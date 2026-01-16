@@ -1,4 +1,4 @@
-import { Video, Instagram, Youtube, TikTok, Heart, TrendingUp, Users } from 'lucide-react'
+import { Video, Instagram, Youtube, Music, Heart, TrendingUp, Users } from 'lucide-react'
 
 export default function Content() {
   const platforms = [
@@ -15,7 +15,7 @@ export default function Content() {
       color: 'from-red-500 to-red-600'
     },
     {
-      icon: TikTok,
+      icon: Music,
       name: 'TikTok',
       description: 'Short-form creative videos that capture attention, showcase personality, and engage with trending topics and challenges.',
       color: 'from-cyan-500 to-blue-500'

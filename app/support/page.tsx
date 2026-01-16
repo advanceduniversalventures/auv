@@ -39,6 +39,20 @@ export default function Support() {
                 This Privacy Policy explains how we collect, use, disclose, and safeguard your information when 
                 you use our software applications, websites, and services.
               </p>
+              <div className="bg-blue-50 border-l-4 border-blue-500 p-4 my-4">
+                <p className="text-gray-800 font-semibold mb-2">App-Specific Privacy Policies</p>
+                <p className="text-gray-700 text-sm">
+                  While this is our general privacy policy, each of our applications may have specific privacy 
+                  considerations based on the type of data they collect. Please refer to the app-specific sections 
+                  below for detailed information about:
+                </p>
+                <ul className="list-disc pl-6 text-gray-700 text-sm mt-2 space-y-1">
+                  <li>HealthTrack Pro - Health & Wellness data</li>
+                  <li>FitLife Coach - Fitness & Training data</li>
+                  <li>Lifestyle Balance - Lifestyle & Habit tracking data</li>
+                  <li>Wellness Planner - Wellness planning & scheduling data</li>
+                </ul>
+              </div>
             </div>
 
             <div className="mb-8">
@@ -51,6 +65,55 @@ export default function Support() {
                 <li>Usage data and analytics</li>
                 <li>Device information and technical data</li>
               </ul>
+              
+              <div className="mt-6 bg-gray-50 p-6 rounded-lg">
+                <h4 className="text-xl font-bold text-gray-900 mb-4">App-Specific Data Collection</h4>
+                
+                <div className="mb-4">
+                  <h5 className="font-semibold text-gray-900 mb-2">HealthTrack Pro</h5>
+                  <p className="text-gray-700 text-sm mb-2">This app collects sensitive health information including:</p>
+                  <ul className="list-disc pl-6 text-gray-700 text-sm space-y-1">
+                    <li>Vital signs and health metrics</li>
+                    <li>Medication schedules and history</li>
+                    <li>Medical appointment information</li>
+                    <li>Health goals and progress tracking</li>
+                  </ul>
+                  <p className="text-gray-600 text-xs mt-2 italic">All health data is encrypted and stored securely in compliance with HIPAA guidelines where applicable.</p>
+                </div>
+
+                <div className="mb-4">
+                  <h5 className="font-semibold text-gray-900 mb-2">FitLife Coach</h5>
+                  <p className="text-gray-700 text-sm mb-2">This app collects fitness-related information including:</p>
+                  <ul className="list-disc pl-6 text-gray-700 text-sm space-y-1">
+                    <li>Workout routines and exercise data</li>
+                    <li>Nutrition and meal tracking information</li>
+                    <li>Body measurements and progress photos (optional)</li>
+                    <li>Wearable device integration data</li>
+                  </ul>
+                </div>
+
+                <div className="mb-4">
+                  <h5 className="font-semibold text-gray-900 mb-2">Lifestyle Balance</h5>
+                  <p className="text-gray-700 text-sm mb-2">This app collects lifestyle management data including:</p>
+                  <ul className="list-disc pl-6 text-gray-700 text-sm space-y-1">
+                    <li>Habit tracking information</li>
+                    <li>Goal setting and achievement data</li>
+                    <li>Time management and scheduling data</li>
+                    <li>Mindfulness and wellness activity logs</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h5 className="font-semibold text-gray-900 mb-2">Wellness Planner</h5>
+                  <p className="text-gray-700 text-sm mb-2">This app collects wellness planning data including:</p>
+                  <ul className="list-disc pl-6 text-gray-700 text-sm space-y-1">
+                    <li>Personalized schedule preferences</li>
+                    <li>Wellness activity planning data</li>
+                    <li>Sleep, nutrition, and exercise scheduling</li>
+                    <li>Calendar integration data</li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
             <div className="mb-8">
