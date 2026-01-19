@@ -1,4 +1,7 @@
-import { Video, Instagram, Youtube, Music, Heart, TrendingUp, Users } from 'lucide-react'
+import { Video, Instagram, Youtube, Heart, TrendingUp, Users } from 'lucide-react'
+import TikTokIcon from '@/components/icons/TikTokIcon'
+import XiaohongshuIcon from '@/components/icons/XiaohongshuIcon'
+import BilibiliIcon from '@/components/icons/BilibiliIcon'
 
 export default function Content() {
   const platforms = [
@@ -6,19 +9,36 @@ export default function Content() {
       icon: Instagram,
       name: 'Instagram',
       description: 'Engaging visual content including photos, reels, and stories that connect with audiences through lifestyle, fitness, and personal insights.',
-      color: 'from-pink-500 to-purple-500'
+      color: 'from-pink-500 to-purple-500',
+      url: 'https://instagram.com'
     },
     {
       icon: Youtube,
       name: 'YouTube',
       description: 'Long-form video content including vlogs, tutorials, and lifestyle content that provides value and entertainment to subscribers.',
-      color: 'from-red-500 to-red-600'
+      color: 'from-red-500 to-red-600',
+      url: 'https://youtube.com'
     },
     {
-      icon: Music,
+      icon: TikTokIcon,
       name: 'TikTok',
       description: 'Short-form creative videos that capture attention, showcase personality, and engage with trending topics and challenges.',
-      color: 'from-cyan-500 to-blue-500'
+      color: 'from-cyan-500 to-blue-500',
+      url: 'https://tiktok.com'
+    },
+    {
+      icon: XiaohongshuIcon,
+      name: 'Xiaohongshu (Red Note)',
+      description: '小红书 - Lifestyle and fashion content sharing platform popular in China, featuring product reviews, travel guides, and lifestyle inspiration.',
+      color: 'from-red-400 to-pink-500',
+      url: 'https://xiaohongshu.com'
+    },
+    {
+      icon: BilibiliIcon,
+      name: 'Bilibili',
+      description: '哔哩哔哩 - Leading video sharing platform in China, featuring anime, gaming, lifestyle vlogs, and educational content for a young, engaged audience.',
+      color: 'from-blue-500 to-cyan-500',
+      url: 'https://bilibili.com'
     }
   ]
 
@@ -43,19 +63,23 @@ export default function Content() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-50 to-purple-100 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-block bg-purple-600 w-20 h-20 rounded-2xl flex items-center justify-center mb-6">
+      <section className="relative bg-gradient-to-br from-purple-50 via-white to-purple-100 py-24 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 right-20 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+          <div className="absolute bottom-20 left-20 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center animate-fade-in">
+            <div className="inline-block bg-gradient-to-br from-purple-600 to-purple-700 w-20 h-20 rounded-2xl flex items-center justify-center mb-6 shadow-xl">
               <Video className="text-white" size={40} />
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Content Creation
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 mb-6">
+              Content <span className="text-purple-600">Creation</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 mb-4 max-w-3xl mx-auto">
               Social Media Content by Hanyu (Mason) Liu
             </p>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Creating engaging, authentic content that connects with audiences worldwide
             </p>
           </div>
@@ -89,7 +113,7 @@ export default function Content() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition"
+                  className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
                 >
                   Follow on Instagram
                 </a>
@@ -97,9 +121,33 @@ export default function Content() {
                   href="https://youtube.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition"
+                  className="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 >
                   Subscribe on YouTube
+                </a>
+                <a
+                  href="https://tiktok.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                >
+                  Follow on TikTok
+                </a>
+                <a
+                  href="https://xiaohongshu.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-r from-red-400 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
+                >
+                  Follow on 小红书
+                </a>
+                <a
+                  href="https://bilibili.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
+                >
+                  Follow on Bilibili
                 </a>
               </div>
             </div>
@@ -127,20 +175,23 @@ export default function Content() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {platforms.map((platform, index) => {
               const IconComponent = platform.icon
               return (
-                <div
+                <a
                   key={index}
-                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+                  href={platform.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 block"
                 >
                   <div className={`bg-gradient-to-br ${platform.color} w-16 h-16 rounded-xl flex items-center justify-center mb-6`}>
                     <IconComponent className="text-white" size={32} />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{platform.name}</h3>
                   <p className="text-gray-700">{platform.description}</p>
-                </div>
+                </a>
               )
             })}
           </div>
@@ -238,6 +289,22 @@ export default function Content() {
               className="bg-white text-purple-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg"
             >
               Follow on TikTok
+            </a>
+            <a
+              href="https://xiaohongshu.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg"
+            >
+              Follow on 小红书
+            </a>
+            <a
+              href="https://bilibili.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg"
+            >
+              Follow on Bilibili
             </a>
           </div>
         </div>
