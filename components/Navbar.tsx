@@ -12,11 +12,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center h-12 hover:opacity-90 transition-opacity duration-200">
+            <Link href="/" className="flex items-center h-full py-2 hover:opacity-90 transition-opacity duration-200">
               <img 
                 src="/logo.png" 
                 alt="Advanced Universal Ventures, LLC" 
-                className="h-10 w-auto"
+                className="h-10 sm:h-12 w-auto"
                 style={{ maxHeight: '48px' }}
               />
             </Link>
@@ -61,7 +61,20 @@ export default function Navbar() {
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+          <div className="px-4 pt-4 pb-3 bg-white border-t">
+            <Link
+              href="/"
+              className="flex items-center justify-center mb-4 pb-4 border-b border-gray-200"
+              onClick={() => setIsOpen(false)}
+            >
+              <img 
+                src="/logo.png" 
+                alt="Advanced Universal Ventures, LLC" 
+                className="h-10 w-auto"
+              />
+            </Link>
+          </div>
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link
               href="/"
               className="block px-3 py-2 text-gray-700 hover:text-primary-600 rounded-md text-base font-medium"
