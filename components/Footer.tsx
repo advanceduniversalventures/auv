@@ -11,8 +11,8 @@ export default function Footer() {
               <img 
                 src="/logo.png" 
                 alt="Advanced Universal Ventures, LLC" 
-                className="h-16 sm:h-20 w-auto opacity-90 hover:opacity-100 transition-opacity"
-                style={{ transform: 'scale(1.5)', transformOrigin: 'left center' }}
+                className="h-12 sm:h-14 w-auto opacity-90 hover:opacity-100 transition-opacity"
+                style={{ transform: 'scale(1.2)', transformOrigin: 'left center' }}
               />
             </Link>
             <p className="text-gray-300 mb-6 leading-relaxed">
