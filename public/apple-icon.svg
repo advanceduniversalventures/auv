@@ -1,5 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
-  <rect width="180" height="180" fill="#2563eb" rx="40"/>
-  <text x="90" y="125" font-family="Arial, sans-serif" font-size="100" font-weight="bold" fill="white" text-anchor="middle">AUV</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180">
+  <!-- Stylized AUV Logo for Apple touch icon -->
+  <rect width="180" height="180" fill="#ffffff" rx="40"/>
+  <g id="auv-apple-icon">
+    <!-- A - Dark blue with teal accent -->
+    <path d="M 20 130 L 20 40 L 50 40 L 60 70 L 70 40 L 100 40 L 100 130 L 80 130 L 80 90 L 70 110 L 60 110 L 50 90 L 50 130 Z" fill="#1e3a8a"/>
+    <path d="M 50 90 L 60 60 L 70 90 L 65 100 L 60 90 L 55 100 Z" fill="#14b8a6"/>
+    
+    <!-- U - Teal -->
+    <path d="M 105 40 L 105 100 Q 105 115 120 115 Q 135 115 135 100 L 135 40 L 155 40 L 155 100 Q 155 130 120 130 Q 85 130 85 100 L 85 40 Z" fill="#14b8a6"/>
+    
+    <!-- V - Dark blue -->
+    <path d="M 160 40 L 175 130 L 190 40 L 210 40 L 190 140 L 170 140 L 140 40 Z" fill="#1e3a8a"/>
+  </g>
 </svg>
-

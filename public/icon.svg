@@ -1,5 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" fill="#2563eb" rx="20"/>
-  <text x="50" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="white" text-anchor="middle">AUV</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Stylized AUV Logo for general icon -->
+  <rect width="512" height="512" fill="#ffffff" rx="100"/>
+  <g id="auv-icon-large" transform="translate(256, 256)">
+    <!-- A - Dark blue with teal accent -->
+    <path d="M -120 150 L -120 -100 L -60 -100 L -30 20 L 0 -100 L 60 -100 L 60 150 L 30 150 L 30 30 L 0 80 L -30 80 L -60 30 L -60 150 Z" fill="#1e3a8a"/>
+    <path d="M -60 30 L -30 -30 L 0 30 L -15 50 L -30 30 L -45 50 Z" fill="#14b8a6"/>
+    
+    <!-- U - Teal -->
+    <path d="M 70 -100 L 70 50 Q 70 100 100 100 Q 130 100 130 50 L 130 -100 L 160 -100 L 160 50 Q 160 150 100 150 Q 40 150 40 50 L 40 -100 Z" fill="#14b8a6"/>
+    
+    <!-- V - Dark blue -->
+    <path d="M 180 -100 L 240 150 L 300 -100 L 360 -100 L 270 180 L 210 180 L 120 -100 Z" fill="#1e3a8a"/>
+  </g>
 </svg>
-
