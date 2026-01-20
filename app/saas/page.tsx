@@ -1,7 +1,26 @@
-import { Smartphone, Globe, Heart, Activity, Coffee, Calendar } from 'lucide-react'
+import { Smartphone, Globe, Heart, Activity, Coffee, Calendar, Users } from 'lucide-react'
+import Link from 'next/link'
 
 export default function SaaS() {
   const softwareProducts = [
+    {
+      icon: Users,
+      title: 'Kevobin',
+      category: 'Health & Wellness',
+      description: 'Stay connected and healthy with Kevobin, the simple daily companion designed specifically for seniors. Features a large, easy-to-read interface with daily check-ins, medication reminders, hydration tracking, safety features, activity monitoring, and mindfulness content. Completely private and runs offline.',
+      features: [
+        'Daily check-in with one-tap "I\'m OK" button',
+        'Medication reminders with virtual pillbox',
+        'Hydration tracking with visual water tracker',
+        'One-tap family calling for safety',
+        'Automatic step and activity tracking',
+        'Daily health tips and mindfulness content',
+        '100% private - all data stored locally',
+        'Works completely offline'
+      ],
+      platforms: ['iOS', 'Android'],
+      privacyPolicyLink: '/kevobin/privacy'
+    },
     {
       icon: Heart,
       title: 'HealthTrack Pro',
@@ -140,6 +159,14 @@ export default function SaaS() {
                             </span>
                           ))}
                         </div>
+                        {product.privacyPolicyLink && (
+                          <Link
+                            href={product.privacyPolicyLink}
+                            className="ml-auto text-blue-600 hover:text-blue-700 font-semibold text-sm flex items-center gap-1 underline"
+                          >
+                            Privacy Policy →
+                          </Link>
+                        )}
                       </div>
                     </div>
                   </div>
