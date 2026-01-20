@@ -10,11 +10,28 @@ export const metadata: Metadata = {
   title: 'Advanced Universal Ventures, LLC | Innovation & Excellence',
   description: 'Advanced Universal Ventures, LLC - Leading provider of SaaS solutions, tennis education consulting, and digital content creation. Based in Maryland, USA.',
   keywords: 'SaaS, software development, tennis education, NCAA consulting, content creation, Maryland LLC',
+  icons: {
+    icon: [
+      { url: '/favicon.png', type: 'image/png', sizes: '512x512' },
+      { url: '/icon.png', type: 'image/png', sizes: '512x512' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
   openGraph: {
     title: 'Advanced Universal Ventures, LLC | Innovation & Excellence',
     description: 'Advanced Universal Ventures, LLC - Leading provider of SaaS solutions, tennis education consulting, and digital content creation. Based in Maryland, USA.',
     url: 'https://advanceduniversalventures.com',
     siteName: 'Advanced Universal Ventures',
+    images: [
+      {
+        url: 'https://advanceduniversalventures.com/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Advanced Universal Ventures Logo',
+      },
+    ],
     locale: 'en_US',
     type: 'website',
   },
@@ -22,6 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Advanced Universal Ventures, LLC | Innovation & Excellence',
     description: 'Leading provider of SaaS solutions, tennis education consulting, and digital content creation.',
+    images: ['https://advanceduniversalventures.com/og-image.png'],
   },
   metadataBase: new URL('https://advanceduniversalventures.com'),
 }
