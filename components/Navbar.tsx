@@ -16,8 +16,8 @@ export default function Navbar() {
               <img 
                 src="/logo.png" 
                 alt="Advanced Universal Ventures, LLC" 
-                className="h-10 sm:h-12 w-auto"
-                style={{ maxHeight: '48px' }}
+                className="h-16 sm:h-20 w-auto"
+                style={{ transform: 'scale(1.5)', transformOrigin: 'left center' }}
               />
             </Link>
           </div>
@@ -70,7 +70,8 @@ export default function Navbar() {
               <img 
                 src="/logo.png" 
                 alt="Advanced Universal Ventures, LLC" 
-                className="h-10 w-auto"
+                className="h-16 w-auto"
+                style={{ transform: 'scale(1.5)', transformOrigin: 'center center' }}
               />
             </Link>
           </div>
