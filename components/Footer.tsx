@@ -7,12 +7,12 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="inline-block mb-4">
+            <Link href="/" className="inline-block mb-6">
               <img 
                 src="/logo.png" 
                 alt="Advanced Universal Ventures, LLC" 
-                className="h-8 w-auto opacity-90 hover:opacity-100 transition-opacity"
-                style={{ maxHeight: '40px' }}
+                className="h-10 sm:h-12 w-auto opacity-90 hover:opacity-100 transition-opacity"
+                style={{ maxHeight: '48px' }}
               />
             </Link>
             <p className="text-gray-300 mb-6 leading-relaxed">
