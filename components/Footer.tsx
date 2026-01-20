@@ -7,13 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="inline-block mb-4">
-              <img 
-                src="/logo.png" 
-                alt="Advanced Universal Ventures, LLC" 
-                className="h-10 w-auto brightness-0 invert"
-              />
-            </Link>
+            <h3 className="text-2xl font-bold mb-4 text-white">Advanced Universal Ventures, LLC</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Driving innovation through technology, education, and creative content. 
               Based in Maryland, USA.
