@@ -1,0 +1,22 @@
+{
+  "name": "Advanced Universal Ventures, LLC",
+  "short_name": "AUV",
+  "description": "Leading provider of SaaS solutions, tennis education consulting, and digital content creation",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/apple-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml"
+    }
+  ]
+}
+
