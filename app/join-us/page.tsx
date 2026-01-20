@@ -29,26 +29,50 @@ export default function JoinUs() {
     },
     {
       icon: Video,
-      title: 'Content Creator / Social Media Manager',
-      department: 'Content Creation',
-      description: 'Create engaging social media content and manage multi-platform presence.',
+      title: 'Social Media Content Writer',
+      department: 'Content & Social Media',
+      description: 'Plan and write engaging content scripts for short-form and long-form social media videos.',
       requirements: [
-        'Experience with Instagram, YouTube, TikTok',
-        'Strong creative and storytelling skills',
-        'Understanding of social media analytics',
-        'Ability to produce high-quality visual content'
+        'Strong writing and storytelling skills for video content',
+        'Understanding of social media trends and audience engagement',
+        'Ability to translate business goals into creative content ideas',
+        'Comfort collaborating with video editors and on-camera talent'
+      ]
+    },
+    {
+      icon: Video,
+      title: 'Video Editor',
+      department: 'Content & Social Media',
+      description: 'Edit and refine video content for TikTok, Instagram Reels, YouTube, and other platforms.',
+      requirements: [
+        'Experience with video editing tools (e.g., CapCut, Premiere Pro, Final Cut, or similar)',
+        'Sense of pacing, music, and visual storytelling for social platforms',
+        'Ability to optimize content for different formats and aspect ratios',
+        'Attention to detail and ability to work with feedback quickly'
       ]
     },
     {
       icon: Briefcase,
-      title: 'Business Development',
-      department: 'All Departments',
-      description: 'Drive growth and partnerships across all business verticals.',
+      title: 'Social Media Business Manager',
+      department: 'Content & Social Media',
+      description: 'Build partnerships with brands, events, and organizations for collaborations and sponsorships.',
       requirements: [
-        'Proven track record in business development',
+        'Experience in business development, partnerships, or influencer marketing',
         'Strong networking and relationship-building skills',
-        'Strategic thinking and market analysis',
-        'Excellent communication abilities'
+        'Comfort reaching out to businesses, events, and agencies',
+        'Ability to negotiate win-win collaboration agreements'
+      ]
+    },
+    {
+      icon: Users,
+      title: 'Social Media Operations',
+      department: 'Content & Social Media',
+      description: 'Operate and manage our social media accounts day-to-day across multiple platforms.',
+      requirements: [
+        'Hands-on experience managing social media accounts',
+        'Ability to schedule posts, respond to comments, and monitor community feedback',
+        'Familiarity with analytics and performance tracking tools',
+        'Highly organized with strong attention to detail'
       ]
     }
   ]
