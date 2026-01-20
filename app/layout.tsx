@@ -12,12 +12,14 @@ export const metadata: Metadata = {
   keywords: 'SaaS, software development, tennis education, NCAA consulting, content creation, Maryland LLC',
   icons: {
     icon: [
+      { url: '/favicon.ico', sizes: 'any' },
       { url: '/favicon.png', type: 'image/png', sizes: '512x512' },
       { url: '/icon.png', type: 'image/png', sizes: '512x512' },
     ],
     apple: [
       { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
     ],
+    shortcut: '/favicon.ico',
   },
   openGraph: {
     title: 'Advanced Universal Ventures, LLC | Innovation & Excellence',
@@ -51,6 +53,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
+      </head>
       <body className={inter.className}>
         <Navbar />
         <main className="min-h-screen">
