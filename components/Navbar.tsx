@@ -14,7 +14,7 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center h-12 hover:opacity-80 transition-opacity duration-200">
               <img 
-                src="/logo.svg" 
+                src="/logo.png" 
                 alt="Advanced Universal Ventures, LLC" 
                 className="h-12 w-auto"
               />
