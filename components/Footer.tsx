@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="inline-block mb-4">
               <img 
-                src="/logo.svg" 
+                src="/logo.png" 
                 alt="Advanced Universal Ventures, LLC" 
                 className="h-10 w-auto brightness-0 invert"
               />
