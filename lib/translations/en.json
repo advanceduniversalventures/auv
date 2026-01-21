@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "home": "Home",
+    "saas": "SaaS",
+    "tennis": "Tennis Education",
+    "content": "Content",
+    "join": "Join Us",
+    "support": "Support"
+  },
+  "home": {
+    "title": "Advanced Universal Ventures",
+    "subtitle": "Driving innovation through cutting-edge SaaS solutions, elite tennis education, and compelling digital content creation.",
+    "exploreServices": "Explore Our Services",
+    "joinTeam": "Join Our Team",
+    "whatWeDo": "What We Do",
+    "whatWeDoDesc": "We offer comprehensive solutions across technology, education, and media",
+    "saasTitle": "SaaS Solutions",
+    "saasDesc": "Custom mobile and web applications focused on health, fitness, and lifestyle enhancement.",
+    "tennisTitle": "Tennis & Education",
+    "tennisDesc": "Expert consulting services for student-athletes pursuing NCAA tennis opportunities.",
+    "contentTitle": "Content Creation",
+    "contentDesc": "Engaging social media content by Hanyu (Mason) Liu, connecting with audiences worldwide.",
+    "joinTitle": "Join Our Team",
+    "joinDesc": "Be part of an innovative team shaping the future of technology and education.",
+    "learnMore": "Learn more",
+    "aboutTitle": "About Advanced Universal Ventures",
+    "aboutDesc1": "Based in Maryland, USA, Advanced Universal Ventures, LLC is a forward-thinking company dedicated to excellence across multiple domains. We combine technological innovation with educational expertise and creative content to deliver exceptional value to our clients and partners.",
+    "aboutDesc2": "Our mission is to empower individuals and organizations through cutting-edge software solutions, personalized educational consulting, and engaging digital content that inspires and connects.",
+    "partnerWithUs": "Partner With Us",
+    "innovation": "Innovation • Excellence • Impact"
+  }
+}
+
