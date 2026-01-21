@@ -10,11 +10,11 @@ export default function Content() {
   const { t } = useI18n()
 
   const platforms = [
-    { icon: Instagram, key: 'instagram', color: 'from-pink-500 to-purple-500', url: 'https://instagram.com' },
-    { icon: Youtube, key: 'youtube', color: 'from-red-500 to-red-600', url: 'https://youtube.com' },
-    { icon: TikTokIcon, key: 'tiktok', color: 'from-cyan-500 to-blue-500', url: 'https://tiktok.com' },
-    { icon: XiaohongshuIcon, key: 'xiaohongshu', color: 'from-red-400 to-pink-500', url: 'https://xiaohongshu.com' },
-    { icon: BilibiliIcon, key: 'bilibili', color: 'from-blue-500 to-cyan-500', url: 'https://bilibili.com' }
+    { icon: Instagram, key: 'instagram', color: 'from-pink-500 to-purple-500', url: 'https://www.instagram.com/jokermason803?igsh=MThyNmxza3h3dzhkeA%3D%3D&utm_source=qr' },
+    { icon: Youtube, key: 'youtube', color: 'from-red-500 to-red-600', url: 'https://youtube.com/@tennismedia6235?si=WgnbTnYpIQKk8pl_' },
+    { icon: TikTokIcon, key: 'tiktok', color: 'from-cyan-500 to-blue-500', url: 'https://www.tiktok.com/@jokermason?_r=1&_t=ZP-93GePIZi458' },
+    { icon: XiaohongshuIcon, key: 'xiaohongshu', color: 'from-red-400 to-pink-500', url: 'https://xhslink.com/m/4lkYOCwHFnO' },
+    { icon: BilibiliIcon, key: 'bilibili', color: 'from-blue-500 to-cyan-500', url: 'https://b23.tv/VdMoR7S' }
   ]
 
   const contentTypes = [
@@ -74,19 +74,19 @@ export default function Content() {
                 {t('content.aboutDesc3')}
               </p>
               <div className="flex flex-wrap gap-4">
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                <a href="https://www.instagram.com/jokermason803?igsh=MThyNmxza3h3dzhkeA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
                   {t('content.followInstagram')}
                 </a>
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                <a href="https://youtube.com/@tennismedia6235?si=WgnbTnYpIQKk8pl_" target="_blank" rel="noopener noreferrer" className="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                   {t('content.subscribeYouTube')}
                 </a>
-                <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                <a href="https://www.tiktok.com/@jokermason?_r=1&_t=ZP-93GePIZi458" target="_blank" rel="noopener noreferrer" className="bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                   {t('content.followTikTok')}
                 </a>
-                <a href="https://xiaohongshu.com" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-red-400 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                <a href="https://xhslink.com/m/4lkYOCwHFnO" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-red-400 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
                   {t('content.followXiaohongshu')}
                 </a>
-                <a href="https://bilibili.com" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                <a href="https://b23.tv/VdMoR7S" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
                   {t('content.followBilibili')}
                 </a>
               </div>
@@ -203,19 +203,19 @@ export default function Content() {
             {t('content.followJourneyDesc')}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="bg-white text-purple-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+            <a href="https://www.instagram.com/jokermason803?igsh=MThyNmxza3h3dzhkeA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="bg-white text-purple-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg">
               {t('content.followInstagram')}
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="bg-white text-purple-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+            <a href="https://youtube.com/@tennismedia6235?si=WgnbTnYpIQKk8pl_" target="_blank" rel="noopener noreferrer" className="bg-white text-purple-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg">
               {t('content.subscribeYouTube')}
             </a>
-            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="bg-white text-purple-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+            <a href="https://www.tiktok.com/@jokermason?_r=1&_t=ZP-93GePIZi458" target="_blank" rel="noopener noreferrer" className="bg-white text-purple-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg">
               {t('content.followTikTok')}
             </a>
-            <a href="https://xiaohongshu.com" target="_blank" rel="noopener noreferrer" className="bg-white text-purple-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+            <a href="https://xhslink.com/m/4lkYOCwHFnO" target="_blank" rel="noopener noreferrer" className="bg-white text-purple-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg">
               {t('content.followXiaohongshu')}
             </a>
-            <a href="https://bilibili.com" target="_blank" rel="noopener noreferrer" className="bg-white text-purple-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+            <a href="https://b23.tv/VdMoR7S" target="_blank" rel="noopener noreferrer" className="bg-white text-purple-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg">
               {t('content.followBilibili')}
             </a>
           </div>
