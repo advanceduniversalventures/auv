@@ -1,127 +1,57 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { useI18n } from '@/lib/i18n'
+import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
+  const { t } = useI18n()
 
   return (
-    <nav className="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-100">
+    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center h-full py-2 hover:opacity-90 transition-opacity duration-200">
-              <img 
-                src="/logo.png" 
-                alt="Advanced Universal Ventures, LLC" 
-                className="h-12 sm:h-14 w-auto"
-                style={{ transform: 'scale(1.2)', transformOrigin: 'left center' }}
-              />
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center space-x-2">
+              <span className="text-2xl font-bold text-primary-600">AUV</span>
             </Link>
           </div>
           
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              <Link href="/" className="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition">
-                Home
-              </Link>
-              <Link href="/saas" className="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition">
-                SaaS Solutions
-              </Link>
-              <Link href="/tennis-education" className="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition">
-                Tennis & Education
-              </Link>
-              <Link href="/content" className="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition">
-                Content Creation
-              </Link>
-              <Link href="/support" className="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition">
-                Support
-              </Link>
-              <Link href="/join-us" className="bg-primary-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary-700 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                Join Us
-              </Link>
-            </div>
+          <div className="hidden md:flex items-center space-x-8">
+            <Link href="/" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
+              {t('nav.home')}
+            </Link>
+            <Link href="/saas" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
+              {t('nav.saas')}
+            </Link>
+            <Link href="/tennis-education" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
+              {t('nav.tennis')}
+            </Link>
+            <Link href="/content" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
+              {t('nav.content')}
+            </Link>
+            <Link href="/join-us" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
+              {t('nav.join')}
+            </Link>
+            <Link href="/support" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
+              {t('nav.support')}
+            </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-primary-600 focus:outline-none"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+          <div className="flex items-center gap-4">
+            <LanguageSwitcher />
+            
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <button className="text-gray-700 hover:text-primary-600">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Mobile Navigation */}
-      {isOpen && (
-        <div className="md:hidden">
-          <div className="px-4 pt-4 pb-3 bg-white border-t">
-            <Link
-              href="/"
-              className="flex items-center justify-center mb-4 pb-4 border-b border-gray-200"
-              onClick={() => setIsOpen(false)}
-            >
-              <img 
-                src="/logo.png" 
-                alt="Advanced Universal Ventures, LLC" 
-                className="h-12 w-auto"
-                style={{ transform: 'scale(1.2)', transformOrigin: 'center center' }}
-              />
-            </Link>
-          </div>
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link
-              href="/"
-              className="block px-3 py-2 text-gray-700 hover:text-primary-600 rounded-md text-base font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              Home
-            </Link>
-            <Link
-              href="/saas"
-              className="block px-3 py-2 text-gray-700 hover:text-primary-600 rounded-md text-base font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              SaaS Solutions
-            </Link>
-            <Link
-              href="/tennis-education"
-              className="block px-3 py-2 text-gray-700 hover:text-primary-600 rounded-md text-base font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              Tennis & Education
-            </Link>
-            <Link
-              href="/content"
-              className="block px-3 py-2 text-gray-700 hover:text-primary-600 rounded-md text-base font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              Content Creation
-            </Link>
-            <Link
-              href="/support"
-              className="block px-3 py-2 text-gray-700 hover:text-primary-600 rounded-md text-base font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              Support
-            </Link>
-            <Link
-              href="/join-us"
-              className="block px-3 py-2 bg-primary-600 text-white rounded-md text-base font-medium hover:bg-primary-700"
-              onClick={() => setIsOpen(false)}
-            >
-              Join Us
-            </Link>
-          </div>
-        </div>
-      )}
     </nav>
   )
 }
-

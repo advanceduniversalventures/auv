@@ -1,7 +1,12 @@
+'use client'
+
 import Link from 'next/link'
 import { ArrowRight, Code, GraduationCap, Video, Users } from 'lucide-react'
+import { useI18n } from '@/lib/i18n'
 
 export default function Home() {
+  const { t } = useI18n()
+
   return (
     <div>
       {/* Hero Section */}
@@ -14,24 +19,23 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-fade-in">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 mb-6 leading-tight">
-              Advanced Universal <span className="text-primary-600">Ventures</span>
+              {t('home.title')}
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 mb-10 max-w-3xl mx-auto leading-relaxed">
-              Driving innovation through cutting-edge SaaS solutions, elite tennis education, 
-              and compelling digital content creation.
+              {t('home.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
               <Link
                 href="/saas"
                 className="btn-primary text-lg px-8 py-4"
               >
-                Explore Our Services
+                {t('home.exploreServices')}
               </Link>
               <Link
                 href="/join-us"
                 className="btn-secondary text-lg px-8 py-4"
               >
-                Join Our Team
+                {t('home.joinTeam')}
               </Link>
             </div>
           </div>
@@ -42,9 +46,9 @@ export default function Home() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">What We Do</h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">{t('home.whatWeDo')}</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We offer comprehensive solutions across technology, education, and media
+              {t('home.whatWeDoDesc')}
             </p>
           </div>
           
@@ -54,12 +58,12 @@ export default function Home() {
                 <div className="bg-gradient-to-br from-blue-600 to-blue-700 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
                   <Code className="text-white" size={32} />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">SaaS Solutions</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('home.saasTitle')}</h3>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Custom mobile and web applications focused on health, fitness, and lifestyle enhancement.
+                  {t('home.saasDesc')}
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold group-hover:translate-x-2 transition-transform duration-300">
-                  Learn more <ArrowRight className="ml-2" size={20} />
+                  {t('home.learnMore')} <ArrowRight className="ml-2" size={20} />
                 </div>
               </div>
             </Link>
@@ -69,12 +73,12 @@ export default function Home() {
                 <div className="bg-gradient-to-br from-green-600 to-green-700 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
                   <GraduationCap className="text-white" size={32} />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Tennis & Education</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('home.tennisTitle')}</h3>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Expert consulting services for student-athletes pursuing NCAA tennis opportunities.
+                  {t('home.tennisDesc')}
                 </p>
                 <div className="flex items-center text-green-600 font-semibold group-hover:translate-x-2 transition-transform duration-300">
-                  Learn more <ArrowRight className="ml-2" size={20} />
+                  {t('home.learnMore')} <ArrowRight className="ml-2" size={20} />
                 </div>
               </div>
             </Link>
@@ -84,12 +88,12 @@ export default function Home() {
                 <div className="bg-gradient-to-br from-purple-600 to-purple-700 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
                   <Video className="text-white" size={32} />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Content Creation</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('home.contentTitle')}</h3>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Engaging social media content by Hanyu (Mason) Liu, connecting with audiences worldwide.
+                  {t('home.contentDesc')}
                 </p>
                 <div className="flex items-center text-purple-600 font-semibold group-hover:translate-x-2 transition-transform duration-300">
-                  Learn more <ArrowRight className="ml-2" size={20} />
+                  {t('home.learnMore')} <ArrowRight className="ml-2" size={20} />
                 </div>
               </div>
             </Link>
@@ -99,12 +103,12 @@ export default function Home() {
                 <div className="bg-gradient-to-br from-orange-600 to-orange-700 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
                   <Users className="text-white" size={32} />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Join Our Team</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('home.joinTitle')}</h3>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Be part of an innovative team shaping the future of technology and education.
+                  {t('home.joinDesc')}
                 </p>
                 <div className="flex items-center text-orange-600 font-semibold group-hover:translate-x-2 transition-transform duration-300">
-                  Learn more <ArrowRight className="ml-2" size={20} />
+                  {t('home.learnMore')} <ArrowRight className="ml-2" size={20} />
                 </div>
               </div>
             </Link>
@@ -117,30 +121,25 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in">
-              <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">About Advanced Universal Ventures</h2>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">{t('home.aboutTitle')}</h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Based in Maryland, USA, Advanced Universal Ventures, LLC is a forward-thinking 
-                company dedicated to excellence across multiple domains. We combine technological 
-                innovation with educational expertise and creative content to deliver exceptional 
-                value to our clients and partners.
+                {t('home.aboutDesc1')}
               </p>
               <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                Our mission is to empower individuals and organizations through cutting-edge 
-                software solutions, personalized educational consulting, and engaging digital 
-                content that inspires and connects.
+                {t('home.aboutDesc2')}
               </p>
               <Link
                 href="/join-us"
                 className="btn-primary inline-block"
               >
-                Partner With Us
+                {t('home.partnerWithUs')}
               </Link>
             </div>
             <div className="relative animate-scale-in">
               <div className="bg-gradient-to-br from-primary-100 via-primary-200 to-primary-300 rounded-3xl p-12 h-80 flex items-center justify-center shadow-2xl transform hover:scale-105 transition-transform duration-300">
                 <div className="text-center">
                   <div className="text-6xl font-extrabold text-primary-700 mb-3 drop-shadow-lg">AUV</div>
-                  <div className="text-primary-600 font-bold text-lg tracking-wide">Innovation • Excellence • Impact</div>
+                  <div className="text-primary-600 font-bold text-lg tracking-wide">{t('home.innovation')}</div>
                 </div>
                 {/* Decorative circles */}
                 <div className="absolute top-4 right-4 w-20 h-20 bg-white/20 rounded-full blur-xl"></div>
@@ -153,4 +152,3 @@ export default function Home() {
     </div>
   )
 }
-
