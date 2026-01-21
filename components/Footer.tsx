@@ -1,83 +1,83 @@
+'use client'
+
 import Link from 'next/link'
-import { Mail, MapPin } from 'lucide-react'
+import { useI18n } from '@/lib/i18n'
 
 export default function Footer() {
+  const { t } = useI18n()
+
   return (
-    <footer className="bg-gradient-to-b from-gray-900 to-gray-950 text-white border-t border-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+    <footer className="bg-gray-900 text-gray-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="inline-block mb-6">
-              <img 
-                src="/logo.png" 
-                alt="Advanced Universal Ventures, LLC" 
-                className="h-12 sm:h-14 w-auto opacity-90 hover:opacity-100 transition-opacity"
-                style={{ transform: 'scale(1.2)', transformOrigin: 'left center' }}
-              />
-            </Link>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Driving innovation through technology, education, and creative content. 
-              Based in Maryland, USA.
+            <h3 className="text-white text-xl font-bold mb-4">{t('footer.company')}</h3>
+            <p className="text-gray-400 mb-4">{t('footer.description')}</p>
+            <p className="text-gray-400 text-sm">
+              {t('footer.location')}
             </p>
-            <div className="flex items-center text-gray-300 mb-2">
-              <MapPin size={18} className="mr-2 text-primary-400" />
-              <span>Maryland, United States</span>
-            </div>
           </div>
-          
+
+          {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-bold mb-5 text-white">Quick Links</h4>
-            <ul className="space-y-3">
+            <h4 className="text-white font-semibold mb-4">{t('footer.quickLinks')}</h4>
+            <ul className="space-y-2">
               <li>
-                <Link href="/saas" className="text-gray-300 hover:text-primary-400 transition-colors duration-200 inline-block transform hover:translate-x-1">
-                  SaaS Solutions
+                <Link href="/" className="hover:text-white transition-colors">
+                  {t('nav.home')}
                 </Link>
               </li>
               <li>
-                <Link href="/tennis-education" className="text-gray-300 hover:text-primary-400 transition-colors duration-200 inline-block transform hover:translate-x-1">
-                  Tennis & Education
+                <Link href="/saas" className="hover:text-white transition-colors">
+                  {t('nav.saas')}
                 </Link>
               </li>
               <li>
-                <Link href="/content" className="text-gray-300 hover:text-primary-400 transition-colors duration-200 inline-block transform hover:translate-x-1">
-                  Content Creation
+                <Link href="/tennis-education" className="hover:text-white transition-colors">
+                  {t('nav.tennis')}
                 </Link>
               </li>
               <li>
-                <Link href="/join-us" className="text-gray-300 hover:text-primary-400 transition-colors duration-200 inline-block transform hover:translate-x-1">
-                  Join Us
+                <Link href="/content" className="hover:text-white transition-colors">
+                  {t('nav.content')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/join-us" className="hover:text-white transition-colors">
+                  {t('nav.join')}
                 </Link>
               </li>
             </ul>
           </div>
-          
+
+          {/* Legal & Support */}
           <div>
-            <h4 className="text-lg font-bold mb-5 text-white">Legal</h4>
-            <ul className="space-y-3">
+            <h4 className="text-white font-semibold mb-4">{t('footer.legal')}</h4>
+            <ul className="space-y-2">
               <li>
-                <Link href="/support" className="text-gray-300 hover:text-primary-400 transition-colors duration-200 inline-block transform hover:translate-x-1">
-                  Privacy Policy
+                <Link href="/support" className="hover:text-white transition-colors">
+                  {t('footer.privacy')}
                 </Link>
               </li>
               <li>
-                <Link href="/support" className="text-gray-300 hover:text-primary-400 transition-colors duration-200 inline-block transform hover:translate-x-1">
-                  Terms of Service
+                <Link href="/support" className="hover:text-white transition-colors">
+                  {t('footer.terms')}
                 </Link>
               </li>
               <li>
-                <Link href="/support" className="text-gray-300 hover:text-primary-400 transition-colors duration-200 inline-block transform hover:translate-x-1">
-                  Support
+                <Link href="/support" className="hover:text-white transition-colors">
+                  {t('footer.support')}
                 </Link>
               </li>
             </ul>
           </div>
         </div>
-        
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-          <p className="text-gray-400">&copy; {new Date().getFullYear()} Advanced Universal Ventures, LLC. All rights reserved.</p>
+
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+          <p>{t('footer.copyright')}</p>
         </div>
       </div>
     </footer>
   )
 }
-

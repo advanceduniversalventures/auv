@@ -11,7 +11,7 @@ type Translations = typeof enTranslations
 interface I18nContextType {
   language: Language
   setLanguage: (lang: Language) => void
-  t: (key: string) => string
+  t: (key: string) => any
 }
 
 const I18nContext = createContext<I18nContextType | undefined>(undefined)

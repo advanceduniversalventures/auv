@@ -8,7 +8,7 @@
     "support": "支持"
   },
   "home": {
-    "title": "高级环球创投",
+    "title": "翰网科创",
     "subtitle": "通过尖端的SaaS解决方案、精英网球教育和引人入胜的数字内容创作推动创新。",
     "exploreServices": "探索我们的服务",
     "joinTeam": "加入我们的团队",
@@ -23,11 +23,423 @@
     "joinTitle": "加入我们的团队",
     "joinDesc": "成为塑造技术和教育未来的创新团队的一员。",
     "learnMore": "了解更多",
-    "aboutTitle": "关于高级环球创投",
-    "aboutDesc1": "高级环球创投有限责任公司总部位于美国马里兰州，是一家致力于在多个领域追求卓越的前瞻性公司。我们将技术创新与教育专业知识和创意内容相结合，为客户和合作伙伴提供卓越的价值。",
+    "aboutTitle": "关于翰网科创",
+    "aboutDesc1": "翰网科创有限责任公司总部位于美国马里兰州，是一家致力于在多个领域追求卓越的前瞻性公司。我们将技术创新与教育专业知识和创意内容相结合，为客户和合作伙伴提供卓越的价值。",
     "aboutDesc2": "我们的使命是通过尖端的软件解决方案、个性化教育咨询和激发灵感和联系的引人入胜的数字内容，为个人和组织赋能。",
     "partnerWithUs": "与我们合作",
     "innovation": "创新 • 卓越 • 影响"
+  },
+  "footer": {
+    "company": "翰网科创有限责任公司",
+    "description": "通过技术、教育和内容创作推动创新。",
+    "quickLinks": "快速链接",
+    "legal": "法律",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "support": "支持",
+    "contact": "联系",
+    "email": "电子邮件",
+    "location": "美国马里兰州",
+    "copyright": "© 2024 翰网科创有限责任公司。保留所有权利。"
+  },
+  "saas": {
+    "title": "SaaS解决方案",
+    "subtitle": "旨在提升健康、健身和生活方式的创新移动和网络应用程序",
+    "ourProducts": "我们的软件产品",
+    "productsDesc": "每个应用程序都经过精心设计，以满足健康、健身和生活方式管理方面的特定需求",
+    "keyFeatures": "主要功能：",
+    "availableOn": "可用平台：",
+    "privacyPolicy": "隐私政策",
+    "ourTechnology": "我们的技术",
+    "technologyDesc": "采用现代、可扩展的技术构建，以实现最佳性能",
+    "interested": "对我们的软件解决方案感兴趣？",
+    "interestedDesc": "让我们讨论我们的应用程序如何帮助您实现健康、健身或生活方式目标",
+    "contactUs": "联系我们",
+    "products": {
+      "kevobin": {
+        "title": "Kevobin",
+        "category": "健康与保健",
+        "description": "通过Kevobin保持联系和健康，这是专为老年人设计的简单日常伴侣。具有大而易读的界面，包括每日签到、药物提醒、水分追踪、安全功能、活动监控和正念内容。完全私密且可离线运行。",
+        "features": [
+          "一键\"我很好\"按钮的每日签到",
+          "带虚拟药盒的药物提醒",
+          "带可视化水追踪器的水分追踪",
+          "一键家庭通话以确保安全",
+          "自动步数和活动追踪",
+          "每日健康提示和正念内容",
+          "100%私密 - 所有数据本地存储",
+          "完全离线工作"
+        ]
+      },
+      "healthtrack": {
+        "title": "HealthTrack Pro",
+        "category": "健康与保健",
+        "description": "全面的健康监测应用程序，帮助用户追踪生命体征、药物和健康指标。功能包括AI驱动的健康洞察、预约提醒以及与医疗保健提供商的集成。",
+        "features": [
+          "实时健康指标追踪",
+          "药物提醒系统",
+          "医疗保健提供商集成",
+          "AI驱动的健康洞察",
+          "安全数据加密"
+        ]
+      },
+      "fitlife": {
+        "title": "FitLife Coach",
+        "category": "健身与训练",
+        "description": "个性化健身指导平台，提供锻炼计划、营养追踪和进度分析。包括社区支持和激励的社交功能。",
+        "features": [
+          "定制锻炼计划",
+          "营养追踪和膳食计划",
+          "进度分析和可视化",
+          "社交社区功能",
+          "可穿戴设备集成"
+        ]
+      },
+      "lifestyle": {
+        "title": "Lifestyle Balance",
+        "category": "生活方式管理",
+        "description": "一体化生活方式管理工具，帮助用户平衡工作、个人生活和健康。功能包括习惯追踪、目标设定和正念练习。",
+        "features": [
+          "习惯追踪和形成",
+          "目标设定和达成",
+          "正念和冥想指南",
+          "时间管理工具",
+          "工作与生活平衡分析"
+        ]
+      },
+      "wellness": {
+        "title": "Wellness Planner",
+        "category": "健康与生活方式",
+        "description": "智能健康规划应用程序，根据用户偏好和目标为锻炼、膳食、睡眠和自我护理活动创建个性化时间表。",
+        "features": [
+          "AI驱动的时间表优化",
+          "多类别规划（健身、营养、睡眠）",
+          "智能通知和提醒",
+          "进度追踪和报告",
+          "与日历应用集成"
+        ]
+      }
+    }
+  },
+  "tennis": {
+    "title": "网球与教育咨询",
+    "subtitle": "为追求NCAA网球机会的学生运动员提供专业指导",
+    "yourPath": "您的NCAA网球之路",
+    "pathDesc1": "NCAA招募过程可能复杂且令人不知所措。我们的咨询服务为学生运动员及其家人提供专业指导，以成功导航大学网球之路。",
+    "pathDesc2": "我们了解平衡学术卓越与运动表现的独特挑战，我们在这里帮助您实现这两个目标，同时找到合适的大学。",
+    "scheduleConsultation": "安排咨询",
+    "becomeConsultant": "成为顾问",
+    "ncaaExpertise": "NCAA专业知识",
+    "ncaaExpertiseDesc": "深入了解法规",
+    "personalizedApproach": "个性化方法",
+    "personalizedApproachDesc": "为每位学生运动员量身定制",
+    "provenResults": "经过验证的结果",
+    "provenResultsDesc": "成功的安置和成果",
+    "ourServices": "我们的咨询服务",
+    "servicesDesc": "在您的NCAA旅程中提供全面支持",
+    "whyChooseUs": "为什么选择我们",
+    "whyChooseUsDesc": "我们的咨询服务与众不同之处",
+    "ourProcess": "我们的流程",
+    "processDesc": "结构化的成功方法",
+    "ready": "准备开始您的NCAA之旅？",
+    "readyDesc": "让我们共同努力，实现您的大学网球梦想",
+    "getStarted": "立即开始",
+    "services": {
+      "eligibility": {
+        "title": "NCAA资格评估",
+        "description": "全面评估您的学术和运动档案，以确定NCAA资格状态并确定需要改进的领域。",
+        "details": [
+          "学术成绩单审查",
+          "核心课程要求分析",
+          "GPA和考试成绩评估",
+          "资格中心注册指导"
+        ]
+      },
+      "recruitment": {
+        "title": "招募策略",
+        "description": "根据您的技能水平、学术成就和大学偏好量身定制的个性化招募计划。",
+        "details": [
+          "大学选择指导",
+          "招募时间表规划",
+          "教练沟通策略",
+          "视频亮点包制作"
+        ]
+      },
+      "academic": {
+        "title": "学术规划",
+        "description": "战略性学术规划，确保您满足所有NCAA要求，同时保持强劲表现。",
+        "details": [
+          "课程选择指导",
+          "学习时间表优化",
+          "考试准备策略",
+          "学术表现追踪"
+        ]
+      },
+      "application": {
+        "title": "申请支持",
+        "description": "在大学申请和招募过程中提供端到端支持。",
+        "details": [
+          "申请论文协助",
+          "面试准备",
+          "奖学金机会识别",
+          "决策指导"
+        ]
+      }
+    },
+    "benefits": [
+      "NCAA法规和要求的专业知识",
+      "为每位学生运动员量身定制的个性化方法",
+      "成功安置的可靠记录",
+      "从评估到入学的全面支持",
+      "强大的大学教练和项目网络",
+      "专注于运动和学术卓越"
+    ],
+    "process": {
+      "step1": {
+        "title": "初步评估",
+        "desc": "评估您当前的状况和目标"
+      },
+      "step2": {
+        "title": "战略规划",
+        "desc": "制定个性化路线图"
+      },
+      "step3": {
+        "title": "积极支持",
+        "desc": "持续指导和协助"
+      },
+      "step4": {
+        "title": "成就",
+        "desc": "实现您的NCAA目标"
+      }
+    }
+  },
+  "content": {
+    "title": "内容创作",
+    "subtitle": "刘瀚宇（Mason）的社交媒体内容",
+    "subtitle2": "创建引人入胜、真实的内容，与世界各地的观众建立联系",
+    "aboutCreator": "关于刘瀚宇（Mason）",
+    "aboutDesc1": "作为一位充满热情的内容创作者，刘瀚宇（Mason）为社交媒体带来了独特的视角，将个人经历与生活方式、健身、教育和娱乐方面的宝贵见解相结合。",
+    "aboutDesc2": "致力于真实性和质量，内容专注于与观众建立真正的联系，同时分享知识、灵感和引起观众共鸣的引人入胜的故事。",
+    "aboutDesc3": "通过在多个平台上持续提供高质量内容，目标是激励、教育和娱乐，同时建立一个积极参与的粉丝社区。",
+    "followInstagram": "在Instagram上关注",
+    "subscribeYouTube": "在YouTube上订阅",
+    "followTikTok": "在TikTok上关注",
+    "followXiaohongshu": "在小红书上关注",
+    "followBilibili": "在Bilibili上关注",
+    "creator": "内容创作者",
+    "creatorTagline": "创建有意义的内容，一次一个帖子",
+    "platforms": "平台",
+    "platformsDesc": "在多个社交媒体平台上吸引观众",
+    "contentFocus": "内容重点领域",
+    "contentFocusDesc": "多样化的内容，吸引和激励",
+    "contentImpact": "内容影响",
+    "contentImpactDesc": "通过真实参与建立社区",
+    "followJourney": "跟随旅程",
+    "followJourneyDesc": "加入社区，与最新内容和更新保持联系",
+    "platformsData": {
+      "instagram": {
+        "name": "Instagram",
+        "description": "引人入胜的视觉内容，包括照片、卷轴和故事，通过生活方式、健身和个人见解与观众建立联系。"
+      },
+      "youtube": {
+        "name": "YouTube",
+        "description": "长视频内容，包括视频博客、教程和生活方式内容，为订阅者提供价值和娱乐。"
+      },
+      "tiktok": {
+        "name": "TikTok",
+        "description": "短格式创意视频，吸引注意力，展示个性，并参与热门话题和挑战。"
+      },
+      "xiaohongshu": {
+        "name": "小红书（Red Note）",
+        "description": "小红书 - 在中国流行的生活方式和时尚内容分享平台，包括产品评论、旅行指南和生活方式灵感。"
+      },
+      "bilibili": {
+        "name": "Bilibili",
+        "description": "哔哩哔哩 - 中国领先的视频分享平台，面向年轻、积极参与的观众，包括动漫、游戏、生活方式视频博客和教育内容。"
+      }
+    },
+    "contentTypes": {
+      "lifestyle": {
+        "title": "生活方式内容",
+        "description": "真实地一瞥日常生活、例行公事和个人经历，引起观众共鸣。"
+      },
+      "fitness": {
+        "title": "健身与健康",
+        "description": "锻炼计划、营养提示和健康建议，以激励和教育社区。"
+      },
+      "educational": {
+        "title": "教育内容",
+        "description": "跨各种感兴趣主题的宝贵见解、教程和知识分享。"
+      }
+    },
+    "stats": {
+      "followers": "总粉丝数",
+      "followersValue": "不断增长的社区",
+      "posts": "内容帖子",
+      "postsValue": "定期更新",
+      "engagement": "参与率",
+      "engagementValue": "高互动",
+      "platforms": "平台",
+      "platformsValue": "多平台"
+    }
+  },
+  "joinUs": {
+    "title": "加入我们的团队",
+    "subtitle": "成为塑造技术、教育和内容创作未来的创新团队的一员",
+    "viewPositions": "查看开放职位",
+    "whyJoin": "为什么加入翰网科创？",
+    "whyJoinDesc": "我们正在建设一些特别的东西，我们希望您成为其中的一部分",
+    "ourCulture": "我们的文化",
+    "cultureDesc1": "在翰网科创，我们相信营造一个创新蓬勃发展、多样性受到庆祝、每个团队成员都能产生有意义影响的环境。",
+    "cultureDesc2": "我们重视协作、持续学习和成长心态。鼓励团队成员带来独特的视角，主动采取行动，并为我们共同的卓越使命做出贡献。",
+    "cultureDesc3": "无论您对构建尖端软件、帮助学生实现梦想还是创建引人入胜的内容充满热情，您都会在这里找到成长和卓越的地方。",
+    "openPositions": "开放职位",
+    "openPositionsDesc": "探索加入我们不断壮大的团队的机会",
+    "dontSeeMatch": "没有看到完美匹配？",
+    "dontSeeMatchDesc": "我们一直在寻找与我们分享热情和价值观的有才华的个人。向我们发送您的简历，让我们知道您想如何贡献！",
+    "submitGeneral": "提交一般申请",
+    "readyImpact": "准备产生影响？",
+    "readyImpactDesc": "加入我们，构建创新解决方案并创造有意义的体验",
+    "getInTouch": "取得联系",
+    "ourValues": "我们的价值观",
+    "benefits": {
+      "compensation": {
+        "title": "有竞争力的薪酬",
+        "description": "公平且有竞争力的薪资待遇，带绩效激励"
+      },
+      "collaborative": {
+        "title": "协作环境",
+        "description": "在支持性氛围中与多元化、有才华的团队合作"
+      },
+      "growth": {
+        "title": "成长机会",
+        "description": "专业发展和职业晋升途径"
+      },
+      "flexible": {
+        "title": "灵活工作",
+        "description": "远程和混合工作选项，适合您的生活方式"
+      }
+    },
+    "values": {
+      "innovation": "创新与创造力",
+      "collaboration": "协作与团队合作",
+      "learning": "持续学习",
+      "balance": "工作与生活平衡",
+      "diversity": "多样性与包容性"
+    },
+    "coreValues": {
+      "excellence": {
+        "title": "卓越",
+        "desc": "在我们所做的一切中追求最高标准"
+      },
+      "integrity": {
+        "title": "诚信",
+        "desc": "始终做正确的事"
+      },
+      "impact": {
+        "title": "影响",
+        "desc": "在人们的生活中产生积极影响"
+      }
+    },
+    "positions": {
+      "developer": {
+        "title": "软件开发人员",
+        "department": "SaaS解决方案",
+        "description": "在健康、健身和生活方式领域构建创新的移动和网络应用程序。",
+        "requirements": [
+          "具有React Native、Next.js或类似框架的经验",
+          "强大的解决问题的能力",
+          "对创建用户友好应用程序的热情",
+          "了解现代开发实践"
+        ]
+      },
+      "consultant": {
+        "title": "网球教育顾问",
+        "department": "网球与教育",
+        "description": "指导学生运动员完成NCAA招募过程和学术规划。",
+        "requirements": [
+          "深入了解NCAA法规",
+          "在大学体育或教育方面的经验",
+          "出色的沟通和指导技能",
+          "对帮助学生运动员成功的热情"
+        ]
+      },
+      "writer": {
+        "title": "社交媒体内容撰稿人",
+        "department": "内容与社交媒体",
+        "description": "为短格式和长格式社交媒体视频规划和撰写引人入胜的内容脚本。",
+        "requirements": [
+          "强大的视频内容写作和讲故事技能",
+          "了解社交媒体趋势和观众参与",
+          "将业务目标转化为创意内容想法的能力",
+          "与视频编辑和出镜人才合作的舒适度"
+        ]
+      },
+      "editor": {
+        "title": "视频编辑",
+        "department": "内容与社交媒体",
+        "description": "为TikTok、Instagram Reels、YouTube和其他平台编辑和完善视频内容。",
+        "requirements": [
+          "具有视频编辑工具的经验（例如CapCut、Premiere Pro、Final Cut或类似工具）",
+          "对社交平台的节奏、音乐和视觉叙事的感知",
+          "优化不同格式和宽高比内容的能力",
+          "注重细节和快速处理反馈的能力"
+        ]
+      },
+      "manager": {
+        "title": "社交媒体业务经理",
+        "department": "内容与社交媒体",
+        "description": "与品牌、活动和组织建立合作伙伴关系，进行合作和赞助。",
+        "requirements": [
+          "在业务发展、合作伙伴关系或影响者营销方面的经验",
+          "强大的网络和关系建设技能",
+          "与商业、活动和机构联系的舒适度",
+          "谈判双赢合作协议的能力"
+        ]
+      },
+      "operations": {
+        "title": "社交媒体运营",
+        "department": "内容与社交媒体",
+        "description": "跨多个平台日常运营和管理我们的社交媒体账户。",
+        "requirements": [
+          "管理社交媒体账户的实践经验",
+          "安排帖子、回复评论和监控社区反馈的能力",
+          "熟悉分析和性能追踪工具",
+          "高度组织化，注重细节"
+        ]
+      }
+    },
+    "applyNow": "立即申请",
+    "applicationSubject": "申请："
+  },
+  "support": {
+    "title": "支持与隐私",
+    "subtitle": "您的隐私和安全是我们的首要任务",
+    "privacyPolicy": "隐私政策",
+    "lastUpdated": "最后更新：",
+    "termsOfService": "服务条款",
+    "needHelp": "需要帮助？",
+    "needHelpDesc": "我们在这里协助您解决任何问题或疑虑",
+    "emailSupport": "电子邮件支持",
+    "emailSupportDesc": "对于一般咨询、隐私问题或技术支持：",
+    "reportIssue": "报告问题",
+    "reportIssueDesc": "发现错误或有安全担忧？请告诉我们：",
+    "kevobinPrivacy": "Kevobin隐私政策",
+    "backToSaaS": "返回SaaS解决方案",
+    "common": {
+      "contact": "联系我们",
+      "location": "美国马里兰州",
+      "privacyEmail": "隐私电子邮件：",
+      "company": "翰网科创有限责任公司"
+    }
+  },
+  "common": {
+    "back": "返回",
+    "next": "下一步",
+    "learnMore": "了解更多",
+    "contact": "联系",
+    "email": "电子邮件",
+    "phone": "电话",
+    "address": "地址"
   }
 }
-
