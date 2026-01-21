@@ -1,61 +1,25 @@
+'use client'
+
 import { GraduationCap, Trophy, Target, Users, CheckCircle, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
+import { useI18n } from '@/lib/i18n'
 
 export default function TennisEducation() {
+  const { t } = useI18n()
+
   const services = [
-    {
-      icon: Target,
-      title: 'NCAA Eligibility Assessment',
-      description: 'Comprehensive evaluation of your academic and athletic profile to determine NCAA eligibility status and identify areas for improvement.',
-      details: [
-        'Academic transcript review',
-        'Core course requirements analysis',
-        'GPA and test score evaluation',
-        'Eligibility center registration guidance'
-      ]
-    },
-    {
-      icon: Trophy,
-      title: 'Recruitment Strategy',
-      description: 'Personalized recruitment plan tailored to your skill level, academic achievements, and college preferences.',
-      details: [
-        'College selection guidance',
-        'Recruitment timeline planning',
-        'Coach communication strategies',
-        'Video highlight package creation'
-      ]
-    },
-    {
-      icon: GraduationCap,
-      title: 'Academic Planning',
-      description: 'Strategic academic planning to ensure you meet all NCAA requirements while maintaining strong performance.',
-      details: [
-        'Course selection guidance',
-        'Study schedule optimization',
-        'Test preparation strategies',
-        'Academic performance tracking'
-      ]
-    },
-    {
-      icon: Users,
-      title: 'Application Support',
-      description: 'End-to-end support throughout the college application and recruitment process.',
-      details: [
-        'Application essay assistance',
-        'Interview preparation',
-        'Scholarship opportunity identification',
-        'Decision-making guidance'
-      ]
-    }
+    { icon: Target, key: 'eligibility' },
+    { icon: Trophy, key: 'recruitment' },
+    { icon: GraduationCap, key: 'academic' },
+    { icon: Users, key: 'application' }
   ]
 
-  const benefits = [
-    'Expert knowledge of NCAA regulations and requirements',
-    'Personalized approach tailored to each student-athlete',
-    'Proven track record of successful placements',
-    'Comprehensive support from assessment to enrollment',
-    'Strong network of college coaches and programs',
-    'Focus on both athletic and academic excellence'
+  const benefits = t('tennis.benefits') as string[]
+  const processSteps = [
+    { step: '1', key: 'step1' },
+    { step: '2', key: 'step2' },
+    { step: '3', key: 'step3' },
+    { step: '4', key: 'step4' }
   ]
 
   return (
@@ -68,10 +32,10 @@ export default function TennisEducation() {
               <GraduationCap className="text-white" size={40} />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Tennis & Education Consulting
+              {t('tennis.title')}
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">
-              Expert guidance for student-athletes pursuing NCAA tennis opportunities
+              {t('tennis.subtitle')}
             </p>
           </div>
         </div>
@@ -83,30 +47,26 @@ export default function TennisEducation() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Your Path to NCAA Tennis
+                {t('tennis.yourPath')}
               </h2>
               <p className="text-lg text-gray-700 mb-4">
-                Navigating the NCAA recruitment process can be complex and overwhelming. 
-                Our consulting services provide student-athletes and their families with 
-                expert guidance to successfully navigate the path to collegiate tennis.
+                {t('tennis.pathDesc1')}
               </p>
               <p className="text-lg text-gray-700 mb-6">
-                We understand the unique challenges of balancing academic excellence with 
-                athletic performance, and we're here to help you achieve both goals while 
-                finding the right college fit.
+                {t('tennis.pathDesc2')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="mailto:tennis@advanceduniversalventures.com"
                   className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition text-center"
                 >
-                  Schedule Consultation
+                  {t('tennis.scheduleConsultation')}
                 </a>
                 <Link
                   href="/join-us"
                   className="inline-block bg-white text-green-600 border-2 border-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition text-center"
                 >
-                  Become a Consultant
+                  {t('tennis.becomeConsultant')}
                 </Link>
               </div>
             </div>
@@ -115,22 +75,22 @@ export default function TennisEducation() {
                 <div className="flex items-center">
                   <Trophy className="text-green-600 mr-4" size={32} />
                   <div>
-                    <div className="text-2xl font-bold text-gray-900">NCAA Expertise</div>
-                    <div className="text-gray-700">Deep understanding of regulations</div>
+                    <div className="text-2xl font-bold text-gray-900">{t('tennis.ncaaExpertise')}</div>
+                    <div className="text-gray-700">{t('tennis.ncaaExpertiseDesc')}</div>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Target className="text-green-600 mr-4" size={32} />
                   <div>
-                    <div className="text-2xl font-bold text-gray-900">Personalized Approach</div>
-                    <div className="text-gray-700">Tailored to each student-athlete</div>
+                    <div className="text-2xl font-bold text-gray-900">{t('tennis.personalizedApproach')}</div>
+                    <div className="text-gray-700">{t('tennis.personalizedApproachDesc')}</div>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="text-green-600 mr-4" size={32} />
                   <div>
-                    <div className="text-2xl font-bold text-gray-900">Proven Results</div>
-                    <div className="text-gray-700">Successful placements and outcomes</div>
+                    <div className="text-2xl font-bold text-gray-900">{t('tennis.provenResults')}</div>
+                    <div className="text-gray-700">{t('tennis.provenResultsDesc')}</div>
                   </div>
                 </div>
               </div>
@@ -143,15 +103,16 @@ export default function TennisEducation() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Consulting Services</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('tennis.ourServices')}</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Comprehensive support throughout your NCAA journey
+              {t('tennis.servicesDesc')}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => {
               const IconComponent = service.icon
+              const serviceData = t(`tennis.services.${service.key}`) as any
               return (
                 <div
                   key={index}
@@ -160,10 +121,10 @@ export default function TennisEducation() {
                   <div className="bg-green-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
                     <IconComponent className="text-green-600" size={32} />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                  <p className="text-gray-700 mb-6">{service.description}</p>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{serviceData.title}</h3>
+                  <p className="text-gray-700 mb-6">{serviceData.description}</p>
                   <ul className="space-y-2">
-                    {service.details.map((detail, idx) => (
+                    {Array.isArray(serviceData.details) && serviceData.details.map((detail: string, idx: number) => (
                       <li key={idx} className="flex items-start text-gray-700">
                         <CheckCircle className="text-green-600 mr-2 mt-1 flex-shrink-0" size={20} />
                         <span>{detail}</span>
@@ -181,14 +142,14 @@ export default function TennisEducation() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Us</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('tennis.whyChooseUs')}</h2>
             <p className="text-xl text-gray-600">
-              What sets our consulting services apart
+              {t('tennis.whyChooseUsDesc')}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+            {Array.isArray(benefits) && benefits.map((benefit: string, index: number) => (
               <div
                 key={index}
                 className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border-l-4 border-green-600"
@@ -207,32 +168,30 @@ export default function TennisEducation() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Process</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('tennis.ourProcess')}</h2>
             <p className="text-xl text-gray-600">
-              A structured approach to your success
+              {t('tennis.processDesc')}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { step: '1', title: 'Initial Assessment', desc: 'Evaluate your current status and goals' },
-              { step: '2', title: 'Strategic Planning', desc: 'Develop personalized roadmap' },
-              { step: '3', title: 'Active Support', desc: 'Ongoing guidance and assistance' },
-              { step: '4', title: 'Achievement', desc: 'Reach your NCAA goals' }
-            ].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  {item.step}
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
-                {index < 3 && (
-                  <div className="hidden md:block absolute top-8 left-full w-full">
-                    <ArrowRight className="text-green-600 mx-auto" size={24} />
+            {processSteps.map((item, index) => {
+              const stepData = t(`tennis.process.${item.key}`) as any
+              return (
+                <div key={index} className="text-center relative">
+                  <div className="bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                    {item.step}
                   </div>
-                )}
-              </div>
-            ))}
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{stepData.title}</h3>
+                  <p className="text-gray-600">{stepData.desc}</p>
+                  {index < 3 && (
+                    <div className="hidden md:block absolute top-8 left-full w-full">
+                      <ArrowRight className="text-green-600 mx-auto" size={24} />
+                    </div>
+                  )}
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -241,22 +200,19 @@ export default function TennisEducation() {
       <section className="py-20 bg-green-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Start Your NCAA Journey?
+            {t('tennis.ready')}
           </h2>
           <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Let's work together to make your collegiate tennis dreams a reality
+            {t('tennis.readyDesc')}
           </p>
           <a
             href="mailto:tennis@advanceduniversalventures.com"
             className="inline-block bg-white text-green-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg"
           >
-            Get Started Today
+            {t('tennis.getStarted')}
           </a>
         </div>
       </section>
     </div>
   )
 }
-
-
-

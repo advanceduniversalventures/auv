@@ -1,80 +1,37 @@
+'use client'
+
 import { Smartphone, Globe, Heart, Activity, Coffee, Calendar, Users } from 'lucide-react'
 import Link from 'next/link'
+import { useI18n } from '@/lib/i18n'
 
 export default function SaaS() {
+  const { t } = useI18n()
+
   const softwareProducts = [
     {
       icon: Users,
-      title: 'Kevobin',
-      category: 'Health & Wellness',
-      description: 'Stay connected and healthy with Kevobin, the simple daily companion designed specifically for seniors. Features a large, easy-to-read interface with daily check-ins, medication reminders, hydration tracking, safety features, activity monitoring, and mindfulness content. Completely private and runs offline.',
-      features: [
-        'Daily check-in with one-tap "I\'m OK" button',
-        'Medication reminders with virtual pillbox',
-        'Hydration tracking with visual water tracker',
-        'One-tap family calling for safety',
-        'Automatic step and activity tracking',
-        'Daily health tips and mindfulness content',
-        '100% private - all data stored locally',
-        'Works completely offline'
-      ],
+      titleKey: 'kevobin',
       platforms: ['iOS', 'Android'],
       privacyPolicyLink: '/kevobin/privacy'
     },
     {
       icon: Heart,
-      title: 'HealthTrack Pro',
-      category: 'Health & Wellness',
-      description: 'Comprehensive health monitoring application that helps users track vital signs, medications, and wellness metrics. Features include AI-powered health insights, appointment reminders, and integration with healthcare providers.',
-      features: [
-        'Real-time health metrics tracking',
-        'Medication reminder system',
-        'Healthcare provider integration',
-        'AI-powered health insights',
-        'Secure data encryption'
-      ],
+      titleKey: 'healthtrack',
       platforms: ['iOS', 'Android', 'Web']
     },
     {
       icon: Activity,
-      title: 'FitLife Coach',
-      category: 'Fitness & Training',
-      description: 'Personalized fitness coaching platform with workout plans, nutrition tracking, and progress analytics. Includes social features for community support and motivation.',
-      features: [
-        'Custom workout plans',
-        'Nutrition tracking & meal planning',
-        'Progress analytics & visualization',
-        'Social community features',
-        'Wearable device integration'
-      ],
+      titleKey: 'fitlife',
       platforms: ['iOS', 'Android', 'Web']
     },
     {
       icon: Coffee,
-      title: 'Lifestyle Balance',
-      category: 'Lifestyle Management',
-      description: 'All-in-one lifestyle management tool that helps users balance work, personal life, and wellness. Features include habit tracking, goal setting, and mindfulness exercises.',
-      features: [
-        'Habit tracking & formation',
-        'Goal setting & achievement',
-        'Mindfulness & meditation guides',
-        'Time management tools',
-        'Work-life balance analytics'
-      ],
+      titleKey: 'lifestyle',
       platforms: ['iOS', 'Android', 'Web']
     },
     {
       icon: Calendar,
-      title: 'Wellness Planner',
-      category: 'Health & Lifestyle',
-      description: 'Intelligent wellness planning application that creates personalized schedules for exercise, meals, sleep, and self-care activities based on user preferences and goals.',
-      features: [
-        'AI-powered schedule optimization',
-        'Multi-category planning (fitness, nutrition, sleep)',
-        'Smart notifications & reminders',
-        'Progress tracking & reports',
-        'Integration with calendar apps'
-      ],
+      titleKey: 'wellness',
       platforms: ['iOS', 'Android', 'Web']
     }
   ]
@@ -93,10 +50,10 @@ export default function SaaS() {
               <Globe className="text-white" size={40} />
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 mb-6">
-              SaaS <span className="text-blue-600">Solutions</span>
+              {t('saas.title')}
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Innovative mobile and web applications designed to enhance health, fitness, and lifestyle
+              {t('saas.subtitle')}
             </p>
           </div>
         </div>
@@ -106,15 +63,16 @@ export default function SaaS() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Software Products</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('saas.ourProducts')}</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Each application is carefully crafted to address specific needs in health, fitness, and lifestyle management
+              {t('saas.productsDesc')}
             </p>
           </div>
 
           <div className="space-y-12">
             {softwareProducts.map((product, index) => {
               const IconComponent = product.icon
+              const baseKey = `saas.products.${product.titleKey}`
               return (
                 <div
                   key={index}
@@ -128,27 +86,27 @@ export default function SaaS() {
                     </div>
                     <div className="flex-grow">
                       <div className="flex flex-wrap items-center gap-4 mb-4">
-                        <h3 className="text-3xl font-bold text-gray-900">{product.title}</h3>
+                        <h3 className="text-3xl font-bold text-gray-900">{t(`${baseKey}.title`)}</h3>
                         <span className="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-semibold">
-                          {product.category}
+                          {t(`${baseKey}.category`)}
                         </span>
                       </div>
-                      <p className="text-lg text-gray-700 mb-6">{product.description}</p>
+                      <p className="text-lg text-gray-700 mb-6">{t(`${baseKey}.description`)}</p>
                       
                       <div className="mb-6">
-                        <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Features:</h4>
+                        <h4 className="text-lg font-semibold text-gray-900 mb-3">{t('saas.keyFeatures')}</h4>
                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                          {product.features.map((feature, idx) => (
+                          {Array.isArray(t(`${baseKey}.features`)) && (t(`${baseKey}.features`) as string[]).map((feature: string, idx: number) => (
                             <li key={idx} className="flex items-center text-gray-700">
                               <span className="text-blue-600 mr-2">✓</span>
                               {feature}
                             </li>
-                          ))}
+                          )))}
                         </ul>
                       </div>
 
                       <div className="flex flex-wrap items-center gap-4">
-                        <span className="text-sm font-semibold text-gray-700">Available on:</span>
+                        <span className="text-sm font-semibold text-gray-700">{t('saas.availableOn')}</span>
                         <div className="flex gap-2">
                           {product.platforms.map((platform, idx) => (
                             <span
@@ -164,7 +122,7 @@ export default function SaaS() {
                             href={product.privacyPolicyLink}
                             className="ml-auto text-blue-600 hover:text-blue-700 font-semibold text-sm flex items-center gap-1 underline"
                           >
-                            Privacy Policy →
+                            {t('saas.privacyPolicy')} →
                           </Link>
                         )}
                       </div>
@@ -181,9 +139,9 @@ export default function SaaS() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Technology</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('saas.ourTechnology')}</h2>
             <p className="text-xl text-gray-600">
-              Built with modern, scalable technologies for optimal performance
+              {t('saas.technologyDesc')}
             </p>
           </div>
           
@@ -204,20 +162,19 @@ export default function SaaS() {
       <section className="py-20 bg-primary-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Interested in Our Software Solutions?
+            {t('saas.interested')}
           </h2>
           <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our applications can help transform your health, fitness, or lifestyle goals
+            {t('saas.interestedDesc')}
           </p>
           <a
             href="mailto:contact@advanceduniversalventures.com"
             className="inline-block bg-white text-primary-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5"
           >
-            Contact Us
+            {t('saas.contactUs')}
           </a>
         </div>
       </section>
     </div>
   )
 }
-

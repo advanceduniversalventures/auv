@@ -28,6 +28,418 @@
     "aboutDesc2": "Our mission is to empower individuals and organizations through cutting-edge software solutions, personalized educational consulting, and engaging digital content that inspires and connects.",
     "partnerWithUs": "Partner With Us",
     "innovation": "Innovation • Excellence • Impact"
+  },
+  "footer": {
+    "company": "Advanced Universal Ventures, LLC",
+    "description": "Driving innovation through technology, education, and content creation.",
+    "quickLinks": "Quick Links",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "support": "Support",
+    "contact": "Contact",
+    "email": "Email",
+    "location": "Maryland, United States",
+    "copyright": "© 2024 Advanced Universal Ventures, LLC. All rights reserved."
+  },
+  "saas": {
+    "title": "SaaS Solutions",
+    "subtitle": "Innovative mobile and web applications designed to enhance health, fitness, and lifestyle",
+    "ourProducts": "Our Software Products",
+    "productsDesc": "Each application is carefully crafted to address specific needs in health, fitness, and lifestyle management",
+    "keyFeatures": "Key Features:",
+    "availableOn": "Available on:",
+    "privacyPolicy": "Privacy Policy",
+    "ourTechnology": "Our Technology",
+    "technologyDesc": "Built with modern, scalable technologies for optimal performance",
+    "interested": "Interested in Our Software Solutions?",
+    "interestedDesc": "Let's discuss how our applications can help transform your health, fitness, or lifestyle goals",
+    "contactUs": "Contact Us",
+    "products": {
+      "kevobin": {
+        "title": "Kevobin",
+        "category": "Health & Wellness",
+        "description": "Stay connected and healthy with Kevobin, the simple daily companion designed specifically for seniors. Features a large, easy-to-read interface with daily check-ins, medication reminders, hydration tracking, safety features, activity monitoring, and mindfulness content. Completely private and runs offline.",
+        "features": [
+          "Daily check-in with one-tap \"I'm OK\" button",
+          "Medication reminders with virtual pillbox",
+          "Hydration tracking with visual water tracker",
+          "One-tap family calling for safety",
+          "Automatic step and activity tracking",
+          "Daily health tips and mindfulness content",
+          "100% private - all data stored locally",
+          "Works completely offline"
+        ]
+      },
+      "healthtrack": {
+        "title": "HealthTrack Pro",
+        "category": "Health & Wellness",
+        "description": "Comprehensive health monitoring application that helps users track vital signs, medications, and wellness metrics. Features include AI-powered health insights, appointment reminders, and integration with healthcare providers.",
+        "features": [
+          "Real-time health metrics tracking",
+          "Medication reminder system",
+          "Healthcare provider integration",
+          "AI-powered health insights",
+          "Secure data encryption"
+        ]
+      },
+      "fitlife": {
+        "title": "FitLife Coach",
+        "category": "Fitness & Training",
+        "description": "Personalized fitness coaching platform with workout plans, nutrition tracking, and progress analytics. Includes social features for community support and motivation.",
+        "features": [
+          "Custom workout plans",
+          "Nutrition tracking & meal planning",
+          "Progress analytics & visualization",
+          "Social community features",
+          "Wearable device integration"
+        ]
+      },
+      "lifestyle": {
+        "title": "Lifestyle Balance",
+        "category": "Lifestyle Management",
+        "description": "All-in-one lifestyle management tool that helps users balance work, personal life, and wellness. Features include habit tracking, goal setting, and mindfulness exercises.",
+        "features": [
+          "Habit tracking & formation",
+          "Goal setting & achievement",
+          "Mindfulness & meditation guides",
+          "Time management tools",
+          "Work-life balance analytics"
+        ]
+      },
+      "wellness": {
+        "title": "Wellness Planner",
+        "category": "Health & Lifestyle",
+        "description": "Intelligent wellness planning application that creates personalized schedules for exercise, meals, sleep, and self-care activities based on user preferences and goals.",
+        "features": [
+          "AI-powered schedule optimization",
+          "Multi-category planning (fitness, nutrition, sleep)",
+          "Smart notifications & reminders",
+          "Progress tracking & reports",
+          "Integration with calendar apps"
+        ]
+      }
+    }
+  },
+  "tennis": {
+    "title": "Tennis & Education Consulting",
+    "subtitle": "Expert guidance for student-athletes pursuing NCAA tennis opportunities",
+    "yourPath": "Your Path to NCAA Tennis",
+    "pathDesc1": "Navigating the NCAA recruitment process can be complex and overwhelming. Our consulting services provide student-athletes and their families with expert guidance to successfully navigate the path to collegiate tennis.",
+    "pathDesc2": "We understand the unique challenges of balancing academic excellence with athletic performance, and we're here to help you achieve both goals while finding the right college fit.",
+    "scheduleConsultation": "Schedule Consultation",
+    "becomeConsultant": "Become a Consultant",
+    "ncaaExpertise": "NCAA Expertise",
+    "ncaaExpertiseDesc": "Deep understanding of regulations",
+    "personalizedApproach": "Personalized Approach",
+    "personalizedApproachDesc": "Tailored to each student-athlete",
+    "provenResults": "Proven Results",
+    "provenResultsDesc": "Successful placements and outcomes",
+    "ourServices": "Our Consulting Services",
+    "servicesDesc": "Comprehensive support throughout your NCAA journey",
+    "whyChooseUs": "Why Choose Us",
+    "whyChooseUsDesc": "What sets our consulting services apart",
+    "ourProcess": "Our Process",
+    "processDesc": "A structured approach to your success",
+    "ready": "Ready to Start Your NCAA Journey?",
+    "readyDesc": "Let's work together to make your collegiate tennis dreams a reality",
+    "getStarted": "Get Started Today",
+    "services": {
+      "eligibility": {
+        "title": "NCAA Eligibility Assessment",
+        "description": "Comprehensive evaluation of your academic and athletic profile to determine NCAA eligibility status and identify areas for improvement.",
+        "details": [
+          "Academic transcript review",
+          "Core course requirements analysis",
+          "GPA and test score evaluation",
+          "Eligibility center registration guidance"
+        ]
+      },
+      "recruitment": {
+        "title": "Recruitment Strategy",
+        "description": "Personalized recruitment plan tailored to your skill level, academic achievements, and college preferences.",
+        "details": [
+          "College selection guidance",
+          "Recruitment timeline planning",
+          "Coach communication strategies",
+          "Video highlight package creation"
+        ]
+      },
+      "academic": {
+        "title": "Academic Planning",
+        "description": "Strategic academic planning to ensure you meet all NCAA requirements while maintaining strong performance.",
+        "details": [
+          "Course selection guidance",
+          "Study schedule optimization",
+          "Test preparation strategies",
+          "Academic performance tracking"
+        ]
+      },
+      "application": {
+        "title": "Application Support",
+        "description": "End-to-end support throughout the college application and recruitment process.",
+        "details": [
+          "Application essay assistance",
+          "Interview preparation",
+          "Scholarship opportunity identification",
+          "Decision-making guidance"
+        ]
+      }
+    },
+    "benefits": [
+      "Expert knowledge of NCAA regulations and requirements",
+      "Personalized approach tailored to each student-athlete",
+      "Proven track record of successful placements",
+      "Comprehensive support from assessment to enrollment",
+      "Strong network of college coaches and programs",
+      "Focus on both athletic and academic excellence"
+    ],
+    "process": {
+      "step1": {
+        "title": "Initial Assessment",
+        "desc": "Evaluate your current status and goals"
+      },
+      "step2": {
+        "title": "Strategic Planning",
+        "desc": "Develop personalized roadmap"
+      },
+      "step3": {
+        "title": "Active Support",
+        "desc": "Ongoing guidance and assistance"
+      },
+      "step4": {
+        "title": "Achievement",
+        "desc": "Reach your NCAA goals"
+      }
+    }
+  },
+  "content": {
+    "title": "Content Creation",
+    "subtitle": "Social Media Content by Hanyu (Mason) Liu",
+    "subtitle2": "Creating engaging, authentic content that connects with audiences worldwide",
+    "aboutCreator": "About Hanyu (Mason) Liu",
+    "aboutDesc1": "As a passionate content creator, Hanyu (Mason) Liu brings a unique perspective to social media, combining personal experiences with valuable insights across lifestyle, fitness, education, and entertainment.",
+    "aboutDesc2": "With a commitment to authenticity and quality, the content focuses on building genuine connections with audiences while sharing knowledge, inspiration, and engaging stories that resonate with viewers.",
+    "aboutDesc3": "Through consistent, high-quality content across multiple platforms, the goal is to inspire, educate, and entertain while building a community of engaged followers.",
+    "followInstagram": "Follow on Instagram",
+    "subscribeYouTube": "Subscribe on YouTube",
+    "followTikTok": "Follow on TikTok",
+    "followXiaohongshu": "Follow on 小红书",
+    "followBilibili": "Follow on Bilibili",
+    "creator": "Content Creator",
+    "creatorTagline": "Creating content that matters, one post at a time",
+    "platforms": "Platforms",
+    "platformsDesc": "Engaging audiences across multiple social media platforms",
+    "contentFocus": "Content Focus Areas",
+    "contentFocusDesc": "Diverse content that engages and inspires",
+    "contentImpact": "Content Impact",
+    "contentImpactDesc": "Building a community through authentic engagement",
+    "followJourney": "Follow Along on the Journey",
+    "followJourneyDesc": "Join the community and stay connected with the latest content and updates",
+    "platformsData": {
+      "instagram": {
+        "name": "Instagram",
+        "description": "Engaging visual content including photos, reels, and stories that connect with audiences through lifestyle, fitness, and personal insights."
+      },
+      "youtube": {
+        "name": "YouTube",
+        "description": "Long-form video content including vlogs, tutorials, and lifestyle content that provides value and entertainment to subscribers."
+      },
+      "tiktok": {
+        "name": "TikTok",
+        "description": "Short-form creative videos that capture attention, showcase personality, and engage with trending topics and challenges."
+      },
+      "xiaohongshu": {
+        "name": "Xiaohongshu (Red Note)",
+        "description": "小红书 - Lifestyle and fashion content sharing platform popular in China, featuring product reviews, travel guides, and lifestyle inspiration."
+      },
+      "bilibili": {
+        "name": "Bilibili",
+        "description": "哔哩哔哩 - Leading video sharing platform in China, featuring anime, gaming, lifestyle vlogs, and educational content for a young, engaged audience."
+      }
+    },
+    "contentTypes": {
+      "lifestyle": {
+        "title": "Lifestyle Content",
+        "description": "Authentic glimpses into daily life, routines, and personal experiences that resonate with viewers."
+      },
+      "fitness": {
+        "title": "Fitness & Health",
+        "description": "Workout routines, nutrition tips, and wellness advice to inspire and educate the community."
+      },
+      "educational": {
+        "title": "Educational Content",
+        "description": "Valuable insights, tutorials, and knowledge sharing across various topics of interest."
+      }
+    },
+    "stats": {
+      "followers": "Total Followers",
+      "followersValue": "Growing Community",
+      "posts": "Content Posts",
+      "postsValue": "Regular Updates",
+      "engagement": "Engagement Rate",
+      "engagementValue": "High Interaction",
+      "platforms": "Platforms",
+      "platformsValue": "Multi-Platform"
+    }
+  },
+  "joinUs": {
+    "title": "Join Our Team",
+    "subtitle": "Be part of an innovative team shaping the future of technology, education, and content creation",
+    "viewPositions": "View Open Positions",
+    "whyJoin": "Why Join Advanced Universal Ventures?",
+    "whyJoinDesc": "We're building something special, and we want you to be part of it",
+    "ourCulture": "Our Culture",
+    "cultureDesc1": "At Advanced Universal Ventures, we believe in fostering an environment where innovation thrives, diversity is celebrated, and every team member can make a meaningful impact.",
+    "cultureDesc2": "We value collaboration, continuous learning, and a growth mindset. Our team members are encouraged to bring their unique perspectives, take initiative, and contribute to our shared mission of excellence.",
+    "cultureDesc3": "Whether you're passionate about building cutting-edge software, helping students achieve their dreams, or creating compelling content, you'll find a place to grow and excel here.",
+    "openPositions": "Open Positions",
+    "openPositionsDesc": "Explore opportunities to join our growing team",
+    "dontSeeMatch": "Don't See a Perfect Match?",
+    "dontSeeMatchDesc": "We're always looking for talented individuals who share our passion and values. Send us your resume and let us know how you'd like to contribute!",
+    "submitGeneral": "Submit General Application",
+    "readyImpact": "Ready to Make an Impact?",
+    "readyImpactDesc": "Join us in building innovative solutions and creating meaningful experiences",
+    "getInTouch": "Get in Touch",
+    "ourValues": "Our Values",
+    "benefits": {
+      "compensation": {
+        "title": "Competitive Compensation",
+        "description": "Fair and competitive salary packages with performance incentives"
+      },
+      "collaborative": {
+        "title": "Collaborative Environment",
+        "description": "Work with a diverse, talented team in a supportive atmosphere"
+      },
+      "growth": {
+        "title": "Growth Opportunities",
+        "description": "Professional development and career advancement pathways"
+      },
+      "flexible": {
+        "title": "Flexible Work",
+        "description": "Remote and hybrid work options to fit your lifestyle"
+      }
+    },
+    "values": {
+      "innovation": "Innovation & Creativity",
+      "collaboration": "Collaboration & Teamwork",
+      "learning": "Continuous Learning",
+      "balance": "Work-Life Balance",
+      "diversity": "Diversity & Inclusion"
+    },
+    "coreValues": {
+      "excellence": {
+        "title": "Excellence",
+        "desc": "Striving for the highest standards in everything we do"
+      },
+      "integrity": {
+        "title": "Integrity",
+        "desc": "Doing the right thing, always"
+      },
+      "impact": {
+        "title": "Impact",
+        "desc": "Making a positive difference in people's lives"
+      }
+    },
+    "positions": {
+      "developer": {
+        "title": "Software Developer",
+        "department": "SaaS Solutions",
+        "description": "Build innovative mobile and web applications in health, fitness, and lifestyle domains.",
+        "requirements": [
+          "Experience with React Native, Next.js, or similar frameworks",
+          "Strong problem-solving skills",
+          "Passion for creating user-friendly applications",
+          "Knowledge of modern development practices"
+        ]
+      },
+      "consultant": {
+        "title": "Tennis Education Consultant",
+        "department": "Tennis & Education",
+        "description": "Guide student-athletes through the NCAA recruitment process and academic planning.",
+        "requirements": [
+          "Deep understanding of NCAA regulations",
+          "Experience in college athletics or education",
+          "Excellent communication and mentoring skills",
+          "Passion for helping student-athletes succeed"
+        ]
+      },
+      "writer": {
+        "title": "Social Media Content Writer",
+        "department": "Content & Social Media",
+        "description": "Plan and write engaging content scripts for short-form and long-form social media videos.",
+        "requirements": [
+          "Strong writing and storytelling skills for video content",
+          "Understanding of social media trends and audience engagement",
+          "Ability to translate business goals into creative content ideas",
+          "Comfort collaborating with video editors and on-camera talent"
+        ]
+      },
+      "editor": {
+        "title": "Video Editor",
+        "department": "Content & Social Media",
+        "description": "Edit and refine video content for TikTok, Instagram Reels, YouTube, and other platforms.",
+        "requirements": [
+          "Experience with video editing tools (e.g., CapCut, Premiere Pro, Final Cut, or similar)",
+          "Sense of pacing, music, and visual storytelling for social platforms",
+          "Ability to optimize content for different formats and aspect ratios",
+          "Attention to detail and ability to work with feedback quickly"
+        ]
+      },
+      "manager": {
+        "title": "Social Media Business Manager",
+        "department": "Content & Social Media",
+        "description": "Build partnerships with brands, events, and organizations for collaborations and sponsorships.",
+        "requirements": [
+          "Experience in business development, partnerships, or influencer marketing",
+          "Strong networking and relationship-building skills",
+          "Comfort reaching out to businesses, events, and agencies",
+          "Ability to negotiate win-win collaboration agreements"
+        ]
+      },
+      "operations": {
+        "title": "Social Media Operations",
+        "department": "Content & Social Media",
+        "description": "Operate and manage our social media accounts day-to-day across multiple platforms.",
+        "requirements": [
+          "Hands-on experience managing social media accounts",
+          "Ability to schedule posts, respond to comments, and monitor community feedback",
+          "Familiarity with analytics and performance tracking tools",
+          "Highly organized with strong attention to detail"
+        ]
+      }
+    },
+    "applyNow": "Apply Now",
+    "applicationSubject": "Application:"
+  },
+  "support": {
+    "title": "Support & Privacy",
+    "subtitle": "Your privacy and security are our top priorities",
+    "privacyPolicy": "Privacy Policy",
+    "lastUpdated": "Last updated:",
+    "termsOfService": "Terms of Service",
+    "needHelp": "Need Help?",
+    "needHelpDesc": "We're here to assist you with any questions or concerns",
+    "emailSupport": "Email Support",
+    "emailSupportDesc": "For general inquiries, privacy concerns, or technical support:",
+    "reportIssue": "Report an Issue",
+    "reportIssueDesc": "Found a bug or have a security concern? Let us know:",
+    "kevobinPrivacy": "Kevobin Privacy Policy",
+    "backToSaaS": "Back to SaaS Solutions",
+    "common": {
+      "contact": "Contact Us",
+      "location": "Maryland, United States",
+      "privacyEmail": "Privacy Email:",
+      "company": "Advanced Universal Ventures, LLC"
+    }
+  },
+  "common": {
+    "back": "Back",
+    "next": "Next",
+    "learnMore": "Learn more",
+    "contact": "Contact",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address"
   }
 }
-
