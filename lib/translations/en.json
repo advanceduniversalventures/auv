@@ -410,7 +410,8 @@
       }
     },
     "applyNow": "Apply Now",
-    "applicationSubject": "Application:"
+    "applicationSubject": "Application:",
+    "keyRequirements": "Key Requirements:"
   },
   "support": {
     "title": "Support & Privacy",

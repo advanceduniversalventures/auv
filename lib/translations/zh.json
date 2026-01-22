@@ -410,7 +410,8 @@
       }
     },
     "applyNow": "立即申请",
-    "applicationSubject": "申请："
+    "applicationSubject": "申请：",
+    "keyRequirements": "主要要求："
   },
   "support": {
     "title": "支持与隐私",

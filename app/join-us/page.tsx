@@ -161,7 +161,7 @@ export default function JoinUs() {
                       <p className="text-lg text-gray-700 mb-6">{positionData.description}</p>
                       
                       <div className="mb-6">
-                        <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Requirements:</h4>
+                        <h4 className="text-lg font-semibold text-gray-900 mb-3">{t('joinUs.keyRequirements')}</h4>
                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                           {Array.isArray(positionData.requirements) && positionData.requirements.map((req: string, idx: number) => (
                             <li key={idx} className="flex items-start text-gray-700">
