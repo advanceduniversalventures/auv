@@ -101,7 +101,7 @@ export default function SaaS() {
                               <span className="text-blue-600 mr-2">✓</span>
                               {feature}
                             </li>
-                          )))}
+                          ))}
                         </ul>
                       </div>
 
