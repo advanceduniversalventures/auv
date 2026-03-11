@@ -36,6 +36,7 @@
     "company": "翰网科创有限责任公司",
     "description": "网球教练、NCAA咨询、内容创作和软件开发。",
     "quickLinks": "快速链接",
+    "bookLesson": "预约课程",
     "legal": "法律",
     "privacy": "隐私政策",
     "terms": "服务条款",
@@ -44,6 +45,11 @@
     "email": "电子邮件",
     "location": "美国马里兰州",
     "copyright": "© 2024 翰网科创有限责任公司。保留所有权利。"
+  },
+  "cta": {
+    "readyToBook": "准备预约网球课程？",
+    "viewSlots": "查看可用时间段，预约您的私教、双人或团体课程。",
+    "viewTimes": "查看可用时间"
   },
   "saas": {
     "title": "软件产品",

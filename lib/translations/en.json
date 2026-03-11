@@ -36,6 +36,7 @@
     "company": "Advanced Universal Ventures, LLC",
     "description": "Tennis coaching, NCAA consulting, content creation, and software development.",
     "quickLinks": "Quick Links",
+    "bookLesson": "Book a Lesson",
     "legal": "Legal",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
@@ -44,6 +45,11 @@
     "email": "Email",
     "location": "Maryland, United States",
     "copyright": "© 2024 Advanced Universal Ventures, LLC. All rights reserved."
+  },
+  "cta": {
+    "readyToBook": "Ready to book a tennis lesson?",
+    "viewSlots": "View available time slots and book your private, duo, or group session.",
+    "viewTimes": "View Available Times"
   },
   "saas": {
     "title": "Software Products",

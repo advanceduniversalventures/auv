@@ -171,17 +171,17 @@ export default function Home() {
       <section className="py-16 bg-green-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to book a tennis lesson?
+            {t('cta.readyToBook')}
           </h2>
           <p className="text-green-100 mb-6 max-w-xl mx-auto">
-            View available time slots and book your private, duo, or group session.
+            {t('cta.viewSlots')}
           </p>
           <Link
             href="/tennis-education/book"
             className="inline-flex items-center gap-2 bg-white text-green-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg"
           >
             <Calendar size={24} />
-            View Available Times
+            {t('cta.viewTimes')}
           </Link>
         </div>
       </section>

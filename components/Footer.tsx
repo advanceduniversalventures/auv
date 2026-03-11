@@ -40,7 +40,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/tennis-education/book" className="hover:text-white transition-colors">
-                  Book a Lesson
+                  {t('footer.bookLesson')}
                 </Link>
               </li>
               <li>
