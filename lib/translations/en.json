@@ -511,7 +511,7 @@
     "groupNoticeText2": "If the minimum is not met, you will be notified and can reschedule or receive a full refund.",
     "loading": "Loading available times...",
     "bookingNotice": "Bookings must be made at least 48 hours in advance",
-    "cancellationPolicy": "Group and duo lessons that don't meet the minimum participants will be automatically cancelled 24 hours before the scheduled time. You will be notified by email and can reschedule or receive a full refund.",
+    "cancellationPolicy": "Group and duo lessons that don't meet the minimum participants will be automatically cancelled 24 hours before the scheduled time.",
     "errors": {
       "nameRequired": "Please enter your name",
       "emailRequired": "Please enter your email",

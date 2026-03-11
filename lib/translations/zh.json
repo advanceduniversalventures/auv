@@ -511,7 +511,7 @@
     "groupNoticeText2": "如果未达到最低人数，我们会通知您，您可以改期或获得全额退款。",
     "loading": "正在加载可用时间...",
     "bookingNotice": "预约须提前48小时",
-    "cancellationPolicy": "团体课和双人课如未达到最低人数，将在开课前24小时自动取消。届时您将收到邮件通知，可以改期或获得全额退款。",
+    "cancellationPolicy": "团体课和双人课如未达到最低人数，将在开课前24小时自动取消。",
     "errors": {
       "nameRequired": "请输入您的姓名",
       "emailRequired": "请输入您的邮箱",
