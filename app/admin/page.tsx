@@ -8,7 +8,7 @@ import {
 } from 'lucide-react'
 import { supabase, TimeSlot as DBTimeSlot, Booking } from '@/lib/supabase'
 
-const ADMIN_PASSWORD = 'REDACTED'
+const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || ''
 
 interface BookingWithSlot extends Booking {
   time_slots?: DBTimeSlot
