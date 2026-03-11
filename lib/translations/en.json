@@ -508,7 +508,7 @@
     "participants": "participants",
     "groupNotice": "Note:",
     "groupNoticeText": "This is a group lesson that requires a minimum of",
-    "groupNoticeText2": "If the minimum is not met, you will be notified and can reschedule or receive a full refund.",
+    "groupNoticeText2": "If the minimum is not met, the lesson will be automatically cancelled.",
     "loading": "Loading available times...",
     "bookingNotice": "Bookings must be made at least 48 hours in advance",
     "cancellationPolicy": "Group and duo lessons that don't meet the minimum participants will be automatically cancelled 24 hours before the scheduled time.",
