@@ -39,6 +39,11 @@ export interface BookingData {
 
 type BookingStep = 'select' | 'details' | 'confirm' | 'success'
 
+function parseLocalDate(dateStr: string): Date {
+  const [year, month, day] = dateStr.split('-').map(Number)
+  return new Date(year, month - 1, day)
+}
+
 export default function BookingCalendar({ timeSlots, onBookingComplete }: BookingCalendarProps) {
   const { t } = useI18n()
   const [currentDate, setCurrentDate] = useState(new Date())
@@ -158,7 +163,7 @@ export default function BookingCalendar({ timeSlots, onBookingComplete }: Bookin
         slot: selectedSlot
       }
 
-      const formattedDate = new Date(selectedSlot.date).toLocaleDateString('en-US', { 
+      const formattedDate = parseLocalDate(selectedSlot.date).toLocaleDateString('en-US', { 
         weekday: 'long', 
         year: 'numeric', 
         month: 'long', 
@@ -285,7 +290,7 @@ export default function BookingCalendar({ timeSlots, onBookingComplete }: Bookin
       return slotDateTime >= minBookingTime && 
              slot.currentParticipants < slot.maxParticipants
     }).sort((a, b) => {
-      const dateCompare = new Date(a.date).getTime() - new Date(b.date).getTime()
+      const dateCompare = parseLocalDate(a.date).getTime() - parseLocalDate(b.date).getTime()
       if (dateCompare !== 0) return dateCompare
       return a.startTime.localeCompare(b.startTime)
     })
@@ -402,7 +407,7 @@ export default function BookingCalendar({ timeSlots, onBookingComplete }: Bookin
                         </div>
                         <div className="flex items-center gap-2 text-gray-900 font-medium">
                           <Calendar size={18} className={style.icon} />
-                          <span>{new Date(slot.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                          <span>{parseLocalDate(slot.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>
                         </div>
                         <div className="flex items-center gap-2 text-gray-700">
                           <Clock size={18} className={style.icon} />
@@ -475,7 +480,7 @@ export default function BookingCalendar({ timeSlots, onBookingComplete }: Bookin
                 selectedSlot.lessonType === 'individual' ? 'text-blue-600' : 
                 selectedSlot.lessonType === 'duo' ? 'text-purple-600' : 'text-green-600'
               } />
-              <span>{new Date(selectedSlot.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>
+              <span>{parseLocalDate(selectedSlot.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock size={16} className="text-green-600" />
@@ -628,7 +633,7 @@ export default function BookingCalendar({ timeSlots, onBookingComplete }: Bookin
             <div className="space-y-2 text-gray-700">
               <div className="flex items-center gap-2">
                 <Calendar size={18} className="text-green-600" />
-                <span>{new Date(selectedSlot.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                <span>{parseLocalDate(selectedSlot.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={18} className="text-green-600" />
@@ -719,7 +724,7 @@ export default function BookingCalendar({ timeSlots, onBookingComplete }: Bookin
           <div className="space-y-2 text-gray-700">
             <div className="flex items-center gap-2">
               <Calendar size={18} className="text-green-600" />
-              <span>{new Date(selectedSlot.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>
+              <span>{parseLocalDate(selectedSlot.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock size={18} className="text-green-600" />
