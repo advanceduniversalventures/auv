@@ -1,37 +1,40 @@
 {
   "nav": {
     "home": "首页",
-    "saas": "软件产品",
-    "tennis": "网球教育",
+    "tennis": "网球",
     "content": "内容",
+    "saas": "软件",
     "join": "加入我们",
     "support": "支持"
   },
   "home": {
     "title": "翰网科创",
-    "subtitle": "通过尖端的SaaS解决方案、精英网球教育和引人入胜的数字内容创作推动创新。",
-    "exploreServices": "探索我们的服务",
+    "subtitle": "翰网科创是一家总部位于马里兰州的有限责任公司，提供专业网球教练、NCAA招募咨询和以人体表现为核心的内容创作服务。",
+    "subtitleCta": "预约私教网球课程，获取学生运动员NCAA指导，或关注Mason关于人体表现和运动科技的内容。",
+    "exploreServices": "预约网球课程",
     "joinTeam": "加入我们的团队",
-    "whatWeDo": "我们的业务",
-    "whatWeDoDesc": "我们提供涵盖技术、教育和媒体的综合解决方案",
-    "saasTitle": "SaaS解决方案",
-    "saasDesc": "专注于健康、健身和生活方式提升的定制移动和网络应用程序。",
-    "tennisTitle": "网球与教育",
-    "tennisDesc": "为追求NCAA网球机会的学生运动员提供专业咨询服务。",
-    "contentTitle": "内容创作",
-    "contentDesc": "由刘翰雨（Mason）创作的引人入胜的社交媒体内容，与世界各地的观众建立联系。",
-    "joinTitle": "加入我们的团队",
-    "joinDesc": "成为塑造技术和教育未来的创新团队的一员。",
+    "whatWeDo": "我们的服务",
+    "whatWeDoDesc": "三个基于真实专业经验的核心服务",
+    "tennisTitle": "网球教练与NCAA咨询",
+    "tennisDesc": "私教课程、团体训练，以及为学生运动员提供NCAA招募过程的专业指导。",
+    "contentTitle": "刘翰雨(Mason)的内容",
+    "contentDesc": "关于人体表现、运动科技和个人成长的多平台内容——由运动员、教练和研究者创作。",
+    "softwareTitle": "软件产品",
+    "softwareDesc": "专注于健康和保健的移动应用程序，首发产品Kevobin——专为老年人设计的简单日常伴侣。",
+    "joinTitle": "与我们合作",
+    "joinDesc": "加入一个跨越教练、内容和软件开发的小型团队。",
     "learnMore": "了解更多",
     "aboutTitle": "关于翰网科创",
-    "aboutDesc1": "翰网科创有限责任公司总部位于美国马里兰州，是一家致力于在多个领域追求卓越的前瞻性公司。我们将技术创新与教育专业知识和创意内容相结合，为客户和合作伙伴提供卓越的价值。",
-    "aboutDesc2": "我们的使命是通过尖端的软件解决方案、个性化教育咨询和激发灵感和联系的引人入胜的数字内容，为个人和组织赋能。",
-    "partnerWithUs": "与我们合作",
-    "innovation": "创新 • 卓越 • 影响"
+    "aboutDesc1": "翰网科创有限责任公司由刘翰雨（Mason）在马里兰州创立。公司在三个领域运营：网球教练和NCAA咨询、以表现和科技为核心的内容创作，以及健康应用软件开发。",
+    "aboutDesc2": "每项服务都基于直接经验——Mason亲自执教网球、创作内容、构建产品。这不是创业宣传，而是一家运营中的企业。",
+    "partnerWithUs": "联系我们",
+    "tagline": "教练 • 内容 • 软件",
+    "location": "美国马里兰州",
+    "founded": "成立于2024年"
   },
   "footer": {
     "company": "翰网科创有限责任公司",
-    "description": "通过技术、教育和内容创作推动创新。",
+    "description": "网球教练、NCAA咨询、内容创作和软件开发。",
     "quickLinks": "快速链接",
     "legal": "法律",
     "privacy": "隐私政策",
@@ -43,492 +46,458 @@
     "copyright": "© 2024 翰网科创有限责任公司。保留所有权利。"
   },
   "saas": {
-    "title": "SaaS解决方案",
-    "subtitle": "旨在提升健康、健身和生活方式的创新移动和网络应用程序",
-    "ourProducts": "我们的软件产品",
-    "productsDesc": "每个应用程序都经过精心设计，以满足健康、健身和生活方式管理方面的特定需求",
+    "title": "软件产品",
+    "subtitle": "专注于健康和保健的移动应用程序",
+    "ourProducts": "我们的应用程序",
+    "productsDesc": "我们构建解决实际问题的软件。Kevobin目前正在开发中。",
     "keyFeatures": "主要功能：",
     "availableOn": "可用平台：",
     "privacyPolicy": "隐私政策",
-    "ourTechnology": "我们的技术",
-    "technologyDesc": "采用现代、可扩展的技术构建，以实现最佳性能",
-    "interested": "对我们的软件解决方案感兴趣？",
-    "interestedDesc": "让我们讨论我们的应用程序如何帮助您实现健康、健身或生活方式目标",
+    "ourTechnology": "技术栈",
+    "technologyDesc": "现代、可靠的移动和网络应用技术",
+    "interested": "对我们的软件有疑问？",
+    "interestedDesc": "联系我们了解更多关于我们应用程序的信息或讨论定制开发",
     "contactUs": "联系我们",
+    "released": "已发布",
+    "inDevelopment": "开发中",
     "products": {
       "kevobin": {
         "title": "Kevobin",
         "category": "健康与保健",
-        "description": "通过Kevobin保持联系和健康，这是专为老年人设计的简单日常伴侣。具有大而易读的界面，包括每日签到、药物提醒、水分追踪、安全功能、活动监控和正念内容。完全私密且可离线运行。",
+        "status": "开发中",
+        "description": "专为老年人设计的简单日常伴侣。大而易读的界面，包括每日签到、药物提醒、水分追踪和安全功能。完全私密——所有数据都保存在设备上。",
         "features": [
           "一键\"我很好\"按钮的每日签到",
-          "带虚拟药盒的药物提醒",
-          "带可视化水追踪器的水分追踪",
-          "一键家庭通话以确保安全",
-          "自动步数和活动追踪",
-          "每日健康提示和正念内容",
-          "100%私密 - 所有数据本地存储",
+          "带可视化药盒的药物提醒",
+          "水分追踪",
+          "一键家庭通话",
+          "步数和活动追踪",
+          "100%私密——所有数据本地存储",
           "完全离线工作"
-        ]
-      },
-      "healthtrack": {
-        "title": "HealthTrack Pro",
-        "category": "健康与保健",
-        "description": "全面的健康监测应用程序，帮助用户追踪生命体征、药物和健康指标。功能包括AI驱动的健康洞察、预约提醒以及与医疗保健提供商的集成。",
-        "features": [
-          "实时健康指标追踪",
-          "药物提醒系统",
-          "医疗保健提供商集成",
-          "AI驱动的健康洞察",
-          "安全数据加密"
-        ]
-      },
-      "fitlife": {
-        "title": "FitLife Coach",
-        "category": "健身与训练",
-        "description": "个性化健身指导平台，提供锻炼计划、营养追踪和进度分析。包括社区支持和激励的社交功能。",
-        "features": [
-          "定制锻炼计划",
-          "营养追踪和膳食计划",
-          "进度分析和可视化",
-          "社交社区功能",
-          "可穿戴设备集成"
-        ]
-      },
-      "lifestyle": {
-        "title": "Lifestyle Balance",
-        "category": "生活方式管理",
-        "description": "一体化生活方式管理工具，帮助用户平衡工作、个人生活和健康。功能包括习惯追踪、目标设定和正念练习。",
-        "features": [
-          "习惯追踪和形成",
-          "目标设定和达成",
-          "正念和冥想指南",
-          "时间管理工具",
-          "工作与生活平衡分析"
-        ]
-      },
-      "wellness": {
-        "title": "Wellness Planner",
-        "category": "健康与生活方式",
-        "description": "智能健康规划应用程序，根据用户偏好和目标为锻炼、膳食、睡眠和自我护理活动创建个性化时间表。",
-        "features": [
-          "AI驱动的时间表优化",
-          "多类别规划（健身、营养、睡眠）",
-          "智能通知和提醒",
-          "进度追踪和报告",
-          "与日历应用集成"
         ]
       }
     }
   },
   "tennis": {
-    "title": "网球与教育咨询",
-    "subtitle": "为追求NCAA网球机会的学生运动员提供专业指导",
-    "yourPath": "您的NCAA网球之路",
-    "pathDesc1": "NCAA招募过程可能复杂且令人不知所措。我们的咨询服务为学生运动员及其家人提供专业指导，以成功导航大学网球之路。",
-    "pathDesc2": "我们了解平衡学术卓越与运动表现的独特挑战，我们在这里帮助您实现这两个目标，同时找到合适的大学。",
-    "scheduleConsultation": "安排咨询",
+    "title": "网球教练与NCAA咨询",
+    "subtitle": "私教课程、团体训练，以及为追求大学网球的学生运动员提供专业指导",
+    "yourPath": "专业教练与NCAA专业知识",
+    "pathDesc1": "无论您是想提高球技还是导航复杂的NCAA招募过程，我们都提供基于真实经验的实践教练和咨询服务。",
+    "pathDesc2": "我们的服务范围从私教和团体网球课程到全面的NCAA资格评估和针对学生运动员及其家庭的招募策略。",
+    "scheduleConsultation": "发邮件咨询",
     "becomeConsultant": "成为顾问",
-    "ncaaExpertise": "NCAA专业知识",
-    "ncaaExpertiseDesc": "深入了解法规",
-    "personalizedApproach": "个性化方法",
-    "personalizedApproachDesc": "为每位学生运动员量身定制",
-    "provenResults": "经过验证的结果",
-    "provenResultsDesc": "成功的安置和成果",
-    "ourServices": "我们的咨询服务",
-    "servicesDesc": "在您的NCAA旅程中提供全面支持",
-    "whyChooseUs": "为什么选择我们",
-    "whyChooseUsDesc": "我们的咨询服务与众不同之处",
-    "ourProcess": "我们的流程",
-    "processDesc": "结构化的成功方法",
-    "ready": "准备开始您的NCAA之旅？",
-    "readyDesc": "让我们共同努力，实现您的大学网球梦想",
-    "getStarted": "立即开始",
+    "ncaaExpertise": "NCAA知识",
+    "ncaaExpertiseDesc": "了解资格规则和招募时间表",
+    "personalizedApproach": "个性化关注",
+    "personalizedApproachDesc": "为每位运动员量身定制的教练和咨询",
+    "provenResults": "实践经验",
+    "provenResultsDesc": "基于真实教练和招募工作的指导",
+    "ourServices": "我们的服务",
+    "servicesDesc": "适用于各水平球员的教练和咨询服务",
+    "whyChooseUs": "我们的方法",
+    "whyChooseUsDesc": "与我们合作您可以期待什么",
+    "ourProcess": "流程说明",
+    "processDesc": "从首次联系到获得结果的简单路径",
+    "ready": "准备开始了吗？",
+    "readyDesc": "预约课程或联系我们讨论NCAA咨询",
+    "getStarted": "发送邮件",
     "bookLesson": "预约课程",
     "bookLessonTitle": "预约网球课程",
-    "bookLessonDesc": "查看可用时间段，立即预约专业网球课程",
+    "bookLessonDesc": "查看可用时间段并预约课程。提供私教、双人和团体课程选项。",
     "viewAvailability": "查看可用时间",
+    "coachTitle": "您的教练",
+    "coachName": "刘翰雨(Mason)",
+    "coachBio": "网球教练和翰网科创创始人。拥有从初学者到竞技青少年的各水平球员教练经验，熟悉学生运动员NCAA招募流程。",
+    "lessonTypes": "课程选项",
+    "privateLessons": "私教课程",
+    "privateDesc": "专注于您特定目标和技术的一对一指导",
+    "duoLessons": "双人课程",
+    "duoDesc": "与伙伴一起训练——适合朋友或家人",
+    "groupLessons": "团体课程",
+    "groupDesc": "小组技能发展和对抗练习",
+    "ncaaServices": "NCAA咨询",
+    "ncaaDesc": "为学生运动员提供资格评估、招募策略和申请支持",
     "services": {
       "eligibility": {
         "title": "NCAA资格评估",
-        "description": "全面评估您的学术和运动档案，以确定NCAA资格状态并确定需要改进的领域。",
+        "description": "审查您的学术和运动档案以确定NCAA资格状态，并识别需要解决的任何差距。",
         "details": [
           "学术成绩单审查",
-          "核心课程要求分析",
+          "核心课程要求检查",
           "GPA和考试成绩评估",
-          "资格中心注册指导"
+          "资格中心指导"
         ]
       },
       "recruitment": {
         "title": "招募策略",
-        "description": "根据您的技能水平、学术成就和大学偏好量身定制的个性化招募计划。",
+        "description": "根据您的技能水平、学术成绩和大学偏好制定个性化招募计划。",
         "details": [
-          "大学选择指导",
+          "大学项目研究",
           "招募时间表规划",
-          "教练沟通策略",
-          "视频亮点包制作"
+          "教练联系策略",
+          "视频亮点指导"
         ]
       },
       "academic": {
         "title": "学术规划",
-        "description": "战略性学术规划，确保您满足所有NCAA要求，同时保持强劲表现。",
+        "description": "课程选择和学术规划，以满足NCAA要求同时保持优异成绩。",
         "details": [
           "课程选择指导",
-          "学习时间表优化",
           "考试准备策略",
-          "学术表现追踪"
+          "学术时间表规划",
+          "进度追踪"
         ]
       },
       "application": {
         "title": "申请支持",
-        "description": "在大学申请和招募过程中提供端到端支持。",
+        "description": "在大学申请和招募过程中提供全程支持。",
         "details": [
-          "申请论文协助",
+          "申请论文审查",
           "面试准备",
-          "奖学金机会识别",
+          "奖学金研究",
           "决策指导"
         ]
       }
     },
     "benefits": [
-      "NCAA法规和要求的专业知识",
-      "为每位学生运动员量身定制的个性化方法",
-      "成功安置的可靠记录",
-      "从评估到入学的全面支持",
-      "强大的大学教练和项目网络",
-      "专注于运动和学术卓越"
+      "多技能水平的直接教练经验",
+      "了解NCAA资格要求",
+      "为每位运动员提供个性化方法",
+      "全程清晰沟通",
+      "灵活的课程安排",
+      "同时支持运动和学术目标"
     ],
     "process": {
       "step1": {
-        "title": "初步评估",
-        "desc": "评估您当前的状况和目标"
+        "title": "联系我们",
+        "desc": "预约课程或发邮件讨论咨询"
       },
       "step2": {
-        "title": "战略规划",
-        "desc": "制定个性化路线图"
+        "title": "评估",
+        "desc": "我们评估您当前的情况和目标"
       },
       "step3": {
-        "title": "积极支持",
-        "desc": "持续指导和协助"
+        "title": "计划与执行",
+        "desc": "共同制定教练或招募策略"
       },
       "step4": {
-        "title": "成就",
-        "desc": "实现您的NCAA目标"
+        "title": "结果",
+        "desc": "提高球技或推进NCAA目标"
       }
     }
   },
   "content": {
-    "title": "内容创作",
-    "subtitle": "刘翰雨（Mason）的社交媒体内容",
-    "subtitle2": "创建引人入胜、真实的内容，与世界各地的观众建立联系",
-    "aboutCreator": "关于刘翰雨（Mason）",
-    "aboutDesc1": "作为一位充满热情的内容创作者，刘翰雨（Mason）为社交媒体带来了独特的视角，将个人经历与生活方式、健身、教育和娱乐方面的宝贵见解相结合。",
-    "aboutDesc2": "致力于真实性和质量，内容专注于与观众建立真正的联系，同时分享知识、灵感和引起观众共鸣的引人入胜的故事。",
-    "aboutDesc3": "通过在多个平台上持续提供高质量内容，目标是激励、教育和娱乐，同时建立一个积极参与的粉丝社区。",
-    "followInstagram": "在Instagram上关注",
-    "subscribeYouTube": "在YouTube上订阅",
-    "followTikTok": "在TikTok上关注",
-    "followXiaohongshu": "在小红书上关注",
-    "followBilibili": "在Bilibili上关注",
-    "creator": "内容创作者",
-    "creatorTagline": "创建有意义的内容，一次一个帖子",
-    "platforms": "平台",
-    "platformsDesc": "在多个社交媒体平台上吸引观众",
-    "contentFocus": "内容重点领域",
-    "contentFocusDesc": "多样化的内容，吸引和激励",
-    "contentImpact": "内容影响",
-    "contentImpactDesc": "通过真实参与建立社区",
-    "followJourney": "跟随旅程",
-    "followJourneyDesc": "加入社区，与最新内容和更新保持联系",
+    "title": "刘翰雨(Mason)",
+    "subtitle": "运动员 • 教练 • 研究者 • 创作者",
+    "subtitle2": "关于人体表现、运动、科技和个人成长的内容",
+    "aboutCreator": "关于Mason",
+    "aboutDesc1": "刘翰雨（Mason）是翰网科创的创始人——一位网球教练、研究者和内容创作者，专注于运动、科技和人体表现的交汇点。",
+    "aboutDesc2": "凭借各水平球员的教练经验以及指导学生运动员通过NCAA招募过程的咨询经验，Mason为内容创作带来了实践者的视角。他的作品探索运动训练、运动科学、提升表现的科技工具，以及从竞技体育中学到的适用于个人成长的经验教训。",
+    "aboutDesc3": "Mason在Instagram、YouTube、TikTok、小红书和Bilibili上使用中英文创作内容。",
+    "followInstagram": "Instagram",
+    "subscribeYouTube": "YouTube",
+    "followTikTok": "TikTok",
+    "followXiaohongshu": "小红书",
+    "followBilibili": "Bilibili",
+    "creator": "翰网科创创始人",
+    "creatorTagline": "教练、创作者、建设者",
+    "platforms": "关注平台",
+    "platformsDesc": "在多个平台上使用中英文创作内容",
+    "contentFocus": "内容重点",
+    "contentFocusDesc": "连接教练、研究和创作的三个主题",
+    "contentImpact": "建立联系",
+    "contentImpactDesc": "关注获取关于表现、运动和成长的新内容",
+    "followJourney": "关注Mason的作品",
+    "followJourneyDesc": "关于人体表现、运动科技和个人成长的新内容",
     "platformsData": {
       "instagram": {
         "name": "Instagram",
-        "description": "引人入胜的视觉内容，包括照片、卷轴和故事，通过生活方式、健身和个人见解与观众建立联系。"
+        "description": "关于训练、教练和日常工作的照片、视频和故事。"
       },
       "youtube": {
         "name": "YouTube",
-        "description": "长视频内容，包括视频博客、教程和生活方式内容，为订阅者提供价值和娱乐。"
+        "description": "关于网球、表现概念和幕后内容的长视频。"
       },
       "tiktok": {
         "name": "TikTok",
-        "description": "短格式创意视频，吸引注意力，展示个性，并参与热门话题和挑战。"
+        "description": "关于运动、科技和快速洞察的短视频内容。"
       },
       "xiaohongshu": {
-        "name": "小红书（Red Note）",
-        "description": "小红书 - 在中国流行的生活方式和时尚内容分享平台，包括产品评论、旅行指南和生活方式灵感。"
+        "name": "小红书",
+        "description": "关于生活方式、网球和个人发展的中文内容。"
       },
       "bilibili": {
-        "name": "Bilibili",
-        "description": "哔哩哔哩 - 中国领先的视频分享平台，面向年轻、积极参与的观众，包括动漫、游戏、生活方式视频博客和教育内容。"
+        "name": "哔哩哔哩",
+        "description": "关于运动、科技和教练的中文视频。"
       }
     },
     "contentTypes": {
-      "lifestyle": {
-        "title": "生活方式内容",
-        "description": "真实地一瞥日常生活、例行公事和个人经历，引起观众共鸣。"
+      "performance": {
+        "title": "人体表现",
+        "description": "从教练视角分享训练原则、恢复科学和运动员心态。"
       },
-      "fitness": {
-        "title": "健身与健康",
-        "description": "锻炼计划、营养提示和健康建议，以激励和教育社区。"
+      "technology": {
+        "title": "运动与科技",
+        "description": "改善运动表现和日常生产力的工具、可穿戴设备和软件。"
       },
-      "educational": {
-        "title": "教育内容",
-        "description": "跨各种感兴趣主题的宝贵见解、教程和知识分享。"
+      "growth": {
+        "title": "个人成长",
+        "description": "从竞技网球和创业中学到的关于自律、专注和持续进步的经验教训。"
       }
     },
     "stats": {
-      "followers": "总粉丝数",
-      "followersValue": "不断增长的社区",
-      "posts": "内容帖子",
-      "postsValue": "定期更新",
-      "engagement": "参与率",
-      "engagementValue": "高互动",
-      "platforms": "平台",
-      "platformsValue": "多平台"
+      "followers": "平台",
+      "followersValue": "5",
+      "posts": "语言",
+      "postsValue": "中 / EN",
+      "engagement": "专注",
+      "engagementValue": "表现",
+      "platforms": "所在地",
+      "platformsValue": "马里兰州"
     }
   },
   "joinUs": {
     "title": "加入我们的团队",
-    "subtitle": "成为塑造技术、教育和内容创作未来的创新团队的一员",
+    "subtitle": "与我们一起从事教练、内容和软件开发工作",
     "viewPositions": "查看开放职位",
     "whyJoin": "为什么加入翰网科创？",
-    "whyJoinDesc": "我们正在建设一些特别的东西，我们希望您成为其中的一部分",
-    "ourCulture": "我们的文化",
-    "cultureDesc1": "在翰网科创，我们相信营造一个创新蓬勃发展、多样性受到庆祝、每个团队成员都能产生有意义影响的环境。",
-    "cultureDesc2": "我们重视协作、持续学习和成长心态。鼓励团队成员带来独特的视角，主动采取行动，并为我们共同的卓越使命做出贡献。",
-    "cultureDesc3": "无论您对构建尖端软件、帮助学生实现梦想还是创建引人入胜的内容充满热情，您都会在这里找到成长和卓越的地方。",
+    "whyJoinDesc": "我们是一个跨多个领域工作的小团队——有学习和贡献的空间",
+    "ourCulture": "我们的工作方式",
+    "cultureDesc1": "翰网科创在网球教练、内容创作和软件开发领域运营。我们看重能够独立工作并对自己的工作负责的人。",
+    "cultureDesc2": "无论您对教练、视频制作、写作还是开发感兴趣，我们都在寻找可靠、善于沟通且真正对工作感兴趣的人。",
+    "cultureDesc3": "这是一个不断发展的业务。角色可能会演变，我们看重灵活性和学习意愿。",
     "openPositions": "开放职位",
-    "openPositionsDesc": "探索加入我们不断壮大的团队的机会",
-    "dontSeeMatch": "没有看到完美匹配？",
-    "dontSeeMatchDesc": "我们一直在寻找与我们分享热情和价值观的有才华的个人。向我们发送您的简历，让我们知道您想如何贡献！",
-    "submitGeneral": "提交一般申请",
-    "readyImpact": "准备产生影响？",
-    "readyImpactDesc": "加入我们，构建创新解决方案并创造有意义的体验",
+    "openPositionsDesc": "我们团队目前的机会",
+    "dontSeeMatch": "没有看到合适的职位？",
+    "dontSeeMatchDesc": "我们始终欢迎有才华的人才。向我们发送您的背景和您想从事的工作。",
+    "submitGeneral": "发送一般申请",
+    "readyImpact": "有兴趣一起合作吗？",
+    "readyImpactDesc": "联系我们了解更多关于当前机会的信息",
     "getInTouch": "取得联系",
-    "ourValues": "我们的价值观",
+    "ourValues": "我们看重什么",
     "benefits": {
       "compensation": {
-        "title": "有竞争力的薪酬",
-        "description": "公平且有竞争力的薪资待遇，带绩效激励"
+        "title": "公平薪酬",
+        "description": "根据角色和经验提供有竞争力的薪酬"
       },
       "collaborative": {
-        "title": "协作环境",
-        "description": "在支持性氛围中与多元化、有才华的团队合作"
+        "title": "小团队",
+        "description": "直接与领导层合作完成有意义的项目"
       },
       "growth": {
         "title": "成长机会",
-        "description": "专业发展和职业晋升途径"
+        "description": "随着我们的发展承担新责任的空间"
       },
       "flexible": {
         "title": "灵活工作",
-        "description": "远程和混合工作选项，适合您的生活方式"
+        "description": "提供远程和混合选项"
       }
     },
     "values": {
-      "innovation": "创新与创造力",
-      "collaboration": "协作与团队合作",
-      "learning": "持续学习",
-      "balance": "工作与生活平衡",
-      "diversity": "多样性与包容性"
+      "reliability": "可靠性",
+      "communication": "清晰沟通",
+      "learning": "学习意愿",
+      "ownership": "主人翁精神",
+      "quality": "高质量工作"
     },
     "coreValues": {
       "excellence": {
-        "title": "卓越",
-        "desc": "在我们所做的一切中追求最高标准"
+        "title": "质量",
+        "desc": "做好工作，注重细节"
       },
       "integrity": {
         "title": "诚信",
-        "desc": "始终做正确的事"
+        "desc": "诚实并坚持到底"
       },
       "impact": {
-        "title": "影响",
-        "desc": "在人们的生活中产生积极影响"
+        "title": "结果",
+        "desc": "专注于成果，而不是无用功"
       }
     },
     "positions": {
       "developer": {
         "title": "软件开发人员",
-        "department": "SaaS解决方案",
-        "description": "在健康、健身和生活方式领域构建创新的移动和网络应用程序。",
+        "department": "软件",
+        "description": "为健康和保健产品构建移动和网络应用程序。",
         "requirements": [
           "具有React Native、Next.js或类似框架的经验",
-          "强大的解决问题的能力",
-          "对创建用户友好应用程序的热情",
-          "了解现代开发实践"
+          "强大的解决问题能力",
+          "能够独立工作",
+          "对健康/保健应用程序感兴趣"
         ]
       },
       "consultant": {
-        "title": "网球教育顾问",
+        "title": "网球/NCAA顾问",
         "department": "网球与教育",
-        "description": "指导学生运动员完成NCAA招募过程和学术规划。",
+        "description": "帮助学生运动员导航NCAA招募过程。",
         "requirements": [
-          "深入了解NCAA法规",
+          "了解NCAA资格规则",
           "在大学体育或教育方面的经验",
-          "出色的沟通和指导技能",
-          "对帮助学生运动员成功的热情"
+          "强大的沟通能力",
+          "真正有兴趣帮助学生运动员"
         ]
       },
       "writer": {
-        "title": "社交媒体内容撰稿人",
-        "department": "内容与社交媒体",
-        "description": "为短格式和长格式社交媒体视频规划和撰写引人入胜的内容脚本。",
+        "title": "内容撰稿人",
+        "department": "内容",
+        "description": "为社交媒体内容撰写脚本和文案。",
         "requirements": [
-          "强大的视频内容写作和讲故事技能",
-          "了解社交媒体趋势和观众参与",
-          "将业务目标转化为创意内容想法的能力",
-          "与视频编辑和出镜人才合作的舒适度"
+          "强大的写作能力",
+          "了解社交媒体平台",
+          "能够将想法转化为吸引人的内容",
+          "能够接受反馈并进行迭代"
         ]
       },
       "editor": {
         "title": "视频编辑",
-        "department": "内容与社交媒体",
-        "description": "为TikTok、Instagram Reels、YouTube和其他平台编辑和完善视频内容。",
+        "department": "内容",
+        "description": "为TikTok、Instagram、YouTube和其他平台编辑视频内容。",
         "requirements": [
-          "具有视频编辑工具的经验（例如CapCut、Premiere Pro、Final Cut或类似工具）",
-          "对社交平台的节奏、音乐和视觉叙事的感知",
-          "优化不同格式和宽高比内容的能力",
-          "注重细节和快速处理反馈的能力"
+          "具有视频编辑工具的经验",
+          "了解节奏和叙事",
+          "能够针对不同平台进行优化",
+          "快速处理反馈"
         ]
       },
       "manager": {
-        "title": "社交媒体业务经理",
-        "department": "内容与社交媒体",
-        "description": "与品牌、活动和组织建立合作伙伴关系，进行合作和赞助。",
+        "title": "商务拓展",
+        "department": "内容",
+        "description": "与品牌和组织建立合作伙伴关系。",
         "requirements": [
-          "在业务发展、合作伙伴关系或影响者营销方面的经验",
-          "强大的网络和关系建设技能",
-          "与商业、活动和机构联系的舒适度",
-          "谈判双赢合作协议的能力"
+          "在合作伙伴关系或销售方面的经验",
+          "强大的人脉能力",
+          "能够主动联系",
+          "能够谈判协议"
         ]
       },
       "operations": {
-        "title": "社交媒体运营",
-        "department": "内容与社交媒体",
-        "description": "跨多个平台日常运营和管理我们的社交媒体账户。",
+        "title": "社交媒体经理",
+        "department": "内容",
+        "description": "管理社交媒体账户的日常运营。",
         "requirements": [
-          "管理社交媒体账户的实践经验",
-          "安排帖子、回复评论和监控社区反馈的能力",
-          "熟悉分析和性能追踪工具",
-          "高度组织化，注重细节"
+          "管理社交媒体的经验",
+          "能够安排和监控帖子",
+          "熟悉分析工具",
+          "有组织性且注重细节"
         ]
       }
     },
-    "applyNow": "立即申请",
+    "applyNow": "申请",
     "applicationSubject": "申请：",
-    "keyRequirements": "主要要求："
+    "keyRequirements": "要求："
   },
   "support": {
     "title": "支持与隐私",
-    "subtitle": "您的隐私和安全是我们的首要任务",
+    "subtitle": "隐私信息和联系方式",
     "privacyPolicy": "隐私政策",
     "lastUpdated": "最后更新：",
     "termsOfService": "服务条款",
     "needHelp": "需要帮助？",
-    "needHelpDesc": "我们在这里协助您解决任何问题或疑虑",
+    "needHelpDesc": "如有问题或疑虑请联系我们",
     "emailSupport": "电子邮件支持",
-    "emailSupportDesc": "对于一般咨询、隐私问题或技术支持：",
+    "emailSupportDesc": "一般咨询或支持：",
     "reportIssue": "报告问题",
-    "reportIssueDesc": "发现错误或有安全担忧？请告诉我们：",
+    "reportIssueDesc": "发现错误或有疑虑？",
     "kevobinPrivacy": "Kevobin隐私政策",
-    "backToSaaS": "返回软件产品",
+    "backToSaaS": "返回软件",
     "common": {
       "contact": "联系我们",
       "location": "美国马里兰州",
-      "privacyEmail": "隐私电子邮件：",
+      "privacyEmail": "隐私邮箱：",
       "company": "翰网科创有限责任公司"
     },
     "privacy": {
       "intro": {
         "title": "1. 简介",
-        "content": "翰网科创有限责任公司（「我们」）致力于保护您的隐私。本隐私政策说明我们如何在三个主要服务领域收集、使用、披露和保护您的信息：网球教练服务、内容创作和软件产品。"
+        "content": "翰网科创有限责任公司（「我们」）致力于保护您的隐私。本隐私政策说明我们如何在各项服务中收集、使用、披露和保护您的信息：网球教练、内容创作和软件产品。"
       },
       "dataCollected": "我们收集的数据：",
       "howUsed": "我们如何使用这些数据：",
       "tennis": {
         "title": "2. 网球教练服务",
-        "intro": "当您预约网球课程或咨询服务时，我们会收集提供个性化教练体验所需的信息。",
+        "intro": "当您预约网球课程或咨询服务时，我们会收集提供服务所需的信息。",
         "data1": "个人身份信息（姓名、电子邮件、电话号码）",
         "data2": "课程预约详情（日期、时间、地点、参与人数）",
         "data3": "技能水平和训练偏好",
-        "data4": "付款和交易信息",
+        "data4": "付款信息",
         "use1": "安排和确认课程预约",
-        "use2": "沟通课程变更、取消或更新",
-        "use3": "根据您的技能水平和目标定制教练服务"
+        "use2": "沟通课程信息",
+        "use3": "根据您的目标定制教练服务"
       },
       "content": {
         "title": "3. 内容创作服务",
-        "intro": "我们的内容创作涉及多个平台的社交媒体。当您与我们的内容互动或与我们合作时，我们可能会收集某些信息。",
-        "data1": "社交媒体互动数据（点赞、评论、分享）",
+        "intro": "我们的内容创作涉及多个平台的社交媒体。当您与我们的内容互动时，我们可能会收集某些信息。",
+        "data1": "社交媒体互动数据",
         "data2": "合作咨询的联系信息",
-        "data3": "品牌合作和赞助沟通记录",
-        "use1": "回复粉丝的评论和消息",
-        "use2": "开发与观众产生共鸣的内容",
-        "use3": "管理品牌合作伙伴关系"
+        "data3": "沟通记录",
+        "use1": "回复消息",
+        "use2": "开发内容",
+        "use3": "管理合作"
       },
       "software": {
         "title": "4. 软件产品",
-        "intro": "我们的软件产品，包括健康、健身和生活方式应用程序，收集数据以提供个性化体验并改进我们的服务。",
-        "data1": "账户凭据和个人资料信息",
-        "data2": "健康和健身数据（使用健康相关应用程序时）",
-        "data3": "使用分析和应用程序交互数据",
-        "data4": "设备信息和技术诊断",
-        "use1": "提供、维护和改进我们的软件服务",
-        "use2": "根据偏好个性化您的体验",
-        "use3": "发送技术通知、更新和支持消息",
-        "use4": "监控和分析趋势以改进我们的产品"
+        "intro": "我们的软件产品收集数据以提供服务。注意：Kevobin将所有数据本地存储在您的设备上，不传输个人信息。",
+        "data1": "账户信息（如适用）",
+        "data2": "健康和健身数据（在健康应用程序中）",
+        "data3": "使用分析",
+        "data4": "设备信息",
+        "use1": "提供和改进我们的服务",
+        "use2": "个性化您的体验",
+        "use3": "发送更新和支持消息",
+        "use4": "分析使用情况以改进产品"
       },
       "security": {
         "title": "5. 数据安全",
-        "content": "我们实施适当的技术和组织安全措施，以保护您的个人信息免受未经授权的访问、更改、披露或破坏。这包括加密、安全服务器和定期安全审计。但是，没有任何通过互联网传输或电子存储的方法是100%安全的。"
+        "content": "我们实施适当的安全措施来保护您的个人信息。这包括适用时的加密和安全服务器。没有任何传输方法是100%安全的。"
       },
       "sharing": {
-        "title": "6. 数据共享和披露",
-        "intro": "我们不会将您的个人信息出售、交易或出租给第三方。我们仅在以下情况下共享您的信息：",
-        "item1": "经您明确同意",
+        "title": "6. 数据共享",
+        "intro": "我们不会出售您的个人信息。我们可能会在以下情况下共享信息：",
+        "item1": "经您同意",
         "item2": "遵守法律义务",
-        "item3": "保护我们的权利和安全",
-        "item4": "与协助运营我们服务的服务提供商（在严格的保密协议下）"
+        "item3": "保护我们的权利",
+        "item4": "与保密协议下的服务提供商"
       },
       "rights": {
         "title": "7. 您的权利",
         "intro": "您有权：",
-        "item1": "访问并获取您的个人数据副本",
-        "item2": "更正不准确或不完整的数据",
-        "item3": "请求删除您的个人数据",
-        "item4": "反对处理您的个人数据",
-        "item5": "请求限制处理或数据可携带性"
+        "item1": "访问您的个人数据",
+        "item2": "更正不准确的数据",
+        "item3": "请求删除您的数据",
+        "item4": "反对数据处理",
+        "item5": "请求数据可携带性"
       },
       "contact": {
-        "content": "如果您对本隐私政策有任何疑问或希望行使您的权利，请联系我们："
+        "content": "对本隐私政策有疑问？请联系我们："
       }
     },
     "terms": {
       "acceptance": {
         "title": "1. 接受条款",
-        "content": "通过访问和使用翰网科创有限责任公司提供的服务，您接受并同意受本协议条款和规定的约束。这些条款适用于我们的所有服务，包括网球教练、内容创作和软件产品。"
+        "content": "使用翰网科创有限责任公司提供的服务，即表示您同意这些条款。这些条款适用于网球教练、内容创作和软件产品。"
       },
       "services": {
         "title": "2. 我们的服务",
-        "content": "翰网科创有限责任公司提供以下服务：",
-        "item1": "网球教练和NCAA教育咨询服务",
-        "item2": "跨多个平台的社交媒体内容创作",
-        "item3": "用于健康、健身和生活方式管理的软件产品"
+        "content": "翰网科创有限责任公司提供：",
+        "item1": "网球教练和NCAA咨询",
+        "item2": "跨多个平台的内容创作",
+        "item3": "健康和保健软件产品"
       },
       "booking": {
-        "title": "3. 网球课程预约条款",
-        "content": "通过我们的平台预约网球课程时：",
+        "title": "3. 网球课程预约",
+        "content": "预约网球课程时：",
         "item1": "预约须提前至少48小时",
-        "item2": "团体课和双人课需要达到最低参与人数才能进行",
-        "item3": "未达到最低要求的课程可能会在预定时间前24小时自动取消",
+        "item2": "团体和双人课程需要最低参与人数",
+        "item3": "未达到最低人数的课程可能会提前24小时取消",
         "item4": "除非另有说明，否则在上课时收取费用"
       },
       "liability": {
         "title": "4. 责任限制",
-        "content": "材料和服务按「原样」提供。翰网科创有限责任公司不作任何明示或暗示的保证，对因使用或无法使用我们的服务而产生的任何损害不承担责任。"
+        "content": "服务按「原样」提供。翰网科创有限责任公司对因使用或无法使用我们服务而产生的损害不承担责任。"
       },
       "changes": {
         "title": "5. 条款变更",
-        "content": "翰网科创有限责任公司可随时修改这些服务条款，恕不另行通知。使用我们的服务即表示您同意受当时版本的服务条款约束。"
+        "content": "我们可能随时更新这些条款。继续使用我们的服务即表示接受更新后的条款。"
       }
     }
   },
@@ -543,8 +512,8 @@
   },
   "booking": {
     "title": "预约网球课程",
-    "subtitle": "选择可用的时间段，预约专业网球课程",
-    "backToTennis": "返回网球教育",
+    "subtitle": "选择可用的时间段并预约",
+    "backToTennis": "返回网球",
     "available": "可预约",
     "unavailable": "不可用",
     "availableSlots": "可用时间段",
@@ -573,27 +542,27 @@
     "lessonDetails": "课程详情",
     "yourDetails": "您的信息",
     "totalAmount": "总金额",
-    "confirmationNote": "确认预约后，您将收到一封包含所有详情的确认邮件。课程费用将在上课时收取。",
+    "confirmationNote": "确认后，您将收到确认邮件。课程费用在上课时收取。",
     "processing": "处理中...",
     "confirmAndBook": "确认并预约",
     "bookingConfirmed": "预约成功！",
     "confirmationSent": "确认邮件已发送到您的邮箱。",
     "bookingSummary": "预约摘要",
-    "questionsContact": "如有任何问题，请联系我们",
+    "questionsContact": "有问题？请联系我们",
     "bookAnother": "预约其他课程",
     "howItWorks": "预约流程",
     "step1Title": "选择时间段",
-    "step1Desc": "浏览可用时间段，选择适合您日程的时间",
+    "step1Desc": "浏览可用时间，选择适合您的时间",
     "step2Title": "填写信息",
     "step2Desc": "提供您的联系方式和参与人数",
     "step3Title": "收到确认",
-    "step3Desc": "立即收到包含所有预约详情的确认邮件",
+    "step3Desc": "收到包含所有预约详情的确认邮件",
     "individual": "私教 (1人)",
     "duo": "双人课 (2人)",
     "group": "团课 (4-8人)",
     "duoLesson": "双人半私教课程",
     "duoNotice": "提示：",
-    "duoNoticeText": "此课程需要2人。您可以同时预约两个名额，或等待另一人加入。",
+    "duoNoticeText": "此课程需要2人。您可以预约两个名额或另一人可以加入。",
     "confirmed": "已确认",
     "moreNeeded": "人后开课",
     "privateLesson": "一对一私教课程",

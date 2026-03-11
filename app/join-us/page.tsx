@@ -22,7 +22,7 @@ export default function JoinUs() {
     { icon: CheckCircle, key: 'flexible' }
   ]
 
-  const values = ['innovation', 'collaboration', 'learning', 'balance', 'diversity']
+  const values = ['reliability', 'communication', 'learning', 'ownership', 'quality']
   const coreValues = ['excellence', 'integrity', 'impact']
 
   return (

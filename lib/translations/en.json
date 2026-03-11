@@ -1,37 +1,40 @@
 {
   "nav": {
     "home": "Home",
-    "saas": "SaaS",
-    "tennis": "Tennis Education",
+    "tennis": "Tennis",
     "content": "Content",
+    "saas": "Software",
     "join": "Join Us",
     "support": "Support"
   },
   "home": {
     "title": "Advanced Universal Ventures",
-    "subtitle": "Driving innovation through cutting-edge SaaS solutions, elite tennis education, and compelling digital content creation.",
-    "exploreServices": "Explore Our Services",
+    "subtitle": "A Maryland-based LLC offering professional tennis coaching, NCAA recruitment consulting, and performance-focused content creation.",
+    "subtitleCta": "Book private tennis lessons, get NCAA guidance for student-athletes, or follow Mason's content on human performance and sports technology.",
+    "exploreServices": "Book Tennis Lesson",
     "joinTeam": "Join Our Team",
-    "whatWeDo": "What We Do",
-    "whatWeDoDesc": "We offer comprehensive solutions across technology, education, and media",
-    "saasTitle": "SaaS Solutions",
-    "saasDesc": "Custom mobile and web applications focused on health, fitness, and lifestyle enhancement.",
-    "tennisTitle": "Tennis & Education",
-    "tennisDesc": "Expert consulting services for student-athletes pursuing NCAA tennis opportunities.",
-    "contentTitle": "Content Creation",
-    "contentDesc": "Engaging social media content by Hanyu (Mason) Liu, connecting with audiences worldwide.",
-    "joinTitle": "Join Our Team",
-    "joinDesc": "Be part of an innovative team shaping the future of technology and education.",
+    "whatWeDo": "What We Offer",
+    "whatWeDoDesc": "Three focused services built on real expertise",
+    "tennisTitle": "Tennis Coaching & NCAA Consulting",
+    "tennisDesc": "Private lessons, group sessions, and expert guidance for student-athletes navigating the NCAA recruitment process.",
+    "contentTitle": "Content by Mason Liu",
+    "contentDesc": "Multi-platform content on human performance, sports technology, and personal growth—created by an athlete, coach, and researcher.",
+    "softwareTitle": "Software Products",
+    "softwareDesc": "Mobile applications focused on health and wellness, starting with Kevobin—a simple daily companion for seniors.",
+    "joinTitle": "Work With Us",
+    "joinDesc": "Join a small team working across coaching, content, and software development.",
     "learnMore": "Learn more",
     "aboutTitle": "About Advanced Universal Ventures",
-    "aboutDesc1": "Based in Maryland, USA, Advanced Universal Ventures, LLC is a forward-thinking company dedicated to excellence across multiple domains. We combine technological innovation with educational expertise and creative content to deliver exceptional value to our clients and partners.",
-    "aboutDesc2": "Our mission is to empower individuals and organizations through cutting-edge software solutions, personalized educational consulting, and engaging digital content that inspires and connects.",
-    "partnerWithUs": "Partner With Us",
-    "innovation": "Innovation • Excellence • Impact"
+    "aboutDesc1": "Advanced Universal Ventures, LLC was founded by Hanyu (Mason) Liu in Maryland. The company operates across three areas: tennis coaching and NCAA consulting, content creation focused on performance and technology, and software development for health applications.",
+    "aboutDesc2": "Each service is grounded in direct experience—Mason coaches tennis, creates content, and builds products. This isn't a startup pitch; it's an operating business.",
+    "partnerWithUs": "Get in Touch",
+    "tagline": "Coaching • Content • Software",
+    "location": "Maryland, USA",
+    "founded": "Est. 2024"
   },
   "footer": {
     "company": "Advanced Universal Ventures, LLC",
-    "description": "Driving innovation through technology, education, and content creation.",
+    "description": "Tennis coaching, NCAA consulting, content creation, and software development.",
     "quickLinks": "Quick Links",
     "legal": "Legal",
     "privacy": "Privacy Policy",
@@ -43,394 +46,360 @@
     "copyright": "© 2024 Advanced Universal Ventures, LLC. All rights reserved."
   },
   "saas": {
-    "title": "SaaS Solutions",
-    "subtitle": "Innovative mobile and web applications designed to enhance health, fitness, and lifestyle",
-    "ourProducts": "Our Software Products",
-    "productsDesc": "Each application is carefully crafted to address specific needs in health, fitness, and lifestyle management",
+    "title": "Software Products",
+    "subtitle": "Mobile applications focused on health and wellness",
+    "ourProducts": "Our Applications",
+    "productsDesc": "We build software that solves real problems. Kevobin is currently in development.",
     "keyFeatures": "Key Features:",
     "availableOn": "Available on:",
     "privacyPolicy": "Privacy Policy",
-    "ourTechnology": "Our Technology",
-    "technologyDesc": "Built with modern, scalable technologies for optimal performance",
-    "interested": "Interested in Our Software Solutions?",
-    "interestedDesc": "Let's discuss how our applications can help transform your health, fitness, or lifestyle goals",
+    "ourTechnology": "Built With",
+    "technologyDesc": "Modern, reliable technology for mobile and web applications",
+    "interested": "Questions About Our Software?",
+    "interestedDesc": "Reach out to learn more about our applications or discuss custom development",
     "contactUs": "Contact Us",
+    "released": "Released",
+    "inDevelopment": "In Development",
     "products": {
       "kevobin": {
         "title": "Kevobin",
         "category": "Health & Wellness",
-        "description": "Stay connected and healthy with Kevobin, the simple daily companion designed specifically for seniors. Features a large, easy-to-read interface with daily check-ins, medication reminders, hydration tracking, safety features, activity monitoring, and mindfulness content. Completely private and runs offline.",
+        "status": "In Development",
+        "description": "A simple daily companion designed for seniors. Large, easy-to-read interface with daily check-ins, medication reminders, hydration tracking, and safety features. Completely private—all data stays on device.",
         "features": [
           "Daily check-in with one-tap \"I'm OK\" button",
-          "Medication reminders with virtual pillbox",
-          "Hydration tracking with visual water tracker",
-          "One-tap family calling for safety",
-          "Automatic step and activity tracking",
-          "Daily health tips and mindfulness content",
-          "100% private - all data stored locally",
+          "Medication reminders with visual pillbox",
+          "Hydration tracking",
+          "One-tap family calling",
+          "Step and activity tracking",
+          "100% private—all data stored locally",
           "Works completely offline"
-        ]
-      },
-      "healthtrack": {
-        "title": "HealthTrack Pro",
-        "category": "Health & Wellness",
-        "description": "Comprehensive health monitoring application that helps users track vital signs, medications, and wellness metrics. Features include AI-powered health insights, appointment reminders, and integration with healthcare providers.",
-        "features": [
-          "Real-time health metrics tracking",
-          "Medication reminder system",
-          "Healthcare provider integration",
-          "AI-powered health insights",
-          "Secure data encryption"
-        ]
-      },
-      "fitlife": {
-        "title": "FitLife Coach",
-        "category": "Fitness & Training",
-        "description": "Personalized fitness coaching platform with workout plans, nutrition tracking, and progress analytics. Includes social features for community support and motivation.",
-        "features": [
-          "Custom workout plans",
-          "Nutrition tracking & meal planning",
-          "Progress analytics & visualization",
-          "Social community features",
-          "Wearable device integration"
-        ]
-      },
-      "lifestyle": {
-        "title": "Lifestyle Balance",
-        "category": "Lifestyle Management",
-        "description": "All-in-one lifestyle management tool that helps users balance work, personal life, and wellness. Features include habit tracking, goal setting, and mindfulness exercises.",
-        "features": [
-          "Habit tracking & formation",
-          "Goal setting & achievement",
-          "Mindfulness & meditation guides",
-          "Time management tools",
-          "Work-life balance analytics"
-        ]
-      },
-      "wellness": {
-        "title": "Wellness Planner",
-        "category": "Health & Lifestyle",
-        "description": "Intelligent wellness planning application that creates personalized schedules for exercise, meals, sleep, and self-care activities based on user preferences and goals.",
-        "features": [
-          "AI-powered schedule optimization",
-          "Multi-category planning (fitness, nutrition, sleep)",
-          "Smart notifications & reminders",
-          "Progress tracking & reports",
-          "Integration with calendar apps"
         ]
       }
     }
   },
   "tennis": {
-    "title": "Tennis & Education Consulting",
-    "subtitle": "Expert guidance for student-athletes pursuing NCAA tennis opportunities",
-    "yourPath": "Your Path to NCAA Tennis",
-    "pathDesc1": "Navigating the NCAA recruitment process can be complex and overwhelming. Our consulting services provide student-athletes and their families with expert guidance to successfully navigate the path to collegiate tennis.",
-    "pathDesc2": "We understand the unique challenges of balancing academic excellence with athletic performance, and we're here to help you achieve both goals while finding the right college fit.",
-    "scheduleConsultation": "Schedule Consultation",
+    "title": "Tennis Coaching & NCAA Consulting",
+    "subtitle": "Private lessons, group training, and expert guidance for student-athletes pursuing collegiate tennis",
+    "yourPath": "Professional Coaching & NCAA Expertise",
+    "pathDesc1": "Whether you're looking to improve your game or navigate the complex NCAA recruitment process, we provide hands-on coaching and consulting built on real experience.",
+    "pathDesc2": "Our services range from private and group tennis lessons to comprehensive NCAA eligibility assessment and recruitment strategy for student-athletes and their families.",
+    "scheduleConsultation": "Email for Consultation",
     "becomeConsultant": "Become a Consultant",
-    "ncaaExpertise": "NCAA Expertise",
-    "ncaaExpertiseDesc": "Deep understanding of regulations",
-    "personalizedApproach": "Personalized Approach",
-    "personalizedApproachDesc": "Tailored to each student-athlete",
-    "provenResults": "Proven Results",
-    "provenResultsDesc": "Successful placements and outcomes",
-    "ourServices": "Our Consulting Services",
-    "servicesDesc": "Comprehensive support throughout your NCAA journey",
-    "whyChooseUs": "Why Choose Us",
-    "whyChooseUsDesc": "What sets our consulting services apart",
-    "ourProcess": "Our Process",
-    "processDesc": "A structured approach to your success",
-    "ready": "Ready to Start Your NCAA Journey?",
-    "readyDesc": "Let's work together to make your collegiate tennis dreams a reality",
-    "getStarted": "Get Started Today",
+    "ncaaExpertise": "NCAA Knowledge",
+    "ncaaExpertiseDesc": "Understanding of eligibility rules and recruitment timelines",
+    "personalizedApproach": "Individual Attention",
+    "personalizedApproachDesc": "Tailored coaching and consulting for each athlete",
+    "provenResults": "Practical Experience",
+    "provenResultsDesc": "Guidance based on real coaching and recruitment work",
+    "ourServices": "What We Offer",
+    "servicesDesc": "Coaching and consulting services for players at all levels",
+    "whyChooseUs": "Our Approach",
+    "whyChooseUsDesc": "What you can expect when working with us",
+    "ourProcess": "How It Works",
+    "processDesc": "A straightforward path from first contact to results",
+    "ready": "Ready to Get Started?",
+    "readyDesc": "Book a lesson or reach out to discuss NCAA consulting",
+    "getStarted": "Email Us",
     "bookLesson": "Book a Lesson",
     "bookLessonTitle": "Book Your Tennis Lesson",
-    "bookLessonDesc": "View available time slots and book your professional tennis lesson today",
+    "bookLessonDesc": "View available time slots and book your lesson. Private, duo, and group options available.",
     "viewAvailability": "View Available Times",
+    "coachTitle": "Your Coach",
+    "coachName": "Mason Liu",
+    "coachBio": "Tennis coach and founder of Advanced Universal Ventures. Experience coaching players from beginners to competitive juniors, with knowledge of NCAA recruitment processes for student-athletes.",
+    "lessonTypes": "Lesson Options",
+    "privateLessons": "Private Lessons",
+    "privateDesc": "One-on-one coaching focused on your specific goals and technique",
+    "duoLessons": "Duo Lessons",
+    "duoDesc": "Train with a partner—ideal for friends or family members",
+    "groupLessons": "Group Lessons",
+    "groupDesc": "Small group sessions for skill development and match play",
+    "ncaaServices": "NCAA Consulting",
+    "ncaaDesc": "Eligibility assessment, recruitment strategy, and application support for student-athletes",
     "services": {
       "eligibility": {
         "title": "NCAA Eligibility Assessment",
-        "description": "Comprehensive evaluation of your academic and athletic profile to determine NCAA eligibility status and identify areas for improvement.",
+        "description": "Review of your academic and athletic profile to determine NCAA eligibility status and identify any gaps to address.",
         "details": [
           "Academic transcript review",
-          "Core course requirements analysis",
+          "Core course requirements check",
           "GPA and test score evaluation",
-          "Eligibility center registration guidance"
+          "Eligibility center guidance"
         ]
       },
       "recruitment": {
         "title": "Recruitment Strategy",
-        "description": "Personalized recruitment plan tailored to your skill level, academic achievements, and college preferences.",
+        "description": "Personalized recruitment plan based on your skill level, academics, and college preferences.",
         "details": [
-          "College selection guidance",
+          "College program research",
           "Recruitment timeline planning",
-          "Coach communication strategies",
-          "Video highlight package creation"
+          "Coach outreach strategies",
+          "Video highlight guidance"
         ]
       },
       "academic": {
         "title": "Academic Planning",
-        "description": "Strategic academic planning to ensure you meet all NCAA requirements while maintaining strong performance.",
+        "description": "Course selection and academic planning to meet NCAA requirements while maintaining strong grades.",
         "details": [
           "Course selection guidance",
-          "Study schedule optimization",
           "Test preparation strategies",
-          "Academic performance tracking"
+          "Academic timeline planning",
+          "Progress tracking"
         ]
       },
       "application": {
         "title": "Application Support",
-        "description": "End-to-end support throughout the college application and recruitment process.",
+        "description": "Support throughout the college application and recruitment process.",
         "details": [
-          "Application essay assistance",
+          "Application essay review",
           "Interview preparation",
-          "Scholarship opportunity identification",
-          "Decision-making guidance"
+          "Scholarship research",
+          "Decision guidance"
         ]
       }
     },
     "benefits": [
-      "Expert knowledge of NCAA regulations and requirements",
-      "Personalized approach tailored to each student-athlete",
-      "Proven track record of successful placements",
-      "Comprehensive support from assessment to enrollment",
-      "Strong network of college coaches and programs",
-      "Focus on both athletic and academic excellence"
+      "Direct coaching experience at multiple skill levels",
+      "Understanding of NCAA eligibility requirements",
+      "Personalized approach for each athlete",
+      "Clear communication throughout the process",
+      "Flexible scheduling for lessons",
+      "Support for both athletic and academic goals"
     ],
     "process": {
       "step1": {
-        "title": "Initial Assessment",
-        "desc": "Evaluate your current status and goals"
+        "title": "Reach Out",
+        "desc": "Book a lesson or email to discuss consulting"
       },
       "step2": {
-        "title": "Strategic Planning",
-        "desc": "Develop personalized roadmap"
+        "title": "Assessment",
+        "desc": "We evaluate your current situation and goals"
       },
       "step3": {
-        "title": "Active Support",
-        "desc": "Ongoing guidance and assistance"
+        "title": "Plan & Execute",
+        "desc": "Work together on coaching or recruitment strategy"
       },
       "step4": {
-        "title": "Achievement",
-        "desc": "Reach your NCAA goals"
+        "title": "Results",
+        "desc": "Improve your game or advance your NCAA goals"
       }
     }
   },
   "content": {
-    "title": "Content Creation",
-    "subtitle": "Social Media Content by Hanyu (Mason) Liu",
-    "subtitle2": "Creating engaging, authentic content that connects with audiences worldwide",
-    "aboutCreator": "About Hanyu (Mason) Liu",
-    "aboutDesc1": "As a passionate content creator, Hanyu (Mason) Liu brings a unique perspective to social media, combining personal experiences with valuable insights across lifestyle, fitness, education, and entertainment.",
-    "aboutDesc2": "With a commitment to authenticity and quality, the content focuses on building genuine connections with audiences while sharing knowledge, inspiration, and engaging stories that resonate with viewers.",
-    "aboutDesc3": "Through consistent, high-quality content across multiple platforms, the goal is to inspire, educate, and entertain while building a community of engaged followers.",
-    "followInstagram": "Follow on Instagram",
-    "subscribeYouTube": "Subscribe on YouTube",
-    "followTikTok": "Follow on TikTok",
-    "followXiaohongshu": "Follow on 小红书",
-    "followBilibili": "Follow on Bilibili",
-    "creator": "Content Creator",
-    "creatorTagline": "Creating content that matters, one post at a time",
-    "platforms": "Platforms",
-    "platformsDesc": "Engaging audiences across multiple social media platforms",
-    "contentFocus": "Content Focus Areas",
-    "contentFocusDesc": "Diverse content that engages and inspires",
-    "contentImpact": "Content Impact",
-    "contentImpactDesc": "Building a community through authentic engagement",
-    "followJourney": "Follow Along on the Journey",
-    "followJourneyDesc": "Join the community and stay connected with the latest content and updates",
+    "title": "Mason Liu",
+    "subtitle": "Athlete • Coach • Researcher • Creator",
+    "subtitle2": "Content on human performance, sports, technology, and personal growth",
+    "aboutCreator": "About Mason",
+    "aboutDesc1": "Hanyu (Mason) Liu is the founder of Advanced Universal Ventures—a tennis coach, researcher, and content creator focused on the intersection of sports, technology, and human performance.",
+    "aboutDesc2": "With experience coaching players across skill levels and consulting student-athletes through the NCAA recruitment process, Mason brings a practitioner's perspective to content creation. His work explores athletic training, sports science, technology tools for performance, and lessons from competitive sports that apply to personal growth.",
+    "aboutDesc3": "Mason creates content in English and Chinese across Instagram, YouTube, TikTok, Xiaohongshu, and Bilibili.",
+    "followInstagram": "Instagram",
+    "subscribeYouTube": "YouTube",
+    "followTikTok": "TikTok",
+    "followXiaohongshu": "小红书",
+    "followBilibili": "Bilibili",
+    "creator": "Founder, Advanced Universal Ventures",
+    "creatorTagline": "Coach, Creator, Builder",
+    "platforms": "Where to Follow",
+    "platformsDesc": "Content in English and Chinese across multiple platforms",
+    "contentFocus": "Content Focus",
+    "contentFocusDesc": "Three themes that connect coaching, research, and creation",
+    "contentImpact": "Connect",
+    "contentImpactDesc": "Follow for new content on performance, sports, and growth",
+    "followJourney": "Follow Mason's Work",
+    "followJourneyDesc": "New content on human performance, sports technology, and personal growth",
     "platformsData": {
       "instagram": {
         "name": "Instagram",
-        "description": "Engaging visual content including photos, reels, and stories that connect with audiences through lifestyle, fitness, and personal insights."
+        "description": "Photos, reels, and stories on training, coaching, and daily work."
       },
       "youtube": {
         "name": "YouTube",
-        "description": "Long-form video content including vlogs, tutorials, and lifestyle content that provides value and entertainment to subscribers."
+        "description": "Longer videos on tennis, performance concepts, and behind-the-scenes content."
       },
       "tiktok": {
         "name": "TikTok",
-        "description": "Short-form creative videos that capture attention, showcase personality, and engage with trending topics and challenges."
+        "description": "Short-form content on sports, tech, and quick insights."
       },
       "xiaohongshu": {
-        "name": "Xiaohongshu (Red Note)",
-        "description": "小红书 - Lifestyle and fashion content sharing platform popular in China, featuring product reviews, travel guides, and lifestyle inspiration."
+        "name": "小红书 (Xiaohongshu)",
+        "description": "Chinese-language content on lifestyle, tennis, and personal development."
       },
       "bilibili": {
-        "name": "Bilibili",
-        "description": "哔哩哔哩 - Leading video sharing platform in China, featuring anime, gaming, lifestyle vlogs, and educational content for a young, engaged audience."
+        "name": "哔哩哔哩 (Bilibili)",
+        "description": "Chinese-language videos on sports, technology, and coaching."
       }
     },
     "contentTypes": {
-      "lifestyle": {
-        "title": "Lifestyle Content",
-        "description": "Authentic glimpses into daily life, routines, and personal experiences that resonate with viewers."
+      "performance": {
+        "title": "Human Performance",
+        "description": "Training principles, recovery science, and athlete mindset from a coach's perspective."
       },
-      "fitness": {
-        "title": "Fitness & Health",
-        "description": "Workout routines, nutrition tips, and wellness advice to inspire and educate the community."
+      "technology": {
+        "title": "Sports & Technology",
+        "description": "Tools, wearables, and software that improve athletic performance and daily productivity."
       },
-      "educational": {
-        "title": "Educational Content",
-        "description": "Valuable insights, tutorials, and knowledge sharing across various topics of interest."
+      "growth": {
+        "title": "Personal Growth",
+        "description": "Lessons from competitive tennis and entrepreneurship on discipline, focus, and improvement."
       }
     },
     "stats": {
-      "followers": "Total Followers",
-      "followersValue": "Growing Community",
-      "posts": "Content Posts",
-      "postsValue": "Regular Updates",
-      "engagement": "Engagement Rate",
-      "engagementValue": "High Interaction",
-      "platforms": "Platforms",
-      "platformsValue": "Multi-Platform"
+      "followers": "Platforms",
+      "followersValue": "5",
+      "posts": "Languages",
+      "postsValue": "EN / 中文",
+      "engagement": "Focus",
+      "engagementValue": "Performance",
+      "platforms": "Based In",
+      "platformsValue": "Maryland"
     }
   },
   "joinUs": {
     "title": "Join Our Team",
-    "subtitle": "Be part of an innovative team shaping the future of technology, education, and content creation",
+    "subtitle": "Work with us on coaching, content, and software development",
     "viewPositions": "View Open Positions",
     "whyJoin": "Why Join Advanced Universal Ventures?",
-    "whyJoinDesc": "We're building something special, and we want you to be part of it",
-    "ourCulture": "Our Culture",
-    "cultureDesc1": "At Advanced Universal Ventures, we believe in fostering an environment where innovation thrives, diversity is celebrated, and every team member can make a meaningful impact.",
-    "cultureDesc2": "We value collaboration, continuous learning, and a growth mindset. Our team members are encouraged to bring their unique perspectives, take initiative, and contribute to our shared mission of excellence.",
-    "cultureDesc3": "Whether you're passionate about building cutting-edge software, helping students achieve their dreams, or creating compelling content, you'll find a place to grow and excel here.",
+    "whyJoinDesc": "We're a small team working across multiple areas—there's room to learn and contribute",
+    "ourCulture": "How We Work",
+    "cultureDesc1": "Advanced Universal Ventures operates across tennis coaching, content creation, and software development. We value people who can work independently and take ownership of their work.",
+    "cultureDesc2": "Whether you're interested in coaching, video production, writing, or development, we look for people who are reliable, communicative, and genuinely interested in the work.",
+    "cultureDesc3": "This is a growing operation. Roles may evolve, and we value flexibility and a willingness to learn.",
     "openPositions": "Open Positions",
-    "openPositionsDesc": "Explore opportunities to join our growing team",
-    "dontSeeMatch": "Don't See a Perfect Match?",
-    "dontSeeMatchDesc": "We're always looking for talented individuals who share our passion and values. Send us your resume and let us know how you'd like to contribute!",
-    "submitGeneral": "Submit General Application",
-    "readyImpact": "Ready to Make an Impact?",
-    "readyImpactDesc": "Join us in building innovative solutions and creating meaningful experiences",
+    "openPositionsDesc": "Current opportunities on our team",
+    "dontSeeMatch": "Don't See a Fit?",
+    "dontSeeMatchDesc": "We're always open to hearing from talented people. Send us your background and what you'd like to work on.",
+    "submitGeneral": "Send General Application",
+    "readyImpact": "Interested in Working Together?",
+    "readyImpactDesc": "Reach out to learn more about current opportunities",
     "getInTouch": "Get in Touch",
-    "ourValues": "Our Values",
+    "ourValues": "What We Value",
     "benefits": {
       "compensation": {
-        "title": "Competitive Compensation",
-        "description": "Fair and competitive salary packages with performance incentives"
+        "title": "Fair Compensation",
+        "description": "Competitive pay based on role and experience"
       },
       "collaborative": {
-        "title": "Collaborative Environment",
-        "description": "Work with a diverse, talented team in a supportive atmosphere"
+        "title": "Small Team",
+        "description": "Work directly with leadership on meaningful projects"
       },
       "growth": {
-        "title": "Growth Opportunities",
-        "description": "Professional development and career advancement pathways"
+        "title": "Growth Opportunity",
+        "description": "Room to take on new responsibilities as we grow"
       },
       "flexible": {
         "title": "Flexible Work",
-        "description": "Remote and hybrid work options to fit your lifestyle"
+        "description": "Remote and hybrid options available"
       }
     },
     "values": {
-      "innovation": "Innovation & Creativity",
-      "collaboration": "Collaboration & Teamwork",
-      "learning": "Continuous Learning",
-      "balance": "Work-Life Balance",
-      "diversity": "Diversity & Inclusion"
+      "reliability": "Reliability",
+      "communication": "Clear Communication",
+      "learning": "Willingness to Learn",
+      "ownership": "Ownership",
+      "quality": "Quality Work"
     },
     "coreValues": {
       "excellence": {
-        "title": "Excellence",
-        "desc": "Striving for the highest standards in everything we do"
+        "title": "Quality",
+        "desc": "Do good work, pay attention to details"
       },
       "integrity": {
         "title": "Integrity",
-        "desc": "Doing the right thing, always"
+        "desc": "Be honest and follow through"
       },
       "impact": {
-        "title": "Impact",
-        "desc": "Making a positive difference in people's lives"
+        "title": "Results",
+        "desc": "Focus on outcomes, not busywork"
       }
     },
     "positions": {
       "developer": {
         "title": "Software Developer",
-        "department": "SaaS Solutions",
-        "description": "Build innovative mobile and web applications in health, fitness, and lifestyle domains.",
+        "department": "Software",
+        "description": "Build mobile and web applications for health and wellness products.",
         "requirements": [
-          "Experience with React Native, Next.js, or similar frameworks",
+          "Experience with React Native, Next.js, or similar",
           "Strong problem-solving skills",
-          "Passion for creating user-friendly applications",
-          "Knowledge of modern development practices"
+          "Ability to work independently",
+          "Interest in health/wellness applications"
         ]
       },
       "consultant": {
-        "title": "Tennis Education Consultant",
+        "title": "Tennis/NCAA Consultant",
         "department": "Tennis & Education",
-        "description": "Guide student-athletes through the NCAA recruitment process and academic planning.",
+        "description": "Help student-athletes navigate the NCAA recruitment process.",
         "requirements": [
-          "Deep understanding of NCAA regulations",
+          "Knowledge of NCAA eligibility rules",
           "Experience in college athletics or education",
-          "Excellent communication and mentoring skills",
-          "Passion for helping student-athletes succeed"
+          "Strong communication skills",
+          "Genuine interest in helping student-athletes"
         ]
       },
       "writer": {
-        "title": "Social Media Content Writer",
-        "department": "Content & Social Media",
-        "description": "Plan and write engaging content scripts for short-form and long-form social media videos.",
+        "title": "Content Writer",
+        "department": "Content",
+        "description": "Write scripts and copy for social media content.",
         "requirements": [
-          "Strong writing and storytelling skills for video content",
-          "Understanding of social media trends and audience engagement",
-          "Ability to translate business goals into creative content ideas",
-          "Comfort collaborating with video editors and on-camera talent"
+          "Strong writing skills",
+          "Understanding of social media platforms",
+          "Ability to translate ideas into engaging content",
+          "Comfortable with feedback and iteration"
         ]
       },
       "editor": {
         "title": "Video Editor",
-        "department": "Content & Social Media",
-        "description": "Edit and refine video content for TikTok, Instagram Reels, YouTube, and other platforms.",
+        "department": "Content",
+        "description": "Edit video content for TikTok, Instagram, YouTube, and other platforms.",
         "requirements": [
-          "Experience with video editing tools (e.g., CapCut, Premiere Pro, Final Cut, or similar)",
-          "Sense of pacing, music, and visual storytelling for social platforms",
-          "Ability to optimize content for different formats and aspect ratios",
-          "Attention to detail and ability to work with feedback quickly"
+          "Experience with video editing tools",
+          "Understanding of pacing and storytelling",
+          "Ability to optimize for different platforms",
+          "Quick turnaround on feedback"
         ]
       },
       "manager": {
-        "title": "Social Media Business Manager",
-        "department": "Content & Social Media",
-        "description": "Build partnerships with brands, events, and organizations for collaborations and sponsorships.",
+        "title": "Business Development",
+        "department": "Content",
+        "description": "Build partnerships with brands and organizations.",
         "requirements": [
-          "Experience in business development, partnerships, or influencer marketing",
-          "Strong networking and relationship-building skills",
-          "Comfort reaching out to businesses, events, and agencies",
-          "Ability to negotiate win-win collaboration agreements"
+          "Experience in partnerships or sales",
+          "Strong networking skills",
+          "Comfortable with outreach",
+          "Ability to negotiate agreements"
         ]
       },
       "operations": {
-        "title": "Social Media Operations",
-        "department": "Content & Social Media",
-        "description": "Operate and manage our social media accounts day-to-day across multiple platforms.",
+        "title": "Social Media Manager",
+        "department": "Content",
+        "description": "Manage day-to-day operations across social media accounts.",
         "requirements": [
-          "Hands-on experience managing social media accounts",
-          "Ability to schedule posts, respond to comments, and monitor community feedback",
-          "Familiarity with analytics and performance tracking tools",
-          "Highly organized with strong attention to detail"
+          "Experience managing social media",
+          "Ability to schedule and monitor posts",
+          "Familiarity with analytics tools",
+          "Organized and detail-oriented"
         ]
       }
     },
-    "applyNow": "Apply Now",
+    "applyNow": "Apply",
     "applicationSubject": "Application:",
-    "keyRequirements": "Key Requirements:"
+    "keyRequirements": "Requirements:"
   },
   "support": {
     "title": "Support & Privacy",
-    "subtitle": "Your privacy and security are our top priorities",
+    "subtitle": "Privacy information and contact details",
     "privacyPolicy": "Privacy Policy",
     "lastUpdated": "Last updated:",
     "termsOfService": "Terms of Service",
     "needHelp": "Need Help?",
-    "needHelpDesc": "We're here to assist you with any questions or concerns",
+    "needHelpDesc": "Contact us with questions or concerns",
     "emailSupport": "Email Support",
-    "emailSupportDesc": "For general inquiries, privacy concerns, or technical support:",
+    "emailSupportDesc": "For general inquiries or support:",
     "reportIssue": "Report an Issue",
-    "reportIssueDesc": "Found a bug or have a security concern? Let us know:",
+    "reportIssueDesc": "Found a bug or have a concern?",
     "kevobinPrivacy": "Kevobin Privacy Policy",
-    "backToSaaS": "Back to SaaS Solutions",
+    "backToSaaS": "Back to Software",
     "common": {
       "contact": "Contact Us",
       "location": "Maryland, United States",
@@ -440,95 +409,95 @@
     "privacy": {
       "intro": {
         "title": "1. Introduction",
-        "content": "Advanced Universal Ventures, LLC (\"we,\" \"our,\" or \"us\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information across our three main service areas: Tennis Coaching, Content Creation, and Software Products."
+        "content": "Advanced Universal Ventures, LLC (\"we,\" \"our,\" or \"us\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information across our services: Tennis Coaching, Content Creation, and Software Products."
       },
       "dataCollected": "Data We Collect:",
       "howUsed": "How We Use This Data:",
       "tennis": {
         "title": "2. Tennis Coaching Services",
-        "intro": "When you book tennis lessons or consulting services with us, we collect information necessary to provide personalized coaching experiences.",
+        "intro": "When you book tennis lessons or consulting services, we collect information necessary to provide our services.",
         "data1": "Personal identification (name, email, phone number)",
         "data2": "Lesson booking details (dates, times, locations, participant count)",
         "data3": "Skill level and training preferences",
-        "data4": "Payment and transaction information",
+        "data4": "Payment information",
         "use1": "Schedule and confirm lesson bookings",
-        "use2": "Communicate about lesson changes, cancellations, or updates",
-        "use3": "Customize coaching to your skill level and goals"
+        "use2": "Communicate about lessons",
+        "use3": "Customize coaching to your goals"
       },
       "content": {
         "title": "3. Content Creation Services",
-        "intro": "Our content creation involves social media presence across multiple platforms. When you interact with our content or collaborate with us, we may collect certain information.",
-        "data1": "Social media interaction data (likes, comments, shares)",
+        "intro": "Our content creation involves social media presence across multiple platforms. When you interact with our content, we may collect certain information.",
+        "data1": "Social media interaction data",
         "data2": "Contact information for collaboration inquiries",
-        "data3": "Brand partnership and sponsorship communication records",
-        "use1": "Respond to comments and messages from followers",
-        "use2": "Develop content that resonates with our audience",
-        "use3": "Manage brand partnerships and collaborations"
+        "data3": "Communication records",
+        "use1": "Respond to messages",
+        "use2": "Develop content",
+        "use3": "Manage collaborations"
       },
       "software": {
-        "title": "4. Software Products (SaaS)",
-        "intro": "Our software products, including health, fitness, and lifestyle applications, collect data to provide personalized experiences and improve our services.",
-        "data1": "Account credentials and profile information",
-        "data2": "Health and fitness data (when using health-related applications)",
-        "data3": "Usage analytics and application interaction data",
-        "data4": "Device information and technical diagnostics",
-        "use1": "Provide, maintain, and improve our software services",
-        "use2": "Personalize your experience based on preferences",
-        "use3": "Send technical notices, updates, and support messages",
-        "use4": "Monitor and analyze trends to improve our products"
+        "title": "4. Software Products",
+        "intro": "Our software products collect data to provide their services. Note: Kevobin stores all data locally on your device and does not transmit personal information.",
+        "data1": "Account information (where applicable)",
+        "data2": "Health and fitness data (in health applications)",
+        "data3": "Usage analytics",
+        "data4": "Device information",
+        "use1": "Provide and improve our services",
+        "use2": "Personalize your experience",
+        "use3": "Send updates and support messages",
+        "use4": "Analyze usage to improve products"
       },
       "security": {
         "title": "5. Data Security",
-        "content": "We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. This includes encryption, secure servers, and regular security audits. However, no method of transmission over the Internet or electronic storage is 100% secure."
+        "content": "We implement appropriate security measures to protect your personal information. This includes encryption and secure servers where applicable. No method of transmission is 100% secure."
       },
       "sharing": {
-        "title": "6. Data Sharing and Disclosure",
-        "intro": "We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:",
-        "item1": "With your explicit consent",
+        "title": "6. Data Sharing",
+        "intro": "We do not sell your personal information. We may share information:",
+        "item1": "With your consent",
         "item2": "To comply with legal obligations",
-        "item3": "To protect our rights and safety",
-        "item4": "With service providers who assist in operating our services (under strict confidentiality agreements)"
+        "item3": "To protect our rights",
+        "item4": "With service providers under confidentiality agreements"
       },
       "rights": {
         "title": "7. Your Rights",
         "intro": "You have the right to:",
-        "item1": "Access and receive a copy of your personal data",
-        "item2": "Rectify inaccurate or incomplete data",
-        "item3": "Request deletion of your personal data",
-        "item4": "Object to processing of your personal data",
-        "item5": "Request restriction of processing or data portability"
+        "item1": "Access your personal data",
+        "item2": "Correct inaccurate data",
+        "item3": "Request deletion of your data",
+        "item4": "Object to processing",
+        "item5": "Request data portability"
       },
       "contact": {
-        "content": "If you have any questions about this Privacy Policy or wish to exercise your rights, please contact us at:"
+        "content": "Questions about this Privacy Policy? Contact us at:"
       }
     },
     "terms": {
       "acceptance": {
         "title": "1. Acceptance of Terms",
-        "content": "By accessing and using the services provided by Advanced Universal Ventures, LLC, you accept and agree to be bound by the terms and provisions of this agreement. These terms apply to all our services including Tennis Coaching, Content Creation, and Software Products."
+        "content": "By using services provided by Advanced Universal Ventures, LLC, you agree to these terms. These apply to Tennis Coaching, Content Creation, and Software Products."
       },
       "services": {
         "title": "2. Our Services",
-        "content": "Advanced Universal Ventures, LLC provides the following services:",
-        "item1": "Tennis coaching and NCAA education consulting services",
-        "item2": "Social media content creation across multiple platforms",
-        "item3": "Software products (SaaS) for health, fitness, and lifestyle management"
+        "content": "Advanced Universal Ventures, LLC provides:",
+        "item1": "Tennis coaching and NCAA consulting",
+        "item2": "Content creation across multiple platforms",
+        "item3": "Software products for health and wellness"
       },
       "booking": {
-        "title": "3. Tennis Lesson Booking Terms",
-        "content": "When booking tennis lessons through our platform:",
+        "title": "3. Tennis Lesson Booking",
+        "content": "When booking tennis lessons:",
         "item1": "Bookings must be made at least 48 hours in advance",
-        "item2": "Group and duo lessons require minimum participant counts to proceed",
-        "item3": "Lessons not meeting minimum requirements may be automatically cancelled 24 hours before the scheduled time",
-        "item4": "Payment is collected at the time of the lesson unless otherwise specified"
+        "item2": "Group and duo lessons require minimum participants",
+        "item3": "Lessons not meeting minimums may be cancelled 24 hours before",
+        "item4": "Payment is collected at the lesson unless specified otherwise"
       },
       "liability": {
         "title": "4. Limitation of Liability",
-        "content": "The materials and services are provided on an 'as is' basis. Advanced Universal Ventures, LLC makes no warranties, expressed or implied, and shall not be liable for any damages arising from the use or inability to use our services."
+        "content": "Services are provided \"as is.\" Advanced Universal Ventures, LLC is not liable for damages arising from use or inability to use our services."
       },
       "changes": {
         "title": "5. Changes to Terms",
-        "content": "Advanced Universal Ventures, LLC may revise these terms of service at any time without notice. By using our services, you are agreeing to be bound by the then current version of these terms of service."
+        "content": "We may update these terms at any time. Continued use of our services constitutes acceptance of updated terms."
       }
     }
   },
@@ -543,8 +512,8 @@
   },
   "booking": {
     "title": "Book a Tennis Lesson",
-    "subtitle": "Select an available time slot and reserve your spot for a professional tennis lesson",
-    "backToTennis": "Back to Tennis Education",
+    "subtitle": "Select an available time slot and reserve your spot",
+    "backToTennis": "Back to Tennis",
     "available": "Available",
     "unavailable": "Unavailable",
     "availableSlots": "Available Time Slots",
@@ -573,27 +542,27 @@
     "lessonDetails": "Lesson Details",
     "yourDetails": "Your Information",
     "totalAmount": "Total Amount",
-    "confirmationNote": "By confirming this booking, you will receive a confirmation email with all the details. Payment will be collected at the lesson.",
+    "confirmationNote": "By confirming, you'll receive a confirmation email. Payment is collected at the lesson.",
     "processing": "Processing...",
     "confirmAndBook": "Confirm & Book",
     "bookingConfirmed": "Booking Confirmed!",
     "confirmationSent": "A confirmation email has been sent to your email address.",
     "bookingSummary": "Booking Summary",
-    "questionsContact": "If you have any questions, please contact us at",
+    "questionsContact": "Questions? Contact us at",
     "bookAnother": "Book Another Lesson",
     "howItWorks": "How It Works",
     "step1Title": "Choose a Time Slot",
-    "step1Desc": "Browse available time slots and select one that fits your schedule",
+    "step1Desc": "Browse available times and select one that works for you",
     "step2Title": "Enter Your Details",
     "step2Desc": "Provide your contact information and number of participants",
     "step3Title": "Receive Confirmation",
-    "step3Desc": "Get an instant email confirmation with all booking details",
+    "step3Desc": "Get an email confirmation with all booking details",
     "individual": "Private (1 Person)",
     "duo": "Duo (2 People)",
     "group": "Group (4-8 People)",
     "duoLesson": "Semi-private lesson for 2",
     "duoNotice": "Note:",
-    "duoNoticeText": "This lesson requires 2 people. You can book both spots yourself, or another person can join.",
+    "duoNoticeText": "This lesson requires 2 people. You can book both spots or another person can join.",
     "confirmed": "Confirmed",
     "moreNeeded": "more needed to start",
     "privateLesson": "Private 1-on-1 lesson",
@@ -601,17 +570,17 @@
     "minParticipants": "Minimum",
     "participants": "participants",
     "groupNotice": "Note:",
-    "groupNoticeText": "This is a group lesson that requires a minimum of",
-    "groupNoticeText2": "If the minimum is not met, the lesson will be automatically cancelled.",
+    "groupNoticeText": "This group lesson requires a minimum of",
+    "groupNoticeText2": "If minimum isn't met, the lesson will be cancelled automatically.",
     "loading": "Loading available times...",
     "bookingNotice": "Bookings must be made at least 48 hours in advance",
-    "cancellationPolicy": "Group and duo lessons that don't meet the minimum participants will be automatically cancelled 24 hours before the scheduled time.",
+    "cancellationPolicy": "Group and duo lessons that don't meet minimum participants will be cancelled 24 hours before the scheduled time.",
     "errors": {
       "nameRequired": "Please enter your name",
       "emailRequired": "Please enter your email",
       "emailInvalid": "Please enter a valid email address",
       "phoneRequired": "Please enter your phone number",
-      "tooManyParticipants": "Not enough spots available for this many participants",
+      "tooManyParticipants": "Not enough spots available",
       "submitFailed": "Failed to submit booking. Please try again or contact us directly."
     },
     "admin": {

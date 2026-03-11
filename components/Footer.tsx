@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useI18n } from '@/lib/i18n'
+import { Mail, MapPin } from 'lucide-react'
 
 export default function Footer() {
   const { t } = useI18n()
@@ -14,9 +15,18 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-white text-xl font-bold mb-4">{t('footer.company')}</h3>
             <p className="text-gray-400 mb-4">{t('footer.description')}</p>
-            <p className="text-gray-400 text-sm">
-              {t('footer.location')}
-            </p>
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 text-gray-400 text-sm">
+                <MapPin size={16} />
+                <span>{t('footer.location')}</span>
+              </div>
+              <div className="flex items-center gap-2 text-gray-400 text-sm">
+                <Mail size={16} />
+                <a href="mailto:contact@advanceduniversalventures.com" className="hover:text-white transition-colors">
+                  contact@advanceduniversalventures.com
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -24,23 +34,23 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="hover:text-white transition-colors">
-                  {t('nav.home')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/saas" className="hover:text-white transition-colors">
-                  {t('nav.saas')}
-                </Link>
-              </li>
-              <li>
                 <Link href="/tennis-education" className="hover:text-white transition-colors">
                   {t('nav.tennis')}
                 </Link>
               </li>
               <li>
+                <Link href="/tennis-education/book" className="hover:text-white transition-colors">
+                  Book a Lesson
+                </Link>
+              </li>
+              <li>
                 <Link href="/content" className="hover:text-white transition-colors">
                   {t('nav.content')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/saas" className="hover:text-white transition-colors">
+                  {t('nav.saas')}
                 </Link>
               </li>
               <li>
@@ -68,6 +78,11 @@ export default function Footer() {
               <li>
                 <Link href="/support" className="hover:text-white transition-colors">
                   {t('footer.support')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/kevobin/privacy" className="hover:text-white transition-colors">
+                  Kevobin Privacy
                 </Link>
               </li>
             </ul>
