@@ -48,6 +48,7 @@ export default function BookingCalendar({ timeSlots, onBookingComplete }: Bookin
   const { t } = useI18n()
   const [currentDate, setCurrentDate] = useState(new Date())
   const [selectedSlot, setSelectedSlot] = useState<TimeSlot | null>(null)
+  const [selectedDay, setSelectedDay] = useState<number | null>(null)
   const [bookingStep, setBookingStep] = useState<BookingStep>('select')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState({
@@ -252,13 +253,7 @@ export default function BookingCalendar({ timeSlots, onBookingComplete }: Bookin
           `}
           onClick={() => {
             if (hasAvailableSlots && !isPast) {
-              const availableSlots = slotsForDay.filter(s => s.currentParticipants < s.maxParticipants)
-              if (availableSlots.length === 1) {
-                handleSelectSlot(availableSlots[0])
-              } else if (availableSlots.length > 1) {
-                // Scroll to the slots list when multiple slots exist
-                document.getElementById('available-slots-list')?.scrollIntoView({ behavior: 'smooth' })
-              }
+              setSelectedDay(day)
             }
           }}
         >
@@ -278,6 +273,123 @@ export default function BookingCalendar({ timeSlots, onBookingComplete }: Bookin
     }
     
     return days
+  }
+
+  const renderDayModal = () => {
+    if (selectedDay === null) return null
+    
+    const slotsForDay = getSlotsForDate(selectedDay)
+    const availableSlots = slotsForDay.filter(s => s.currentParticipants < s.maxParticipants)
+    const dateStr = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(selectedDay).padStart(2, '0')}`
+    const formattedDate = parseLocalDate(dateStr).toLocaleDateString('en-US', { 
+      weekday: 'long', 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    })
+
+    return (
+      <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" onClick={() => setSelectedDay(null)}>
+        <div 
+          className="bg-white rounded-2xl shadow-2xl max-w-lg w-full max-h-[80vh] overflow-y-auto"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="sticky top-0 bg-white border-b border-gray-200 p-4 flex items-center justify-between rounded-t-2xl">
+            <h3 className="text-lg font-bold text-gray-900">{formattedDate}</h3>
+            <button
+              onClick={() => setSelectedDay(null)}
+              className="p-2 hover:bg-gray-100 rounded-lg transition"
+            >
+              <X size={20} />
+            </button>
+          </div>
+          
+          <div className="p-4 space-y-3">
+            {availableSlots.length === 0 ? (
+              <p className="text-gray-500 text-center py-8">{t('booking.noSlots')}</p>
+            ) : (
+              availableSlots.map(slot => {
+                const lessonType = slot.lessonType
+                const spotsLeft = slot.maxParticipants - slot.currentParticipants
+                const needsMore = slot.currentParticipants < slot.minParticipants
+                const moreNeeded = slot.minParticipants - slot.currentParticipants
+                
+                const typeStyles = {
+                  individual: {
+                    border: 'border-blue-200 bg-blue-50/30',
+                    badge: 'bg-blue-100 text-blue-700',
+                    button: 'bg-blue-600 hover:bg-blue-700',
+                    icon: 'text-blue-600',
+                    label: t('booking.individual') || 'Private (1 Person)'
+                  },
+                  duo: {
+                    border: 'border-purple-200 bg-purple-50/30',
+                    badge: 'bg-purple-100 text-purple-700',
+                    button: 'bg-purple-600 hover:bg-purple-700',
+                    icon: 'text-purple-600',
+                    label: t('booking.duo') || 'Duo (2 People)'
+                  },
+                  group: {
+                    border: 'border-green-200 bg-green-50/30',
+                    badge: 'bg-green-100 text-green-700',
+                    button: 'bg-green-600 hover:bg-green-700',
+                    icon: 'text-green-600',
+                    label: t('booking.group') || 'Group (4-8 People)'
+                  }
+                }
+                
+                const style = typeStyles[lessonType]
+                
+                return (
+                  <div
+                    key={slot.id}
+                    onClick={() => {
+                      setSelectedDay(null)
+                      handleSelectSlot(slot)
+                    }}
+                    className={`border rounded-xl p-4 hover:shadow-md cursor-pointer transition-all ${style.border}`}
+                  >
+                    <div className="flex items-center justify-between mb-2">
+                      <span className={`px-2 py-1 rounded-full text-xs font-semibold ${style.badge}`}>
+                        {style.label}
+                      </span>
+                      {needsMore && lessonType !== 'individual' && (
+                        <span className="px-2 py-1 rounded-full text-xs font-semibold bg-amber-100 text-amber-700">
+                          {moreNeeded} {t('booking.moreNeeded') || 'more needed'}
+                        </span>
+                      )}
+                    </div>
+                    
+                    <div className="flex items-center gap-2 text-gray-700 mb-1">
+                      <Clock size={16} className={style.icon} />
+                      <span className="font-medium">{slot.startTime} - {slot.endTime}</span>
+                    </div>
+                    
+                    <div className="flex items-center gap-2 text-gray-600 text-sm mb-2">
+                      <MapPin size={16} className={style.icon} />
+                      <span>{slot.location}</span>
+                    </div>
+                    
+                    <div className="flex items-center justify-between pt-2 border-t border-gray-100">
+                      <div className="flex items-center gap-1 text-sm text-gray-500">
+                        <Users size={14} />
+                        <span>{spotsLeft} {t('booking.spotsLeft')}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-lg font-bold text-gray-900">${slot.pricePerPerson || slot.price}</span>
+                        <button className={`px-3 py-1.5 rounded-lg text-sm font-medium transition text-white ${style.button}`}>
+                          {t('booking.selectSlot')}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )
+              })
+            )}
+          </div>
+        </div>
+      </div>
+    )
   }
 
   const renderSlotSelection = () => {
@@ -757,6 +869,7 @@ export default function BookingCalendar({ timeSlots, onBookingComplete }: Bookin
 
   return (
     <div className="max-w-4xl mx-auto">
+      {renderDayModal()}
       {bookingStep === 'select' && renderSlotSelection()}
       {bookingStep === 'details' && renderDetailsForm()}
       {bookingStep === 'confirm' && renderConfirmation()}
