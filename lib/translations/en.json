@@ -587,7 +587,8 @@
       "emailInvalid": "Please enter a valid email address",
       "phoneRequired": "Please enter your phone number",
       "tooManyParticipants": "Not enough spots available",
-      "submitFailed": "Failed to submit booking. Please try again or contact us directly."
+      "submitFailed": "Failed to submit booking. Please try again or contact us directly.",
+      "alreadyBooked": "You have already booked this time slot. Please select a different slot."
     },
     "admin": {
       "title": "Admin Mode - Manage Time Slots",

@@ -587,7 +587,8 @@
       "emailInvalid": "请输入有效的邮箱地址",
       "phoneRequired": "请输入您的电话号码",
       "tooManyParticipants": "可用名额不足",
-      "submitFailed": "提交预约失败，请重试或直接联系我们。"
+      "submitFailed": "提交预约失败，请重试或直接联系我们。",
+      "alreadyBooked": "您已预约过此时间段，请选择其他时间。"
     },
     "admin": {
       "title": "管理员模式 - 管理时间段",

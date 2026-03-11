@@ -138,13 +138,31 @@ export default function BookingCalendar({ timeSlots, onBookingComplete }: Bookin
     setIsSubmitting(true)
     
     try {
-      // First, save booking to Supabase
+      // Check for duplicate booking (same email, same time slot)
+      const { data: existingBooking, error: checkError } = await supabase
+        .from('bookings')
+        .select('id')
+        .eq('time_slot_id', selectedSlot.id)
+        .eq('customer_email', formData.email.toLowerCase())
+        .limit(1)
+
+      if (checkError) {
+        throw new Error(`Error checking existing bookings: ${checkError.message}`)
+      }
+
+      if (existingBooking && existingBooking.length > 0) {
+        alert(t('booking.errors.alreadyBooked') || 'You have already booked this time slot. Please select a different slot.')
+        setIsSubmitting(false)
+        return
+      }
+
+      // Save booking to Supabase
       const { error: bookingError } = await supabase
         .from('bookings')
         .insert([{
           time_slot_id: selectedSlot.id,
           customer_name: formData.name,
-          customer_email: formData.email,
+          customer_email: formData.email.toLowerCase(),
           customer_phone: formData.phone,
           participants: formData.participants,
           notes: formData.notes || null
@@ -789,7 +807,7 @@ export default function BookingCalendar({ timeSlots, onBookingComplete }: Bookin
           <div className="bg-green-600 text-white rounded-xl p-4">
             <div className="flex justify-between items-center">
               <span className="font-medium">{t('booking.totalAmount')}</span>
-              <span className="text-3xl font-bold">${selectedSlot.price * formData.participants}</span>
+              <span className="text-3xl font-bold">${(selectedSlot.pricePerPerson || selectedSlot.price) * formData.participants}</span>
             </div>
           </div>
         </div>
