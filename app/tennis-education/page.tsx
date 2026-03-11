@@ -1,6 +1,6 @@
 'use client'
 
-import { GraduationCap, Trophy, Target, Users, CheckCircle, ArrowRight } from 'lucide-react'
+import { GraduationCap, Trophy, Target, Users, CheckCircle, ArrowRight, Calendar } from 'lucide-react'
 import Link from 'next/link'
 import { useI18n } from '@/lib/i18n'
 
@@ -56,18 +56,19 @@ export default function TennisEducation() {
                 {t('tennis.pathDesc2')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/tennis-education/book"
+                  className="inline-flex items-center justify-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition text-center"
+                >
+                  <Calendar size={20} />
+                  {t('tennis.bookLesson')}
+                </Link>
                 <a
                   href="mailto:tennis@advanceduniversalventures.com"
-                  className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition text-center"
+                  className="inline-block bg-white text-green-600 border-2 border-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition text-center"
                 >
                   {t('tennis.scheduleConsultation')}
                 </a>
-                <Link
-                  href="/join-us"
-                  className="inline-block bg-white text-green-600 border-2 border-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition text-center"
-                >
-                  {t('tennis.becomeConsultant')}
-                </Link>
               </div>
             </div>
             <div className="bg-gradient-to-br from-green-100 to-green-200 rounded-2xl p-12">
@@ -196,21 +197,52 @@ export default function TennisEducation() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-green-600">
+      {/* Book a Lesson CTA */}
+      <section className="py-20 bg-gradient-to-br from-green-500 to-green-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            {t('tennis.ready')}
+          <div className="inline-block bg-white/20 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+            <Calendar className="text-white" size={32} />
+          </div>
+          <h2 className="text-4xl font-bold text-white mb-4">
+            {t('tennis.bookLessonTitle')}
           </h2>
           <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+            {t('tennis.bookLessonDesc')}
+          </p>
+          <Link
+            href="/tennis-education/book"
+            className="inline-flex items-center gap-2 bg-white text-green-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg"
+          >
+            <Calendar size={24} />
+            {t('tennis.viewAvailability')}
+          </Link>
+        </div>
+      </section>
+
+      {/* Consultation CTA Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            {t('tennis.ready')}
+          </h2>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             {t('tennis.readyDesc')}
           </p>
-          <a
-            href="mailto:tennis@advanceduniversalventures.com"
-            className="inline-block bg-white text-green-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg"
-          >
-            {t('tennis.getStarted')}
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/tennis-education/book"
+              className="inline-flex items-center justify-center gap-2 bg-green-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-green-700 transition shadow-lg"
+            >
+              <Calendar size={20} />
+              {t('tennis.bookLesson')}
+            </Link>
+            <a
+              href="mailto:tennis@advanceduniversalventures.com"
+              className="inline-block bg-white text-green-600 border-2 border-green-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-green-50 transition"
+            >
+              {t('tennis.getStarted')}
+            </a>
+          </div>
         </div>
       </section>
     </div>
