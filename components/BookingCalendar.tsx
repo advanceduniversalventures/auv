@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react'
 import { Calendar, MapPin, Users, Clock, ChevronLeft, ChevronRight, Check, Mail, User, Phone, X } from 'lucide-react'
 import { useI18n } from '@/lib/i18n'
 import emailjs from '@emailjs/browser'
+import { supabase } from '@/lib/supabase'
 
 export interface TimeSlot {
   id: string
@@ -13,8 +14,12 @@ export interface TimeSlot {
   location: string
   address: string
   maxParticipants: number
+  minParticipants: number
   currentParticipants: number
   price: number
+  pricePerPerson: number
+  lessonType: 'individual' | 'duo' | 'group'
+  status: 'open' | 'confirmed' | 'cancelled'
 }
 
 interface BookingCalendarProps {
@@ -127,6 +132,22 @@ export default function BookingCalendar({ timeSlots, onBookingComplete }: Bookin
     setIsSubmitting(true)
     
     try {
+      // First, save booking to Supabase
+      const { error: bookingError } = await supabase
+        .from('bookings')
+        .insert([{
+          time_slot_id: selectedSlot.id,
+          customer_name: formData.name,
+          customer_email: formData.email,
+          customer_phone: formData.phone,
+          participants: formData.participants,
+          notes: formData.notes || null
+        }])
+
+      if (bookingError) {
+        throw new Error(`Database error: ${bookingError.message}`)
+      }
+
       const bookingData: BookingData = {
         slotId: selectedSlot.id,
         name: formData.name,
@@ -144,6 +165,7 @@ export default function BookingCalendar({ timeSlots, onBookingComplete }: Bookin
         day: 'numeric' 
       })
 
+      // Send email notifications
       await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_tennis',
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_OWNER || 'template_booking_owner',
@@ -251,9 +273,13 @@ export default function BookingCalendar({ timeSlots, onBookingComplete }: Bookin
   }
 
   const renderSlotSelection = () => {
+    // Only show slots at least 48 hours from now
+    const minBookingTime = new Date()
+    minBookingTime.setHours(minBookingTime.getHours() + 48)
+    
     const availableSlots = timeSlots.filter(slot => {
-      const slotDate = new Date(slot.date)
-      return slotDate >= new Date(new Date().setHours(0, 0, 0, 0)) && 
+      const slotDateTime = new Date(`${slot.date}T${slot.startTime}`)
+      return slotDateTime >= minBookingTime && 
              slot.currentParticipants < slot.maxParticipants
     }).sort((a, b) => {
       const dateCompare = new Date(a.date).getTime() - new Date(b.date).getTime()
@@ -313,41 +339,97 @@ export default function BookingCalendar({ timeSlots, onBookingComplete }: Bookin
             <p className="text-gray-500 text-center py-8">{t('booking.noSlots')}</p>
           ) : (
             <div className="space-y-3">
-              {availableSlots.map(slot => (
-                <div
-                  key={slot.id}
-                  onClick={() => handleSelectSlot(slot)}
-                  className="border border-gray-200 rounded-xl p-4 hover:border-green-500 hover:bg-green-50 cursor-pointer transition-all"
-                >
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-2 text-gray-900 font-medium">
-                        <Calendar size={18} className="text-green-600" />
-                        <span>{new Date(slot.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>
+              {availableSlots.map(slot => {
+                const lessonType = slot.lessonType
+                const spotsLeft = slot.maxParticipants - slot.currentParticipants
+                const needsMore = slot.currentParticipants < slot.minParticipants
+                const moreNeeded = slot.minParticipants - slot.currentParticipants
+                
+                const typeStyles = {
+                  individual: {
+                    border: 'border-blue-200 bg-blue-50/30',
+                    badge: 'bg-blue-100 text-blue-700',
+                    button: 'bg-blue-600 hover:bg-blue-700',
+                    icon: 'text-blue-600',
+                    label: t('booking.individual') || 'Private (1 Person)',
+                    desc: t('booking.privateLesson') || 'Private 1-on-1 lesson'
+                  },
+                  duo: {
+                    border: 'border-purple-200 bg-purple-50/30',
+                    badge: 'bg-purple-100 text-purple-700',
+                    button: 'bg-purple-600 hover:bg-purple-700',
+                    icon: 'text-purple-600',
+                    label: t('booking.duo') || 'Duo (2 People)',
+                    desc: t('booking.duoLesson') || 'Semi-private lesson for 2'
+                  },
+                  group: {
+                    border: 'border-green-200 bg-green-50/30',
+                    badge: 'bg-green-100 text-green-700',
+                    button: 'bg-green-600 hover:bg-green-700',
+                    icon: 'text-green-600',
+                    label: t('booking.group') || 'Group (4-8 People)',
+                    desc: `${slot.currentParticipants}/${slot.maxParticipants} ${t('booking.enrolled') || 'enrolled'} · ${spotsLeft} ${t('booking.spotsLeft')}`
+                  }
+                }
+                
+                const style = typeStyles[lessonType]
+                
+                return (
+                  <div
+                    key={slot.id}
+                    onClick={() => handleSelectSlot(slot)}
+                    className={`border rounded-xl p-4 hover:shadow-md cursor-pointer transition-all ${style.border}`}
+                  >
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className={`px-2 py-1 rounded-full text-xs font-semibold ${style.badge}`}>
+                            {style.label}
+                          </span>
+                          {lessonType !== 'individual' && slot.status === 'confirmed' && (
+                            <span className="px-2 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-700">
+                              {t('booking.confirmed') || 'Confirmed'}
+                            </span>
+                          )}
+                          {needsMore && lessonType !== 'individual' && (
+                            <span className="px-2 py-1 rounded-full text-xs font-semibold bg-amber-100 text-amber-700">
+                              {moreNeeded} {t('booking.moreNeeded') || 'more needed to start'}
+                            </span>
+                          )}
+                        </div>
+                        <div className="flex items-center gap-2 text-gray-900 font-medium">
+                          <Calendar size={18} className={style.icon} />
+                          <span>{new Date(slot.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-gray-700">
+                          <Clock size={18} className={style.icon} />
+                          <span>{slot.startTime} - {slot.endTime}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-gray-700">
+                          <MapPin size={18} className={style.icon} />
+                          <span>{slot.location}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-gray-600 text-sm">
+                          <Users size={16} className={style.icon} />
+                          <span>{style.desc}</span>
+                        </div>
+                        {lessonType === 'group' && (
+                          <div className="text-xs text-gray-500">
+                            {t('booking.minParticipants') || 'Minimum'}: {slot.minParticipants} {t('booking.participants') || 'participants'}
+                          </div>
+                        )}
                       </div>
-                      <div className="flex items-center gap-2 text-gray-700">
-                        <Clock size={18} className="text-green-600" />
-                        <span>{slot.startTime} - {slot.endTime}</span>
+                      <div className="flex flex-col items-end gap-2">
+                        <span className="text-2xl font-bold text-gray-900">${slot.pricePerPerson || slot.price}</span>
+                        <span className="text-sm text-gray-500">{t('booking.perPerson')}</span>
+                        <button className={`px-4 py-2 rounded-lg font-medium transition text-white ${style.button}`}>
+                          {t('booking.selectSlot')}
+                        </button>
                       </div>
-                      <div className="flex items-center gap-2 text-gray-700">
-                        <MapPin size={18} className="text-green-600" />
-                        <span>{slot.location}</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-gray-600 text-sm">
-                        <Users size={16} className="text-green-600" />
-                        <span>{slot.maxParticipants - slot.currentParticipants} {t('booking.spotsLeft')}</span>
-                      </div>
-                    </div>
-                    <div className="flex flex-col items-end gap-2">
-                      <span className="text-2xl font-bold text-green-600">${slot.price}</span>
-                      <span className="text-sm text-gray-500">{t('booking.perPerson')}</span>
-                      <button className="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-700 transition">
-                        {t('booking.selectSlot')}
-                      </button>
                     </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
           )}
         </div>
@@ -368,11 +450,28 @@ export default function BookingCalendar({ timeSlots, onBookingComplete }: Bookin
           <span>{t('booking.backToSlots')}</span>
         </button>
 
-        <div className="bg-green-50 rounded-xl p-4 mb-6">
-          <h4 className="font-semibold text-gray-900 mb-2">{t('booking.selectedSlot')}</h4>
+        <div className={`rounded-xl p-4 mb-6 ${
+          selectedSlot.lessonType === 'individual' ? 'bg-blue-50' : 
+          selectedSlot.lessonType === 'duo' ? 'bg-purple-50' : 'bg-green-50'
+        }`}>
+          <div className="flex items-center gap-2 mb-2">
+            <h4 className="font-semibold text-gray-900">{t('booking.selectedSlot')}</h4>
+            <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
+              selectedSlot.lessonType === 'individual' ? 'bg-blue-100 text-blue-700' :
+              selectedSlot.lessonType === 'duo' ? 'bg-purple-100 text-purple-700' :
+              'bg-green-100 text-green-700'
+            }`}>
+              {selectedSlot.lessonType === 'individual' ? (t('booking.individual') || 'Private (1 Person)') : 
+               selectedSlot.lessonType === 'duo' ? (t('booking.duo') || 'Duo (2 People)') :
+               (t('booking.group') || 'Group (4-8 People)')}
+            </span>
+          </div>
           <div className="space-y-1 text-sm text-gray-700">
             <div className="flex items-center gap-2">
-              <Calendar size={16} className="text-green-600" />
+              <Calendar size={16} className={
+                selectedSlot.lessonType === 'individual' ? 'text-blue-600' : 
+                selectedSlot.lessonType === 'duo' ? 'text-purple-600' : 'text-green-600'
+              } />
               <span>{new Date(selectedSlot.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>
             </div>
             <div className="flex items-center gap-2">
@@ -466,17 +565,37 @@ export default function BookingCalendar({ timeSlots, onBookingComplete }: Bookin
             <div className="flex justify-between items-center">
               <span className="text-gray-700">{t('booking.total')}</span>
               <span className="text-2xl font-bold text-green-600">
-                ${selectedSlot.price * formData.participants}
+                ${(selectedSlot.pricePerPerson || selectedSlot.price) * formData.participants}
               </span>
             </div>
             <p className="text-sm text-gray-500 mt-1">
-              ${selectedSlot.price} x {formData.participants} {formData.participants === 1 ? t('booking.person') : t('booking.people')}
+              ${selectedSlot.pricePerPerson || selectedSlot.price} x {formData.participants} {formData.participants === 1 ? t('booking.person') : t('booking.people')}
             </p>
           </div>
 
+          {selectedSlot.lessonType === 'duo' && selectedSlot.currentParticipants < selectedSlot.minParticipants && (
+            <div className="bg-purple-50 border border-purple-200 rounded-xl p-4">
+              <p className="text-purple-800 text-sm">
+                <strong>{t('booking.duoNotice') || 'Note:'}</strong> {t('booking.duoNoticeText') || 'This lesson requires 2 people. You can book for yourself and a partner, or wait for another person to join.'}
+              </p>
+            </div>
+          )}
+
+          {selectedSlot.lessonType === 'group' && selectedSlot.currentParticipants < selectedSlot.minParticipants && (
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
+              <p className="text-amber-800 text-sm">
+                <strong>{t('booking.groupNotice') || 'Note:'}</strong> {t('booking.groupNoticeText') || 'This is a group lesson that requires a minimum of'} {selectedSlot.minParticipants} {t('booking.participants') || 'participants'}. {t('booking.groupNoticeText2') || 'If the minimum is not met, you will be notified and can reschedule or receive a full refund.'}
+              </p>
+            </div>
+          )}
+
           <button
             type="submit"
-            className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition"
+            className={`w-full py-3 rounded-lg font-semibold transition text-white ${
+              selectedSlot.lessonType === 'individual' ? 'bg-blue-600 hover:bg-blue-700' :
+              selectedSlot.lessonType === 'duo' ? 'bg-purple-600 hover:bg-purple-700' :
+              'bg-green-600 hover:bg-green-700'
+            }`}
           >
             {t('booking.continueToConfirm')}
           </button>

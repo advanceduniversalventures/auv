@@ -1,86 +1,101 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { ChevronLeft, Calendar } from 'lucide-react'
+import { ChevronLeft, Calendar, Loader2 } from 'lucide-react'
 import { useI18n } from '@/lib/i18n'
-import BookingCalendar, { TimeSlot } from '@/components/BookingCalendar'
+import BookingCalendar from '@/components/BookingCalendar'
+import { supabase, TimeSlot as DBTimeSlot } from '@/lib/supabase'
 
-// ============================================================
-// MANAGE YOUR TIME SLOTS HERE
-// To add/edit/remove time slots, modify this array and push to GitHub
-// ============================================================
-const timeSlots: TimeSlot[] = [
-  {
-    id: '1',
-    date: '2026-03-15',          // Format: YYYY-MM-DD
-    startTime: '09:00',          // Format: HH:MM (24-hour)
-    endTime: '10:30',
-    location: 'Bethesda Tennis Club',
-    address: '7800 Arlington Rd, Bethesda, MD 20814',
-    maxParticipants: 4,          // Max people per session
-    currentParticipants: 0,      // Set to 0 for new slots
-    price: 75                    // Price per person in USD
-  },
-  {
-    id: '2',
-    date: '2026-03-15',
-    startTime: '14:00',
-    endTime: '15:30',
-    location: 'Rock Creek Tennis Center',
-    address: '5200 16th St NW, Washington, DC 20011',
-    maxParticipants: 4,
-    currentParticipants: 0,
-    price: 80
-  },
-  {
-    id: '3',
-    date: '2026-03-17',
-    startTime: '10:00',
-    endTime: '11:30',
-    location: 'Bethesda Tennis Club',
-    address: '7800 Arlington Rd, Bethesda, MD 20814',
-    maxParticipants: 6,
-    currentParticipants: 0,
-    price: 65
-  },
-  {
-    id: '4',
-    date: '2026-03-18',
-    startTime: '16:00',
-    endTime: '17:30',
-    location: 'Cabin John Regional Park',
-    address: '7400 Tuckerman Ln, Rockville, MD 20852',
-    maxParticipants: 4,
-    currentParticipants: 0,
-    price: 70
-  },
-  {
-    id: '5',
-    date: '2026-03-20',
-    startTime: '09:00',
-    endTime: '10:30',
-    location: 'Bethesda Tennis Club',
-    address: '7800 Arlington Rd, Bethesda, MD 20814',
-    maxParticipants: 4,
-    currentParticipants: 0,
-    price: 75
-  },
-  {
-    id: '6',
-    date: '2026-03-22',
-    startTime: '11:00',
-    endTime: '12:30',
-    location: 'Rock Creek Tennis Center',
-    address: '5200 16th St NW, Washington, DC 20011',
-    maxParticipants: 6,
-    currentParticipants: 0,
-    price: 60
+interface TimeSlot {
+  id: string
+  date: string
+  startTime: string
+  endTime: string
+  location: string
+  address: string
+  maxParticipants: number
+  minParticipants: number
+  currentParticipants: number
+  price: number
+  pricePerPerson: number
+  lessonType: 'individual' | 'duo' | 'group'
+  status: 'open' | 'confirmed' | 'cancelled'
+}
+
+function convertDBSlotToUISlot(dbSlot: DBTimeSlot): TimeSlot {
+  return {
+    id: dbSlot.id,
+    date: dbSlot.date,
+    startTime: dbSlot.start_time.slice(0, 5),
+    endTime: dbSlot.end_time.slice(0, 5),
+    location: dbSlot.location,
+    address: dbSlot.address,
+    maxParticipants: dbSlot.max_participants,
+    minParticipants: dbSlot.min_participants,
+    currentParticipants: dbSlot.current_participants,
+    price: Number(dbSlot.price),
+    pricePerPerson: Number(dbSlot.price_per_person),
+    lessonType: dbSlot.lesson_type,
+    status: dbSlot.status
   }
-]
-// ============================================================
+}
 
 export default function BookLessonPage() {
   const { t } = useI18n()
+  const [timeSlots, setTimeSlots] = useState<TimeSlot[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+
+  const fetchTimeSlots = async () => {
+    try {
+      // Only show slots at least 48 hours from now
+      const minBookingDate = new Date()
+      minBookingDate.setHours(minBookingDate.getHours() + 48)
+      const minDateStr = minBookingDate.toISOString().split('T')[0]
+      
+      const { data, error } = await supabase
+        .from('time_slots')
+        .select('*')
+        .eq('is_active', true)
+        .gte('date', minDateStr)
+        .order('date', { ascending: true })
+        .order('start_time', { ascending: true })
+
+      if (error) throw error
+
+      const slots = (data || []).map(convertDBSlotToUISlot)
+      setTimeSlots(slots)
+    } catch (err) {
+      console.error('Error fetching time slots:', err)
+      setError('Failed to load available time slots')
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  useEffect(() => {
+    fetchTimeSlots()
+
+    const channel = supabase
+      .channel('time_slots_changes')
+      .on(
+        'postgres_changes',
+        { event: '*', schema: 'public', table: 'time_slots' },
+        () => {
+          fetchTimeSlots()
+        }
+      )
+      .subscribe()
+
+    return () => {
+      supabase.removeChannel(channel)
+    }
+  }, [])
+
+  const handleBookingComplete = () => {
+    fetchTimeSlots()
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -110,7 +125,37 @@ export default function BookLessonPage() {
 
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <BookingCalendar timeSlots={timeSlots} />
+          {/* Booking Policy Notice */}
+          <div className="mb-8 bg-blue-50 border border-blue-200 rounded-xl p-4">
+            <div className="flex items-start gap-3">
+              <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-0.5">
+                <span className="text-blue-600 text-sm font-bold">i</span>
+              </div>
+              <div className="text-sm text-blue-800">
+                <p className="font-semibold mb-1">{t('booking.bookingNotice')}</p>
+                <p className="text-blue-700">{t('booking.cancellationPolicy')}</p>
+              </div>
+            </div>
+          </div>
+
+          {loading ? (
+            <div className="flex items-center justify-center py-20">
+              <Loader2 className="w-8 h-8 animate-spin text-green-600" />
+              <span className="ml-3 text-gray-600">{t('booking.loading') || 'Loading available times...'}</span>
+            </div>
+          ) : error ? (
+            <div className="text-center py-20">
+              <p className="text-red-600">{error}</p>
+              <button 
+                onClick={() => { setLoading(true); setError(null); fetchTimeSlots(); }}
+                className="mt-4 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
+              >
+                Try Again
+              </button>
+            </div>
+          ) : (
+            <BookingCalendar timeSlots={timeSlots} onBookingComplete={handleBookingComplete} />
+          )}
         </div>
       </section>
 

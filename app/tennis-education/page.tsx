@@ -180,16 +180,19 @@ export default function TennisEducation() {
               const stepData = t(`tennis.process.${item.key}`) as any
               return (
                 <div key={index} className="text-center relative">
-                  <div className="bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                    {item.step}
+                  <div className="flex items-center justify-center mb-4">
+                    <div className="bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold">
+                      {item.step}
+                    </div>
+                    {index < 3 && (
+                      <div className="hidden md:flex items-center absolute left-[calc(50%+40px)] right-0 top-8">
+                        <div className="flex-1 h-0.5 bg-green-300"></div>
+                        <ArrowRight className="text-green-600 flex-shrink-0" size={20} />
+                      </div>
+                    )}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{stepData.title}</h3>
                   <p className="text-gray-600">{stepData.desc}</p>
-                  {index < 3 && (
-                    <div className="hidden md:block absolute top-8 left-full w-full">
-                      <ArrowRight className="text-green-600 mx-auto" size={24} />
-                    </div>
-                  )}
                 </div>
               )
             })}
