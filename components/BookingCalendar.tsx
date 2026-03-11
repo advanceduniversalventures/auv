@@ -250,6 +250,9 @@ export default function BookingCalendar({ timeSlots, onBookingComplete }: Bookin
               const availableSlots = slotsForDay.filter(s => s.currentParticipants < s.maxParticipants)
               if (availableSlots.length === 1) {
                 handleSelectSlot(availableSlots[0])
+              } else if (availableSlots.length > 1) {
+                // Scroll to the slots list when multiple slots exist
+                document.getElementById('available-slots-list')?.scrollIntoView({ behavior: 'smooth' })
               }
             }
           }}
@@ -332,7 +335,7 @@ export default function BookingCalendar({ timeSlots, onBookingComplete }: Bookin
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-lg p-6">
+        <div id="available-slots-list" className="bg-white rounded-2xl shadow-lg p-6">
           <h3 className="text-xl font-bold text-gray-900 mb-4">{t('booking.availableSlots')}</h3>
           
           {availableSlots.length === 0 ? (
