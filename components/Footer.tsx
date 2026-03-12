@@ -80,11 +80,6 @@ export default function Footer() {
                   {t('footer.support')}
                 </Link>
               </li>
-              <li>
-                <Link href="/kevobin/privacy" className="hover:text-white transition-colors">
-                  Kevobin Privacy
-                </Link>
-              </li>
             </ul>
           </div>
         </div>

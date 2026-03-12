@@ -10,6 +10,13 @@ import { supabase, TimeSlot as DBTimeSlot, Booking } from '@/lib/supabase'
 
 const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || ''
 
+const PRESET_LOCATIONS = [
+  { label: 'Gaithersburg, MD', location: 'Gaithersburg, MD', address: '1200 Main St, Gaithersburg, MD 20878' },
+  { label: 'Towson, MD', location: 'Towson, MD', address: '1021 Dulaney Valley Rd, Baltimore, MD 21204' },
+  { label: 'Arlington, VA', location: 'Arlington, VA', address: '1600 S Hayes St, Arlington, VA 22202' },
+  { label: 'Baltimore, MD', location: 'Baltimore, MD', address: '3400 North Charles Street, Baltimore, MD' },
+]
+
 interface BookingWithSlot extends Booking {
   time_slots?: DBTimeSlot
   created_at?: string
@@ -466,14 +473,24 @@ export default function AdminPage() {
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Location *</label>
-                    <input
-                      type="text"
+                    <select
                       required
                       value={newSlot.location}
-                      onChange={(e) => setNewSlot({ ...newSlot, location: e.target.value })}
-                      placeholder="e.g., Bethesda Tennis Club"
+                      onChange={(e) => {
+                        const preset = PRESET_LOCATIONS.find(p => p.location === e.target.value)
+                        setNewSlot({
+                          ...newSlot,
+                          location: e.target.value,
+                          address: preset?.address || newSlot.address
+                        })
+                      }}
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
-                    />
+                    >
+                      <option value="">Select a location...</option>
+                      {PRESET_LOCATIONS.map(p => (
+                        <option key={p.location} value={p.location}>{p.label}</option>
+                      ))}
+                    </select>
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Address *</label>
@@ -482,8 +499,8 @@ export default function AdminPage() {
                       required
                       value={newSlot.address}
                       onChange={(e) => setNewSlot({ ...newSlot, address: e.target.value })}
-                      placeholder="Full address"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
+                      placeholder="Auto-filled from location"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 bg-gray-50"
                     />
                   </div>
                   <div>
@@ -633,14 +650,24 @@ export default function AdminPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">Location *</label>
-                        <input
-                          type="text"
+                        <select
                           required
                           value={bulkSlot.location}
-                          onChange={(e) => setBulkSlot({ ...bulkSlot, location: e.target.value })}
-                          placeholder="e.g., Bethesda Tennis Club"
+                          onChange={(e) => {
+                            const preset = PRESET_LOCATIONS.find(p => p.location === e.target.value)
+                            setBulkSlot({
+                              ...bulkSlot,
+                              location: e.target.value,
+                              address: preset?.address || bulkSlot.address
+                            })
+                          }}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
-                        />
+                        >
+                          <option value="">Select a location...</option>
+                          {PRESET_LOCATIONS.map(p => (
+                            <option key={p.location} value={p.location}>{p.label}</option>
+                          ))}
+                        </select>
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">Address *</label>
@@ -649,8 +676,8 @@ export default function AdminPage() {
                           required
                           value={bulkSlot.address}
                           onChange={(e) => setBulkSlot({ ...bulkSlot, address: e.target.value })}
-                          placeholder="Full address"
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                          placeholder="Auto-filled from location"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 bg-gray-50"
                         />
                       </div>
                       <div>
@@ -990,12 +1017,23 @@ export default function AdminPage() {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Location</label>
-                  <input
-                    type="text"
+                  <select
                     value={editingSlot.location}
-                    onChange={(e) => setEditingSlot({ ...editingSlot, location: e.target.value })}
+                    onChange={(e) => {
+                      const preset = PRESET_LOCATIONS.find(p => p.location === e.target.value)
+                      setEditingSlot({
+                        ...editingSlot,
+                        location: e.target.value,
+                        address: preset?.address || editingSlot.address
+                      })
+                    }}
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg"
-                  />
+                  >
+                    <option value="">Select a location...</option>
+                    {PRESET_LOCATIONS.map(p => (
+                      <option key={p.location} value={p.location}>{p.label}</option>
+                    ))}
+                  </select>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Address</label>
@@ -1003,7 +1041,7 @@ export default function AdminPage() {
                     type="text"
                     value={editingSlot.address}
                     onChange={(e) => setEditingSlot({ ...editingSlot, address: e.target.value })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg bg-gray-50"
                   />
                 </div>
                 <div>
