@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { 
   Lock, LogOut, Calendar, Users, Plus, Trash2, Edit2, 
   Check, X, Clock, MapPin, DollarSign, RefreshCw,
-  ChevronDown, ChevronUp, AlertCircle
+  ChevronDown, ChevronUp, AlertCircle, Layers
 } from 'lucide-react'
 import { supabase, TimeSlot as DBTimeSlot, Booking } from '@/lib/supabase'
 
@@ -40,6 +40,97 @@ export default function AdminPage() {
     lesson_type: 'group' as 'individual' | 'duo' | 'group',
     is_active: true
   })
+
+  const [showBulkForm, setShowBulkForm] = useState(false)
+  const [bulkSlot, setBulkSlot] = useState({
+    date: '',
+    range_start: '13:00',
+    range_end: '16:00',
+    session_duration: 60,
+    location: '',
+    address: '',
+    max_participants: 8,
+    min_participants: 4,
+    price: 50,
+    price_per_person: 50,
+    lesson_type: 'group' as 'individual' | 'duo' | 'group',
+    is_active: true
+  })
+
+  const generateBulkSlots = () => {
+    const [startH, startM] = bulkSlot.range_start.split(':').map(Number)
+    const [endH, endM] = bulkSlot.range_end.split(':').map(Number)
+    const rangeStartMin = startH * 60 + startM
+    const rangeEndMin = endH * 60 + endM
+    const totalMinutes = rangeEndMin - rangeStartMin
+
+    if (totalMinutes <= 0 || bulkSlot.session_duration <= 0) return []
+
+    const slots: { start_time: string; end_time: string }[] = []
+    let cursor = rangeStartMin
+    while (cursor + bulkSlot.session_duration <= rangeEndMin) {
+      const sH = Math.floor(cursor / 60)
+      const sM = cursor % 60
+      const eH = Math.floor((cursor + bulkSlot.session_duration) / 60)
+      const eM = (cursor + bulkSlot.session_duration) % 60
+      slots.push({
+        start_time: `${String(sH).padStart(2, '0')}:${String(sM).padStart(2, '0')}`,
+        end_time: `${String(eH).padStart(2, '0')}:${String(eM).padStart(2, '0')}`
+      })
+      cursor += bulkSlot.session_duration
+    }
+    return slots
+  }
+
+  const handleBulkCreate = async (e: React.FormEvent) => {
+    e.preventDefault()
+    const slots = generateBulkSlots()
+    if (slots.length === 0) {
+      alert('No sessions can be generated with the current settings.')
+      return
+    }
+
+    try {
+      const rows = slots.map(s => ({
+        date: bulkSlot.date,
+        start_time: s.start_time,
+        end_time: s.end_time,
+        location: bulkSlot.location,
+        address: bulkSlot.address,
+        max_participants: bulkSlot.max_participants,
+        min_participants: bulkSlot.min_participants,
+        price: bulkSlot.price_per_person,
+        price_per_person: bulkSlot.price_per_person,
+        lesson_type: bulkSlot.lesson_type,
+        is_active: bulkSlot.is_active,
+        current_participants: 0,
+        status: 'open'
+      }))
+
+      const { error } = await supabase.from('time_slots').insert(rows)
+      if (error) throw error
+
+      setShowBulkForm(false)
+      setBulkSlot({
+        date: '',
+        range_start: '13:00',
+        range_end: '16:00',
+        session_duration: 60,
+        location: '',
+        address: '',
+        max_participants: 8,
+        min_participants: 4,
+        price: 50,
+        price_per_person: 50,
+        lesson_type: 'group',
+        is_active: true
+      })
+      fetchData()
+    } catch (err) {
+      console.error('Error bulk creating slots:', err)
+      alert('Failed to create time slots')
+    }
+  }
 
   useEffect(() => {
     const saved = sessionStorage.getItem('admin_auth')
@@ -321,13 +412,22 @@ export default function AdminPage() {
               <h2 className="text-xl font-semibold text-gray-900">
                 Manage Time Slots ({timeSlots.length} total)
               </h2>
-              <button
-                onClick={() => setShowAddForm(!showAddForm)}
-                className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700"
-              >
-                <Plus size={20} />
-                Add New Slot
-              </button>
+              <div className="flex gap-3">
+                <button
+                  onClick={() => { setShowAddForm(!showAddForm); setShowBulkForm(false) }}
+                  className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700"
+                >
+                  <Plus size={20} />
+                  Add Single Slot
+                </button>
+                <button
+                  onClick={() => { setShowBulkForm(!showBulkForm); setShowAddForm(false) }}
+                  className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700"
+                >
+                  <Layers size={20} />
+                  Bulk Create Slots
+                </button>
+              </div>
             </div>
 
             {showAddForm && (
@@ -463,6 +563,212 @@ export default function AdminPage() {
                 </form>
               </div>
             )}
+
+            {showBulkForm && (() => {
+              const preview = generateBulkSlots()
+              const [startH, startM] = bulkSlot.range_start.split(':').map(Number)
+              const [endH, endM] = bulkSlot.range_end.split(':').map(Number)
+              const totalMinutes = (endH * 60 + endM) - (startH * 60 + startM)
+              const leftoverMinutes = totalMinutes > 0 ? totalMinutes % bulkSlot.session_duration : 0
+
+              return (
+                <div className="bg-white rounded-xl shadow-lg p-6 border-2 border-blue-200">
+                  <h3 className="text-lg font-semibold mb-1 flex items-center gap-2">
+                    <Layers size={20} className="text-blue-600" />
+                    Bulk Create Time Slots
+                  </h3>
+                  <p className="text-sm text-gray-500 mb-4">
+                    Set a time range and session duration to automatically generate multiple slots
+                  </p>
+                  <form onSubmit={handleBulkCreate} className="space-y-5">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Date *</label>
+                        <input
+                          type="date"
+                          required
+                          value={bulkSlot.date}
+                          onChange={(e) => setBulkSlot({ ...bulkSlot, date: e.target.value })}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Range Start *</label>
+                        <input
+                          type="time"
+                          required
+                          value={bulkSlot.range_start}
+                          onChange={(e) => setBulkSlot({ ...bulkSlot, range_start: e.target.value })}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Range End *</label>
+                        <input
+                          type="time"
+                          required
+                          value={bulkSlot.range_end}
+                          onChange={(e) => setBulkSlot({ ...bulkSlot, range_end: e.target.value })}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Session Duration *</label>
+                        <select
+                          value={bulkSlot.session_duration}
+                          onChange={(e) => setBulkSlot({ ...bulkSlot, session_duration: parseInt(e.target.value) })}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                        >
+                          <option value={30}>30 minutes</option>
+                          <option value={45}>45 minutes</option>
+                          <option value={60}>1 hour</option>
+                          <option value={90}>1.5 hours</option>
+                          <option value={120}>2 hours</option>
+                          <option value={150}>2.5 hours</option>
+                          <option value={180}>3 hours</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Location *</label>
+                        <input
+                          type="text"
+                          required
+                          value={bulkSlot.location}
+                          onChange={(e) => setBulkSlot({ ...bulkSlot, location: e.target.value })}
+                          placeholder="e.g., Bethesda Tennis Club"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Address *</label>
+                        <input
+                          type="text"
+                          required
+                          value={bulkSlot.address}
+                          onChange={(e) => setBulkSlot({ ...bulkSlot, address: e.target.value })}
+                          placeholder="Full address"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Lesson Type *</label>
+                        <select
+                          value={bulkSlot.lesson_type}
+                          onChange={(e) => {
+                            const type = e.target.value as 'individual' | 'duo' | 'group'
+                            const defaults = {
+                              individual: { max: 1, min: 1 },
+                              duo: { max: 2, min: 2 },
+                              group: { max: 8, min: 4 }
+                            }
+                            setBulkSlot({ 
+                              ...bulkSlot, 
+                              lesson_type: type,
+                              max_participants: defaults[type].max,
+                              min_participants: defaults[type].min
+                            })
+                          }}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                        >
+                          <option value="individual">Private (1 person)</option>
+                          <option value="duo">Duo (2 people)</option>
+                          <option value="group">Group (4-8 people)</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Max Participants</label>
+                        <input
+                          type="number"
+                          min="1"
+                          value={bulkSlot.max_participants}
+                          onChange={(e) => setBulkSlot({ ...bulkSlot, max_participants: parseInt(e.target.value) })}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Min Participants</label>
+                        <input
+                          type="number"
+                          min="1"
+                          value={bulkSlot.min_participants}
+                          onChange={(e) => setBulkSlot({ ...bulkSlot, min_participants: parseInt(e.target.value) })}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Price per Person ($)</label>
+                        <input
+                          type="number"
+                          min="0"
+                          value={bulkSlot.price_per_person}
+                          onChange={(e) => setBulkSlot({ 
+                            ...bulkSlot, 
+                            price_per_person: parseInt(e.target.value),
+                            price: parseInt(e.target.value)
+                          })}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                        />
+                      </div>
+                    </div>
+
+                    {totalMinutes > 0 && (
+                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                        <div className="flex items-center justify-between mb-3">
+                          <h4 className="font-semibold text-blue-900 flex items-center gap-2">
+                            <Clock size={16} />
+                            Preview: {preview.length} session{preview.length !== 1 ? 's' : ''} will be created
+                          </h4>
+                          <span className="text-sm text-blue-700">
+                            {Math.floor(totalMinutes / 60)}h {totalMinutes % 60 > 0 ? `${totalMinutes % 60}m` : ''} total
+                          </span>
+                        </div>
+                        {preview.length > 0 ? (
+                          <div className="flex flex-wrap gap-2">
+                            {preview.map((slot, i) => (
+                              <div
+                                key={i}
+                                className="bg-white border border-blue-300 rounded-md px-3 py-1.5 text-sm font-medium text-blue-800"
+                              >
+                                {slot.start_time} – {slot.end_time}
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <p className="text-sm text-amber-700">
+                            Session duration is longer than the available time range.
+                          </p>
+                        )}
+                        {leftoverMinutes > 0 && preview.length > 0 && (
+                          <p className="text-xs text-blue-600 mt-2">
+                            {leftoverMinutes} minute{leftoverMinutes !== 1 ? 's' : ''} left over (not enough for another session)
+                          </p>
+                        )}
+                      </div>
+                    )}
+
+                    <div className="flex gap-3">
+                      <button
+                        type="submit"
+                        disabled={preview.length === 0}
+                        className="px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        Create {preview.length} Slot{preview.length !== 1 ? 's' : ''}
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setShowBulkForm(false)}
+                        className="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300"
+                      >
+                        Cancel
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              )
+            })()}
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="overflow-x-auto">
